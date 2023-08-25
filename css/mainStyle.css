@@ -32,11 +32,12 @@ div.site-navigation {
     display: flex;
 }
 div.site-navigation p, div.site-navigation a {
-    color: var(--main-color);
-    text-decoration: none;
     margin-top: 0;
     margin-right: 1em;
     font-size: 30px;
+}
+div.site-navigation a.selected-page {
+    text-decoration: underline 2px;
 }
 div.normal-card {
     color: white;
