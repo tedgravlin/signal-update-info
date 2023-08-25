@@ -3,7 +3,7 @@
 
 <head>
     <!-- Import CSS -->
-    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="../css/mainStyle.css">
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
@@ -25,63 +25,47 @@
 <body class="normal">
     <!-- Site Header and Navigation-->
     <div class="site-header">
-        <a href="./index.html">
+        <a href="../index.html">
             <h1 class="site-title">Signal Update Info</h1>
-        </a>
+        </a>        
         <div class="site-navigation">
-            <a href="./releases/android.html">
+            <a class="selected-page" href="">
                 Releases
             </a>
-            <a href="./news/news.html">
+            <a href="../news/news.html">
                 News
             </a>
-            <a href="./about.html">
+            <a href="../about.html">
                 About
             </a>
-            <a href="./donate.html">
+            <a href="../donate.html">
                 Donate
             </a>
         </div>
     </div>
-
-    <!-- Main Page -->
-    <div class="two-card-container">
-        <div class="normal-card">
-            <h1>Releases</h1>
-            <div class="card-content">
-                <a href="./releases/android.html">
-                    Android
-                </a>
-                <a href="./releases/ios/">
-                    iOS
-                </a>
-                <a href="./releases/desktop/">
-                    Desktop
-                </a>
-            </div>
-        </div>
-        <div class="normal-card">
-            <h1>Social</h1>
-            <div class="card-content">
-                <a href="https://mastodon.world/@SignalUpdateInfo/">
-                    Mastodon
-                </a>
-                <p>Lemmy</p>
-            </div>
-        </div>
+    <div class="platform-selector">
+        <a href="./android.html">
+            <input class="platform-unselected" type="button" value="Android">
+        </a>
+        <a href="./ios.html">
+            <input class="platform-unselected" type="button" value="iOS">
+        </a>
+        <a href="">
+            <input class="platform-selected" type="button" value="Desktop">
+        </a>
     </div>
     <div class="card-container">
         <div class="normal-card">
-            <h1>News</h1>
+            <h1>Desktop Releases</h1>
             <div class="card-content">
                 <a href="https//signal.org">
-                    Username QR Codes
+                    v6.31
                 </a>
                 <a href="https//signal.org">
-                    Phone-Number-Privacy
+                    v6.30
                 </a>
                 <a href="https//signal.org">
-                    New Calls Tab
+                    v6.29
                 </a>
             </div>
         </div>
