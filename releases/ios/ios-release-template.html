@@ -3,7 +3,7 @@
 
 <head>
     <!-- Import CSS -->
-    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
@@ -22,67 +22,47 @@
     <meta property="og:url" content="https://tedgravlin.github.io/signal-update-info/"/>
 </head>
 
-<body class="normal">
+<body class="inverted">
     <!-- Site Header and Navigation-->
     <div class="site-header">
-        <a href="./index.html">
+        <a href="../../index.html">
             <h1 class="site-title">Signal Update Info</h1>
-        </a>
+        </a>        
         <div class="site-navigation">
-            <a href="./releases/android.html">
+            <a class="selected-page" href="">
                 Releases
             </a>
-            <a href="./news/news.html">
+            <a href="../../news/news.html">
                 News
             </a>
-            <a href="./about.html">
+            <a href="../../about.html">
                 About
             </a>
-            <a href="./donate.html">
+            <a href="../../donate.html">
                 Donate
             </a>
         </div>
     </div>
-
-    <!-- Main Page -->
-    <div class="two-card-container">
-        <div class="card">
-            <h1>Releases</h1>
-            <div class="card-content-grid">
-                <a href="./releases/android.html">
-                    Android
-                </a>
-                <a href="./releases/ios/">
-                    iOS
-                </a>
-                <a href="./releases/desktop/">
-                    Desktop
-                </a>
-            </div>
-        </div>
-        <div class="card">
-            <h1>Social</h1>
-            <div class="card-content-grid">
-                <a href="https://mastodon.world/@SignalUpdateInfo/">
-                    Mastodon
-                </a>
-                <p>Lemmy</p>
-            </div>
-        </div>
-    </div>
     <div class="card-container">
         <div class="card">
-            <h1>News</h1>
-            <div class="card-content-grid">
-                <a href="https//signal.org">
-                    Username QR Codes
+            <h1>iOS v0.0</h1>
+            <div class="button-row">
+                <a href="https://github.com" target="_blank">
+                    <input class="no-fill" type="button" value="Commits">
                 </a>
-                <a href="https//signal.org">
-                    Phone-Number-Privacy
+                <a href="https://community.signalusers.org" target="_blank">
+                    <input class="no-fill" type="button" value="Beta thread">
                 </a>
-                <a href="https//signal.org">
-                    New Calls Tab
-                </a>
+            </div>
+            <div class="card-content">
+                <p>Release Notes</p>
+                    <ul>
+                        <li>Bug fixes and performance improvements</li>
+                    </ul>
+                <p>Notable Changes</p>
+                <ul>
+                    <li>Work on usernames</li>
+                </ul>
             </div>
         </div>
     </div>
