@@ -19,6 +19,10 @@ body.normal div.site-header, body.normal div.site-header a:visited {
     color: var(--main-color);
 }
 
+body.normal div.card-content, body.normal div.card-content a {
+    color: white;
+}
+
 /* Inverted color scheme */
 body.inverted, body.inverted div.card h1{
     background-color: var(--main-color);
