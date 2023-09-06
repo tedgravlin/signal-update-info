@@ -96,6 +96,9 @@ div.card-content {
     color: white;
     font-size: 34px;
 }
+div.card-content p, ul {
+    margin: 0;
+}
 div.card-content-grid{
     display: grid;
     grid-template-columns: min-content min-content min-content;
@@ -133,6 +136,13 @@ div.article-preview h1 {
 div.article-preview:hover, div.article-preview:hover h1{
     background-color: white;
     color: var(--main-color);
+}
+div.article-header h1, p{
+    display: inline-block;
+}
+div.article-header p {
+    font-size: 2.5vw;
+    margin-left: 0.5em;
 }
 div.platform-selector {
     display: grid;
