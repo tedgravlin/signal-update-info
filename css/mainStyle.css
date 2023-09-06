@@ -220,7 +220,8 @@ a, a:active {
     }
     div.site-navigation {
         width: 80vw;
-        font-size: 6vw;
+        font-size: 5.5vw;
+        margin-top: 1em;
     }
     /* Card conainters */
     div.card-container, div.two-card-container {
@@ -234,10 +235,11 @@ a, a:active {
     }
     /* Cards */
     div.card {
-        width: 75%;
+        width: 90%;
+        padding: 1em 1em 2em 1em;
     }
     div.card-content-grid {
-        grid-template-columns: min-content min-content;
+        grid-template-columns: min-content min-content min-content;
     }
     div.news-card-grid {
         grid-template-columns: 1fr;
