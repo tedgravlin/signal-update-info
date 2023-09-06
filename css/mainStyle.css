@@ -80,7 +80,7 @@ div.card h1 {
     color: var(--main-color);
     width: fit-content;
     border-radius: 24px;
-    padding: 0.1em 0.5em 0em 0.5em;
+    padding: 0.25em 0.5em 0.15em 0.5em;
 }
 div.card-container, div.two-card-container {
     display: grid;
@@ -102,6 +102,7 @@ div.card-content p, ul {
 div.card-content-grid{
     display: grid;
     grid-template-columns: min-content min-content min-content;
+    margin-left: 0.5em;
     column-gap: 1em;
     font-size: 34px;
 }
@@ -114,14 +115,14 @@ div.card-content-grid p, div.card-content-grid a{
 }
 div.news-card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1em;
     row-gap: 1em;
     font-size: 34px;
 }
 div.article-preview {
     font-size: 14px;
-    border: 4px solid white;
+    border: 3px solid white;
     border-radius: 32px;
     padding: 1em;
     height: max-content;
@@ -137,7 +138,7 @@ div.article-preview:hover, div.article-preview:hover h1{
     background-color: white;
     color: var(--main-color);
 }
-div.article-header h1, p{
+div.article-header h1, div.article-header p{
     display: inline-block;
 }
 div.article-header p {
