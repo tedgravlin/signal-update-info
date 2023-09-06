@@ -1,6 +1,9 @@
 :root {
     font-family: league-spartan;
-    --main-color: #4166f5;
+    --light-main-color: #4166f5;
+    --dark-main-color: #9db1ff;
+    --dark-background-color: #181d44;
+    --dark-text-color: #182142;
 }
 
 @font-face {
@@ -13,10 +16,10 @@ body.normal {
     background-color: white;
 }
 body.normal div.card {
-    background-color: var(--main-color);
+    background-color: var(--light-main-color);
 }
 body.normal div.site-header, body.normal div.site-header a:visited {
-    color: var(--main-color);
+    color: var(--light-main-color);
 }
 
 body.normal div.card-content, body.normal div.card-content a {
@@ -25,7 +28,7 @@ body.normal div.card-content, body.normal div.card-content a {
 
 /* Inverted color scheme */
 body.inverted, body.inverted div.card h1{
-    background-color: var(--main-color);
+    background-color: var(--light-main-color);
     color: white;
 }
 
@@ -34,17 +37,17 @@ body.inverted div.site-header a {
 }
 
 body.inverted div.card-content {
-    color: var(--main-color);
+    color: var(--light-main-color);
 }
 
 body.inverted div.card, body.inverted div.card-content a {
-    color: var(--main-color);
+    color: var(--light-main-color);
     background-color: white;
 }
 
 /* Divs */
 div.site-header {
-    color: var(--main-color);
+    color: var(--light-main-color);
     margin: 2em 0 2em 3em;
     font-weight: bold;
 }
@@ -71,13 +74,13 @@ div.site-navigation a.selected-page {
 }
 div.card {
     color: white;
-    background-color: var(--main-color);
+    background-color: var(--light-main-color);
     border-radius: 24px;
     padding: 1em 2em 2em 2em;
 }
 div.card h1 {
     background-color: white;
-    color: var(--main-color);
+    color: var(--light-main-color);
     width: fit-content;
     border-radius: 24px;
     padding: 0.25em 0.5em 0.15em 0.5em;
@@ -128,7 +131,7 @@ div.article-preview {
     height: max-content;
 }
 div.article-preview h1 {
-    background-color: var(--main-color);
+    background-color: var(--light-main-color);
     color: white;
     padding: 0;
     margin: 0;
@@ -136,7 +139,7 @@ div.article-preview h1 {
 }
 div.article-preview:hover, div.article-preview:hover h1{
     background-color: white;
-    color: var(--main-color);
+    color: var(--light-main-color);
 }
 div.article-header h1, div.article-header p{
     display: inline-block;
@@ -182,13 +185,13 @@ input[type=button].platform-selected, input[type=button].platform-unselected {
 }
 input[type=button].platform-selected {
     color: white;
-    background-color: var(--main-color);
+    background-color: var(--light-main-color);
     border: 2px solid transparent;
 }
 input[type=button].platform-unselected, input[type=button].no-fill {
-    color: var(--main-color);
+    color: var(--light-main-color);
     background-color: white;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--light-main-color);
 }
 
 /* Text */
@@ -251,5 +254,71 @@ a, a:active {
     div.card-content, div.card-content-grid {
         font-size: 7vw;
         row-gap: 1em;
+    }
+  }
+
+  /* Dark mode colors */
+  @media (prefers-color-scheme: dark) {
+    body.normal {
+        background-color: var(--dark-background-color);
+    }
+    body.normal div.card {
+        background-color: var(--dark-main-color);
+    }
+    body.normal div.site-header, body.normal div.site-header a:visited {
+        color: var(--dark-main-color);
+    }
+    
+    body.normal div.card-content, body.normal div.card-content a {
+        color: var(--dark-text-color);
+    }
+    div.card {
+        color: var(--dark-text-color);
+        background-color: var(--dark-background-color);
+    }
+    div.card h1 {
+        background-color: var(--dark-text-color);
+        color: var(--dark-main-color);
+    }
+    div.card-content-grid p, div.card-content-grid a{
+        color: var(--dark-text-color);
+    }
+    div.article-preview {
+        border-color: var(--dark-text-color);
+    }
+    div.article-preview h1 {
+        background-color: var(--dark-main-color);
+        color: var(--dark-text-color);
+    }
+    div.article-preview:hover, div.article-preview:hover h1 {
+        background-color: var(--dark-background-color);
+        color: var(--dark-main-color);
+    }
+    input[type=button].platform-selected {
+        color: var(--dark-text-color);
+        background-color: var(--dark-main-color);
+    }
+    input[type=button].platform-unselected, input[type=button].no-fill {
+        color: var(--dark-main-color);
+        background-color: var(--dark-background-color);
+        border-color: var(--dark-main-color);
+    }
+    /* Inverted colors */
+    body.inverted, body.inverted div.card h1{
+        background-color: var(--dark-main-color);
+        color: var(--dark-text-color);
+    }
+    
+    body.inverted div.site-header a {
+        color: var(--dark-text-color);
+    }
+    
+    body.inverted div.card-content {
+        color: var(--dark-main-color);
+    }
+    
+    body.inverted div.card, body.inverted div.card-content a {
+        color: var(--dark-text-color);
+        background-color: var(--dark-background-color);
     }
   }
