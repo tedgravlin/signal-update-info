@@ -18,7 +18,7 @@ body.normal {
 body.normal div.card {
     background-color: var(--light-main-color);
 }
-body.normal header, body.normal header a:visited {
+body.normal div.site-header, body.normal div.site-header a:visited {
     color: var(--light-main-color);
 }
 
@@ -32,7 +32,7 @@ body.inverted, body.inverted div.card h1{
     color: white;
 }
 
-body.inverted header a {
+body.inverted div.site-header a {
     color: white;
 }
 
@@ -46,16 +46,16 @@ body.inverted div.card, body.inverted div.card-content a {
 }
 
 /* Divs */
-header {
+div.site-header {
     color: var(--light-main-color);
     margin: 2em 0 2em 3em;
     font-weight: bold;
 }
-header h1 {
+div.site-header h1 {
     font-size: 44px;
     margin: 0;
 }
-header a {
+div.site-header a {
     text-decoration: none;
     margin: 0;
 }
@@ -212,10 +212,10 @@ a, a:active {
 /* Mobile layout */
 @media (max-width: 500px) {
     /* Site header */
-    header {
+    div.site-header {
         margin: 2em 0 2em 1em;
     }
-    header h1 {
+    div.site-header h1 {
         font-size: 10vw;
     }
     div.site-navigation {
@@ -268,7 +268,7 @@ a, a:active {
     body.normal div.card {
         background-color: var(--dark-main-color);
     }
-    body.normal header, body.normal header a:visited {
+    body.normal div.site-header, body.normal div.site-header a:visited {
         color: var(--dark-main-color);
     }
     
@@ -312,7 +312,7 @@ a, a:active {
         color: var(--dark-text-color);
     }
     
-    body.inverted header a {
+    body.inverted div.site-header a {
         color: var(--dark-text-color);
     }
     
