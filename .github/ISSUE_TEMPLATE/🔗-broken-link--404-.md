@@ -1,5 +1,5 @@
 ---
-name: Broken link (404)
+name: "\U0001F517 Broken link (404)"
 about: Report broken links
 title: Broken link (404)
 labels: bug
