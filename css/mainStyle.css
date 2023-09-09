@@ -48,7 +48,7 @@ body.inverted div.card, body.inverted div.card-content a {
 /* Divs */
 header {
     color: var(--light-main-color);
-    margin: 2em 0 2em 3em;
+    margin: 2em 0 3em 3em;
     font-weight: bold;
 }
 header h1 {
@@ -126,21 +126,28 @@ div.news-card-grid {
 }
 div.article-preview {
     font-size: 14px;
-    border: 3px solid white;
-    border-radius: 32px;
+    border: 3px solid transparent;
+    background-color: white;
+    color: var(--light-main-color);
+    border-radius: 20px;
     padding: 2em;
     min-height: 125px;
 }
 div.article-preview h1 {
-    background-color: var(--light-main-color);
-    color: white;
+    background-color: white;
+    color: var(--light-main-color);
     padding: 0;
     margin: 0;
     font-size: 2.5vw;
 }
-div.article-preview:hover, div.article-preview:hover h1{
-    background-color: white;
-    color: var(--light-main-color);
+div.article-preview:hover {
+    color: white;
+    background-color: var(--light-main-color);
+    border: 3px solid white;
+}
+div.article-preview:hover h1 {
+    background-color: var(--light-main-color);
+    color: white;
 }
 div.article-header h1, div.article-header p{
     display: inline-block;
@@ -247,6 +254,7 @@ a, a:active {
     }
     div.article-preview {
         min-height: 90px;
+        padding-left: 1em;
     }
     /* Buttons */
     div.platform-selector {
@@ -293,15 +301,18 @@ a, a:active {
         color: var(--dark-text-color);
     }
     div.article-preview {
+        background-color: var(--dark-text-color);
         border-color: var(--dark-text-color);
+        color: var(--dark-main-color);
     }
     div.article-preview h1 {
-        background-color: var(--dark-main-color);
-        color: var(--dark-text-color);
+        color: var(--dark-main-color);
+        background-color: var(--dark-text-color);
     }
     div.article-preview:hover, div.article-preview:hover h1 {
-        background-color: var(--dark-background-color);
-        color: var(--dark-main-color);
+        background-color: var(--dark-main-color);
+        color: var(--dark-text-color);
+        border-color: var(--dark-text-color);
     }
     input[type=button].platform-selected {
         color: var(--dark-text-color);
