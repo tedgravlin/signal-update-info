@@ -101,6 +101,7 @@ div.card-content {
 }
 div.card-content p, ul {
     margin: 0;
+    line-height: 125%;
 }
 div.card-content-grid{
     display: grid;
@@ -127,15 +128,15 @@ div.article-preview {
     font-size: 14px;
     border: 3px solid white;
     border-radius: 32px;
-    padding: 1em;
-    height: max-content;
+    padding: 2em;
+    min-height: 125px;
 }
 div.article-preview h1 {
     background-color: var(--light-main-color);
     color: white;
     padding: 0;
     margin: 0;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 div.article-preview:hover, div.article-preview:hover h1{
     background-color: white;
@@ -155,16 +156,10 @@ div.platform-selector {
     column-gap: 1em;
     margin: 0 3em 1em 3em;
 }
-div.platform-selector a, div.button-row a {
+div.platform-selector a {
     overflow: hidden;
     width: auto;
     display: inline-block;
-}
-div.button-row {
-    display: grid;
-    width: fit-content;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
 }
 /* Buttons */
 input[type=button] {
@@ -233,6 +228,11 @@ a, a:active {
         grid-template-columns: 1fr;
         row-gap: 1em;
     }
+    div.article-header p {
+        font-size: 5.5vw;
+        margin-left: 0.5em;
+        margin-top: 0;
+    }
     /* Cards */
     div.card {
         width: 90%;
@@ -244,6 +244,9 @@ a, a:active {
     div.news-card-grid {
         grid-template-columns: 1fr;
         row-gap: 0.5em;
+    }
+    div.article-preview {
+        min-height: 90px;
     }
     /* Buttons */
     div.platform-selector {
@@ -257,6 +260,9 @@ a, a:active {
     div.card-content, div.card-content-grid {
         font-size: 7vw;
         row-gap: 1em;
+    }
+    input[type=button].platform-selected, input[type=button].platform-unselected {
+        font-size: 6vw;
     }
   }
 
