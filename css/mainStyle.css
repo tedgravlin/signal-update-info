@@ -99,6 +99,9 @@ div.card-content {
     color: white;
     font-size: 34px;
 }
+body.inverted div.card-content p, body.inverted div.card-content a,  body.inverted div.card-content li{
+    font-size: 30px;
+}
 div.card-content p, ul {
     margin: 0;
     line-height: 125%;
@@ -270,6 +273,9 @@ a, a:active {
     div.card-content, div.card-content-grid {
         font-size: 7vw;
         row-gap: 1em;
+    }
+    body.inverted div.card-content p, body.inverted div.card-content a,  body.inverted div.card-content li{
+        font-size: 6vw;
     }
     input[type=button].platform-selected, input[type=button].platform-unselected {
         font-size: 6vw;
