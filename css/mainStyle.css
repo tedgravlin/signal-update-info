@@ -113,7 +113,9 @@ div.card-content-grid{
 div.card-content-grid p, div.card-content-grid a{
     justify-self: left;
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
     margin: 0;
     font-weight: bold;
 }
