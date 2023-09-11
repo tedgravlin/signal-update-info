@@ -340,7 +340,7 @@ a, a:active {
     }
     
     body.inverted div.card, body.inverted div.card-content a {
-        color: var(--dark-text-color);
+        color: var(--dark-main-color);
         background-color: var(--dark-background-color);
     }
   }
