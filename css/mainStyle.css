@@ -11,6 +11,28 @@
     src: url(../assets/fonts/LeagueSpartan-SemiBold.ttf);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.spacer {
+    flex: 1;
+}
+
+footer {
+    color: var(--light-main-color);
+    height: fit-content;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+footer a, footer p {
+    display: inline-block;
+}
+
 /* Normal color scheme */
 body.normal {
     background-color: white;
@@ -37,7 +59,7 @@ body.inverted div.card h1, body.inverted div.slim-card h1 {
     color: white;
 }
 
-body.inverted header a {
+body.inverted header a, body.inverted footer a {
     color: white;
 }
 
