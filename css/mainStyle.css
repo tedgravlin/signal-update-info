@@ -32,7 +32,7 @@ body.normal div.card-content a {
 
 /* Inverted color scheme */
 body.inverted,
-body.inverted div.card h1 {
+body.inverted div.card h1, body.inverted div.slim-card h1 {
     background-color: var(--light-main-color);
     color: white;
 }
@@ -46,7 +46,7 @@ body.inverted div.card-content {
 }
 
 body.inverted div.card,
-body.inverted div.card-content a {
+body.inverted div.card-content a, body.inverted div.slim-card {
     color: var(--light-main-color);
     background-color: white;
 }
@@ -85,14 +85,28 @@ div.site-navigation a.selected-page {
     text-decoration: underline 2px;
 }
 
-div.card {
+div.card, div.slim-card {
     color: white;
     background-color: var(--light-main-color);
     border-radius: 24px;
     padding: 1em 2em 2em 2em;
 }
 
-div.card h1 {
+div.slim-card {
+    display: inline-block;
+    border-radius: 36px;
+    padding: 0em 1em 0em 2em;
+}
+
+div.slim-card a {
+    margin-left: 1em;
+}
+
+div.slim-card h1, div.slim-card div.card-content {
+    display: inline-block;
+}
+
+div.card h1, div.slim-card h1 {
     background-color: white;
     color: var(--light-main-color);
     width: fit-content;
@@ -100,7 +114,7 @@ div.card h1 {
     padding: 0.25em 0.5em 0.15em 0.5em;
 }
 
-div.card-container, div.two-card-container {
+div.card-container, div.two-card-container, div.release-card-container {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 3em 1em 3em;
@@ -109,6 +123,11 @@ div.card-container, div.two-card-container {
 div.two-card-container {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
+}
+
+div.release-card-container {
+    grid-template-columns: auto;
+    row-gap: 1em;
 }
 
 div.card-content {
@@ -331,8 +350,7 @@ a:active {
     }
 
     /* Card conainters */
-    div.card-container,
-    div.two-card-container {
+    div.card-container, div.two-card-container, div.release-card-container {
         margin-left: auto;
         margin-right: auto;
         justify-items: center;
@@ -340,6 +358,11 @@ a:active {
 
     div.two-card-container {
         grid-template-columns: 1fr;
+        row-gap: 1em;
+    }
+
+    div.release-card-container {
+        grid-template-columns: auto;
         row-gap: 1em;
     }
 
@@ -353,9 +376,18 @@ a:active {
     }
 
     /* Cards */
-    div.card {
+    div.card, div.slim-card {
         width: 90%;
         padding: 1em 1em 2em 1em;
+    }
+
+    div.slim-card h1, div.slim-card div.card-content {
+        display: block;
+    }
+
+    div.slim-card a {
+        margin-left: 0;
+        margin-right: 1em;
     }
 
     div.card-content-grid {
@@ -379,7 +411,7 @@ a:active {
     }
 
     /* Text */
-    div.card h1 {
+    div.card h1, div.slim-card h1 {
         font-size: 7vw;
     }
 
@@ -426,7 +458,7 @@ a:active {
         background-color: var(--dark-background-color);
     }
 
-    div.card h1 {
+    div.card h1, div.slim-card h1 {
         background-color: var(--dark-text-color);
         color: var(--dark-main-color);
     }
@@ -468,7 +500,7 @@ a:active {
 
     /* Inverted colors */
     body.inverted,
-    body.inverted div.card h1 {
+    body.inverted div.card h1, body.inverted div.slim-card h1 {
         background-color: var(--dark-main-color);
         color: var(--dark-text-color);
     }
@@ -481,7 +513,7 @@ a:active {
         color: var(--dark-main-color);
     }
 
-    body.inverted div.card,
+    body.inverted div.card, body.inverted div.slim-card,
     body.inverted div.card-content a {
         color: var(--dark-main-color);
         background-color: var(--dark-background-color);
