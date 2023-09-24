@@ -13,6 +13,16 @@ body {
     min-height: 100vh;
 }
 
+img.theme-button-desktop {
+    float: right;
+    margin: 1em 2em 1em 1em;
+    cursor: pointer;
+}
+
+div.theme-button-mobile {
+    display: none;
+}
+
 .spacer {
     flex: 1;
 }
@@ -38,6 +48,7 @@ header {
 header h1 {
     font-size: 44px;
     margin: 0;
+    display: inline-block;
 }
 
 header a {
@@ -246,6 +257,31 @@ a.noshow:hover {
 
     header h1 {
         font-size: 10vw;
+    }
+
+    img.theme-button-desktop {
+        display: none;
+    }
+
+    div.theme-button-mobile {
+        display: block;
+        padding: 0.5em;
+        border: 2px solid var(--main-color);
+        border-radius: 24px;
+        margin: auto;
+        width: fit-content;
+    }
+
+    div.theme-button-mobile p {
+        margin: 0;
+    }
+
+    img.theme-icon-mobile {
+        display: inline-block;
+        position: relative;
+        height: 19px;
+        top: 5px;
+        margin: 0;
     }
 
     div.site-navigation {

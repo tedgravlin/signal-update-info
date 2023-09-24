@@ -4,10 +4,15 @@
         --main-color: #9db1ff;
         --background-color: #181d44;
         --text-color: #182142;
+        --main-color-filter: invert(74%) sepia(95%) saturate(1952%) hue-rotate(192deg) brightness(101%) contrast(100%);
     }
 
     body {
         background-color: var(--background-color);
+    }
+
+    img.theme-button-desktop, img.theme-icon-mobile {
+        filter: var(--main-color-filter);
     }
     
     footer a, footer a:visited, footer a:active {
