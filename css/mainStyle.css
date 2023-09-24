@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: white;
 }
 
 .spacer {
@@ -29,48 +30,19 @@ footer {
     margin-bottom: 1em;
 }
 
-footer a, footer p {
+footer a,
+footer p {
     display: inline-block;
 }
 
-/* Normal color scheme */
-body.normal {
-    background-color: white;
-}
-
-body.normal div.card {
-    background-color: var(--light-main-color);
-}
-
-body.normal header,
-body.normal header a:visited {
+header,
+header a:visited {
     color: var(--light-main-color);
 }
 
-body.normal div.card-content,
-body.normal div.card-content a {
+div.card-content,
+div.card-content a {
     color: white;
-}
-
-/* Inverted color scheme */
-body.inverted,
-body.inverted div.card h1, body.inverted div.slim-card h1 {
-    background-color: var(--light-main-color);
-    color: white;
-}
-
-body.inverted header a, body.inverted footer a {
-    color: white;
-}
-
-body.inverted div.card-content {
-    color: var(--light-main-color);
-}
-
-body.inverted div.card,
-body.inverted div.card-content a, body.inverted div.slim-card {
-    color: var(--light-main-color);
-    background-color: white;
 }
 
 /* Divs */
@@ -107,7 +79,8 @@ div.site-navigation a.selected-page {
     text-decoration: underline 2px;
 }
 
-div.card, div.slim-card {
+div.card,
+div.slim-card {
     color: white;
     background-color: var(--light-main-color);
     border-radius: 24px;
@@ -124,11 +97,13 @@ div.slim-card a {
     margin-left: 1em;
 }
 
-div.slim-card h1, div.slim-card div.card-content {
+div.slim-card h1,
+div.slim-card div.card-content {
     display: inline-block;
 }
 
-div.card h1, div.slim-card h1 {
+div.card h1,
+div.slim-card h1 {
     background-color: white;
     color: var(--light-main-color);
     width: fit-content;
@@ -136,7 +111,9 @@ div.card h1, div.slim-card h1 {
     padding: 0.25em 0.5em 0.15em 0.5em;
 }
 
-div.card-container, div.two-card-container, div.release-card-container {
+div.card-container,
+div.two-card-container,
+div.release-card-container {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 3em 1em 3em;
@@ -156,12 +133,6 @@ div.card-content {
     margin-left: 0.5em;
     color: white;
     font-size: 34px;
-}
-
-body.inverted div.card-content p,
-body.inverted div.card-content a,
-body.inverted div.card-content li {
-    font-size: 30px;
 }
 
 div.card-content p,
@@ -337,7 +308,9 @@ a:active {
     }
 
     /* Card conainters */
-    div.card-container, div.two-card-container, div.release-card-container {
+    div.card-container,
+    div.two-card-container,
+    div.release-card-container {
         margin-left: auto;
         margin-right: auto;
         justify-items: center;
@@ -358,17 +331,20 @@ a:active {
         margin-left: 0.5em;
         margin-top: 0;
     }
+
     div.screenshot-album img {
         width: 30vw;
     }
 
     /* Cards */
-    div.card, div.slim-card {
+    div.card,
+    div.slim-card {
         width: 90%;
         padding: 1em 1em 2em 1em;
     }
 
-    div.slim-card h1, div.slim-card div.card-content {
+    div.slim-card h1,
+    div.slim-card div.card-content {
         display: block;
     }
 
@@ -398,7 +374,8 @@ a:active {
     }
 
     /* Text */
-    div.card h1, div.slim-card h1 {
+    div.card h1,
+    div.slim-card h1 {
         font-size: 7vw;
     }
 
@@ -406,12 +383,6 @@ a:active {
     div.card-content-grid {
         font-size: 7vw;
         row-gap: 1em;
-    }
-
-    body.inverted div.card-content p,
-    body.inverted div.card-content a,
-    body.inverted div.card-content li {
-        font-size: 6vw;
     }
 
     input[type=button].platform-selected,
@@ -422,30 +393,28 @@ a:active {
 
 /* Dark mode colors */
 @media (prefers-color-scheme: dark) {
-    body.normal {
+    body {
         background-color: var(--dark-background-color);
     }
 
-    body.normal div.card {
+    div.card,
+    div.slim-card {
+        color: var(--dark-text-color);
         background-color: var(--dark-main-color);
     }
 
-    body.normal header,
-    body.normal header a:visited {
+    header,
+    header a:visited {
         color: var(--dark-main-color);
     }
 
-    body.normal div.card-content,
-    body.normal div.card-content a {
+    div.card-content,
+    div.card-content a {
         color: var(--dark-text-color);
     }
 
-    div.card {
-        color: var(--dark-text-color);
-        background-color: var(--dark-background-color);
-    }
-
-    div.card h1, div.slim-card h1 {
+    div.card h1,
+    div.slim-card h1 {
         background-color: var(--dark-text-color);
         color: var(--dark-main-color);
     }
@@ -483,26 +452,5 @@ a:active {
         color: var(--dark-main-color);
         background-color: var(--dark-background-color);
         border-color: var(--dark-main-color);
-    }
-
-    /* Inverted colors */
-    body.inverted,
-    body.inverted div.card h1, body.inverted div.slim-card h1 {
-        background-color: var(--dark-main-color);
-        color: var(--dark-text-color);
-    }
-
-    body.inverted header a {
-        color: var(--dark-text-color);
-    }
-
-    body.inverted div.card-content {
-        color: var(--dark-main-color);
-    }
-
-    body.inverted div.card, body.inverted div.slim-card,
-    body.inverted div.card-content a {
-        color: var(--dark-main-color);
-        background-color: var(--dark-background-color);
     }
 }
