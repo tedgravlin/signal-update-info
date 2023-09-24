@@ -396,6 +396,10 @@ a:active {
     body {
         background-color: var(--dark-background-color);
     }
+    
+    footer {
+        color: var(--dark-main-color);
+    }
 
     div.card,
     div.slim-card {
