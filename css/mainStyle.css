@@ -186,16 +186,19 @@ div.article-preview h1 {
     font-size: 2.5vw;
 }
 
-div.article-preview:hover {
-    color: white;
-    background-color: var(--light-main-color);
-    border: 3px solid white;
-}
-
-div.article-preview:hover h1 {
-    background-color: var(--light-main-color);
-    color: white;
-}
+    /* Targeting devices with mouse cursor and :hover */
+    @media(hover: hover) and (pointer: fine) {
+        div.article-preview:hover {
+            color: white;
+            background-color: var(--light-main-color);
+            border: 3px solid white;
+        }
+        
+        div.article-preview:hover h1 {
+            background-color: var(--light-main-color);
+            color: white;
+        }
+    }
 
 div.article-header h1,
 div.article-header p {
@@ -439,12 +442,16 @@ a:active {
         background-color: var(--dark-text-color);
     }
 
-    div.article-preview:hover,
-    div.article-preview:hover h1 {
-        background-color: var(--dark-main-color);
-        color: var(--dark-text-color);
-        border-color: var(--dark-text-color);
+    /* Targeting devices with mouse cursor and :hover */
+    @media(hover: hover) and (pointer: fine) {
+        div.article-preview:hover,
+        div.article-preview:hover h1 {
+            background-color: var(--dark-main-color);
+            color: var(--dark-text-color);
+            border-color: var(--dark-text-color);
+        }
     }
+
 
     input[type=button].platform-selected {
         color: var(--dark-text-color);
