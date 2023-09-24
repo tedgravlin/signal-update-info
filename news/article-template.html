@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <!-- Import CSS -->
+    <!-- Import CSS and Scripts-->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/light-theme.css">
     <link rel="stylesheet" href="/css/dark-theme.css">
+    <script src="/scripts/theme.js"></script>
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
@@ -29,7 +30,8 @@
     <header>
         <a href="/index.html">
             <h1 class="site-title">Signal Update Info</h1>
-        </a>        
+        </a>
+        <img class="theme-button-desktop" id="theme-button-desktop" src="/assets/images/icons/theme-auto.svg">
         <div class="site-navigation">
             <a href="/releases.html">
                 Releases
@@ -66,6 +68,10 @@
         <a href="">RSS</a>
         <p>-</p>
         <a href="https://github.com/tedgravlin/signal-update-info">GitHub</a>
+        <div class="theme-button-mobile "id="theme-button-mobile">
+            <p>Theme:</p>
+            <img class="theme-icon-mobile" id="theme-icon-mobile" src="/assets/images/icons/theme-auto.svg">
+        </div>
     </footer>
 </body>
 

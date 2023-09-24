@@ -265,7 +265,7 @@ a.noshow:hover {
 
     div.theme-button-mobile {
         display: block;
-        padding: 0.5em;
+        padding: 0.30em 0.5em 0.5em 0.5em;
         border: 2px solid var(--main-color);
         border-radius: 24px;
         margin: auto;
