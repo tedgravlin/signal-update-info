@@ -2,16 +2,16 @@ const url_params = new URLSearchParams(window.location.search);
 
 // On page load, show the right platform
 window.addEventListener("load", (event) => {
-    let hash = window.location.hash.substring(1);
-    switchRelease(hash);  
+    let platform = window.location.hash.substring(1);
+    switchRelease(platform);  
 });
 
 
 // Switches platform
 function switchRelease(platform) {
-    let android_container = document.getElementById("android");
-    let ios_container = document.getElementById("ios");
-    let desktop_container = document.getElementById("desktop");
+    let android_container = document.getElementById("android-container");
+    let ios_container = document.getElementById("ios-container");
+    let desktop_container = document.getElementById("desktop-container");
     let android_button = document.getElementById("android-button");
     let ios_button = document.getElementById("ios-button");
     let desktop_button = document.getElementById("desktop-button");
