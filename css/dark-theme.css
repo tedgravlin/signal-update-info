@@ -1,77 +1,77 @@
-:root {
-    --dark-main-color: #9db1ff;
-    --dark-background-color: #181d44;
-    --dark-text-color: #182142;
-}
-
 /* Dark mode colors */
 @media (prefers-color-scheme: dark) {
+    :root {
+        --main-color: #9db1ff;
+        --background-color: #181d44;
+        --text-color: #182142;
+    }
+
     body {
-        background-color: var(--dark-background-color);
+        background-color: var(--background-color);
     }
     
-    footer {
-        color: var(--dark-main-color);
+    footer a, footer a:visited, footer a:active {
+        color: var(--main-color);
     }
 
     div.card,
     div.slim-card {
-        color: var(--dark-text-color);
-        background-color: var(--dark-main-color);
+        color: var(--text-color);
+        background-color: var(--main-color);
     }
 
     header,
     header a:visited {
-        color: var(--dark-main-color);
+        color: var(--main-color);
     }
 
     div.card-content,
     div.card-content a {
-        color: var(--dark-text-color);
+        color: var(--text-color);
     }
 
     div.card h1,
     div.slim-card h1 {
-        background-color: var(--dark-text-color);
-        color: var(--dark-main-color);
+        background-color: var(--text-color);
+        color: var(--main-color);
     }
 
     div.card-content-grid p,
     div.card-content-grid a {
-        color: var(--dark-text-color);
+        color: var(--text-color);
     }
 
     div.article-preview {
-        background-color: var(--dark-text-color);
-        border-color: var(--dark-text-color);
-        color: var(--dark-main-color);
+        background-color: var(--text-color);
+        border-color: var(--text-color);
+        color: var(--main-color);
     }
 
     div.article-preview h1 {
-        color: var(--dark-main-color);
-        background-color: var(--dark-text-color);
+        color: var(--main-color);
+        background-color: var(--text-color);
     }
 
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
         div.article-preview:hover,
         div.article-preview:hover h1 {
-            background-color: var(--dark-main-color);
-            color: var(--dark-text-color);
-            border-color: var(--dark-text-color);
+            background-color: var(--main-color);
+            color: var(--text-color);
+            border-color: var(--text-color);
         }
     }
 
 
     input[type=button].platform-selected {
-        color: var(--dark-text-color);
-        background-color: var(--dark-main-color);
+        color: var(--text-color);
+        background-color: var(--main-color);
     }
 
     input[type=button].platform-unselected,
     input[type=button].no-fill {
-        color: var(--dark-main-color);
-        background-color: var(--dark-background-color);
-        border-color: var(--dark-main-color);
+        color: var(--main-color);
+        background-color: var(--background-color);
+        border-color: var(--main-color);
     }
 }
