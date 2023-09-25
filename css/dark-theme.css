@@ -15,6 +15,7 @@
         filter: var(--main-color-filter);
     }
 
+
     footer {
         color: var(--main-color);
     }
@@ -82,5 +83,15 @@
         color: var(--main-color);
         background-color: var(--background-color);
         border-color: var(--main-color);
+    }
+
+    a.noshow,
+    a.noshow:hover {
+        color: inherit;
+    }
+
+    a,
+    a:active {
+        color: inherit;
     }
 }

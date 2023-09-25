@@ -225,15 +225,12 @@ input[type=button] {
 input[type=button].platform-selected,
 input[type=button].platform-unselected {
     border-radius: 24px;
+    border: 2px solid transparent;
     padding: 0.25em 0em 0.25em 0em;
     font-family: league-spartan;
     font-size: 1.5rem;
     cursor: pointer;
     width: 100%
-}
-
-input[type=button].platform-selected {
-    border: 2px solid transparent;
 }
 
 /* Text */
