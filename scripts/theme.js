@@ -14,7 +14,7 @@ window.addEventListener("load", (event) => {
     }
     setTheme(stored_theme);
     theme_button_desktop.setAttribute('value', stored_theme);
-    theme_button_mobile.setAttribute('src', './assets/images/icons/theme-auto.svg');
+    theme_button_mobile.setAttribute('src', '/assets/images/icons/theme-auto.svg');
 
     // Listen for a click on the button 
     theme_button_desktop.addEventListener("click", function () {
