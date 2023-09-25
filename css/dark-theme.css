@@ -14,6 +14,10 @@
     img.theme-button-desktop, img.theme-icon-mobile {
         filter: var(--main-color-filter);
     }
+
+    footer {
+        color: var(--main-color);
+    }
     
     footer a, footer a:visited, footer a:active {
         color: var(--main-color);

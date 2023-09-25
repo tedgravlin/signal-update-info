@@ -19,6 +19,10 @@
         color: var(--main-color);
     }
 
+    footer a, footer a:visited, footer a:active {
+        color: var(--main-color);
+    }
+
     header,
     header a:visited {
         color: var(--main-color);
