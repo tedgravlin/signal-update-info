@@ -49,8 +49,8 @@ function setTheme(theme) {
     const theme_icon_mobile = document.getElementById("theme-icon-mobile");
 
     if (theme === 'auto') {
-        theme_button_desktop.setAttribute('src', './assets/images/icons/theme-auto.svg');
-        theme_icon_mobile.setAttribute('src', './assets/images/icons/theme-auto.svg');
+        theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-auto.svg');
+        theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-auto.svg');
         localStorage.setItem('theme','auto');
         root.style.removeProperty('--main-color');
         root.style.removeProperty('--background-color');
@@ -59,8 +59,8 @@ function setTheme(theme) {
     }
     // If the system theme is dark, set to light
     else if (theme === 'light') {
-        theme_button_desktop.setAttribute('src', './assets/images/icons/theme-light.svg');
-        theme_icon_mobile.setAttribute('src', './assets/images/icons/theme-light.svg');
+        theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-light.svg');
+        theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-light.svg');
         localStorage.setItem('theme', 'light');
         root.style.setProperty('--main-color', '#4166f5');
         root.style.setProperty('--background-color', 'white');
@@ -69,8 +69,8 @@ function setTheme(theme) {
     }
     // If the system theme is light, set to dark
     else if (theme === 'dark') {
-        theme_button_desktop.setAttribute('src', './assets/images/icons/theme-dark.svg');
-        theme_icon_mobile.setAttribute('src', './assets/images/icons/theme-dark.svg');
+        theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-dark.svg');
+        theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-dark.svg');
         localStorage.setItem('theme', 'dark');
         root.style.setProperty('--main-color', '#9db1ff');
         root.style.setProperty('--background-color', '#181d44');
