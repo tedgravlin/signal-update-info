@@ -27,7 +27,7 @@ function switchRelease(platform) {
         ios_button.className = "platform-unselected";
         desktop_button.className = "platform-unselected";
         // URL
-        window.location.hash = "android";
+        window.location.replace('#' + "android");
     }
     // iOS
     if (platform == 'ios') {
@@ -40,7 +40,7 @@ function switchRelease(platform) {
         ios_button.className = "platform-selected";
         desktop_button.className = "platform-unselected";
         // URL
-        window.location.hash = "ios";
+        window.location.replace('#' + "ios");
     }
     // Desktop
     if (platform == 'desktop') {
@@ -53,6 +53,6 @@ function switchRelease(platform) {
         ios_button.className = "platform-unselected";
         desktop_button.className = "platform-selected";
         // URL
-        window.location.hash = "desktop";
+        window.location.replace('#' + "desktop");
     }
 }
