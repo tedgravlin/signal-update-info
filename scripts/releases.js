@@ -19,13 +19,13 @@ function switchRelease(platform) {
     // Android
     if (platform == 'android' || platform == "") {
         // Containers
-        android_container.style.display = "block";
+        android_container.style.display = "grid";
         ios_container.style.display = "none";
         desktop_container.style.display = "none";
         // Buttons
-        android_button.className = "platform-selected";
-        ios_button.className = "platform-unselected";
-        desktop_button.className = "platform-unselected";
+        android_button.className = "platform-selected left";
+        ios_button.className = "platform-unselected middle";
+        desktop_button.className = "platform-unselected right";
         // URL
         window.location.replace('#' + "android");
     }
@@ -33,12 +33,12 @@ function switchRelease(platform) {
     if (platform == 'ios') {
         // Containers
         android_container.style.display = "none";
-        ios_container.style.display = "block";
+        ios_container.style.display = "grid";
         desktop_container.style.display = "none";
         // Buttons
-        android_button.className = "platform-unselected";
-        ios_button.className = "platform-selected";
-        desktop_button.className = "platform-unselected";
+        android_button.className = "platform-unselected left";
+        ios_button.className = "platform-selected middle";
+        desktop_button.className = "platform-unselected right";
         // URL
         window.location.replace('#' + "ios");
     }
@@ -47,11 +47,11 @@ function switchRelease(platform) {
         // Containers
         android_container.style.display = "none";
         ios_container.style.display = "none";
-        desktop_container.style.display = "block";
+        desktop_container.style.display = "grid";
         // Buttons
-        android_button.className = "platform-unselected";
-        ios_button.className = "platform-unselected";
-        desktop_button.className = "platform-selected";
+        android_button.className = "platform-unselected left";
+        ios_button.className = "platform-unselected middle";
+        desktop_button.className = "platform-selected right";
         // URL
         window.location.replace('#' + "desktop");
     }

@@ -79,6 +79,21 @@ div.slim-card {
     padding: 1em 2em 2em 2em;
 }
 
+div.release-card {
+    display: flex;
+    border-radius: 24px;
+    padding: 1em;
+}
+
+div.release-card * {
+    display: inline-block;
+    margin: auto;
+}
+
+div.release-card img {
+    width: 25px;
+}
+
 div.slim-card {
     display: inline-block;
     border-radius: 36px;
@@ -104,10 +119,23 @@ div.slim-card h1 {
 
 div.card-container,
 div.two-card-container,
-div.release-card-container {
+div.release-page-card-container {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 3em 1em 3em;
+}
+
+div.releases-card-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+div.platform-container {
+    background-color: var(--main-color);
+    border-radius: 24px;
+    padding: 1em;
 }
 
 div.two-card-container {
@@ -115,7 +143,7 @@ div.two-card-container {
     grid-column-gap: 1em;
 }
 
-div.release-card-container {
+div.release-page-card-container {
     grid-template-columns: auto;
     row-gap: 1em;
 }
@@ -186,7 +214,6 @@ div.platform-selector {
     display: grid;
     width: 30%;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 0.5em;
     margin: 0 3em 1em 3em;
 }
 
@@ -226,6 +253,7 @@ input[type=button] {
 
 input[type=button].platform-selected,
 input[type=button].platform-unselected {
+    height: 2.25em;
     border-radius: 24px;
     border: 2px solid transparent;
     padding: 0.25em;
@@ -233,6 +261,22 @@ input[type=button].platform-unselected {
     font-size: 1.75vw;
     cursor: pointer;
     width: 100%
+}
+
+input[type=button].left {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none;
+}
+
+input[type=button].middle {
+    border-radius: 0px;
+}
+
+input[type=button].right {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
 }
 
 /* Text */
@@ -292,7 +336,7 @@ a.noshow:hover {
     /* Card conainters */
     div.card-container,
     div.two-card-container,
-    div.release-card-container {
+    div.release-page-card-container {
         margin-left: auto;
         margin-right: auto;
         justify-items: center;
@@ -303,9 +347,14 @@ a.noshow:hover {
         row-gap: 1em;
     }
 
-    div.release-card-container {
+    div.release-page-card-container {
         grid-template-columns: auto;
         row-gap: 1em;
+    }
+
+    div.releases-card-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0.5em;
     }
 
     div.article-header p {
@@ -354,8 +403,8 @@ a.noshow:hover {
 
     /* Buttons */
     div.platform-selector {
-        width: 95%;
-        margin: 0 auto 1em auto;
+        width: 100%;
+        margin: 0 auto 2em auto;
     }
 
     /* Text */
