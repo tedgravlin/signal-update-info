@@ -86,7 +86,7 @@
     input[type=button].platform-selected {
         color: var(--main-color);
         border-color: var(--text-color);
-        background-color: #181d44bc;
+        background-color: #181d44ca;
     }
 
     input[type=button].platform-unselected {

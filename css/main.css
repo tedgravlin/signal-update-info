@@ -135,7 +135,8 @@ div.releases-card-container {
 div.platform-container {
     background-color: var(--main-color);
     border-radius: 24px;
-    padding: 1em;
+    padding: 1em 2em 2em 2em;
+    margin: 0 3em 1em 3em;
 }
 
 div.two-card-container {
@@ -214,7 +215,7 @@ div.platform-selector {
     display: grid;
     width: 30%;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 3em 1em 3em;
+    margin: 1em 3em 1em 0em;
 }
 
 div.platform-selector a {
@@ -341,6 +342,13 @@ a.noshow:hover {
         margin-right: auto;
         justify-items: center;
     }
+
+    div.platform-container {
+        padding: 1em;
+        width: 90%;
+        margin: auto;
+    }
+    
 
     div.two-card-container {
         grid-template-columns: 1fr;
