@@ -3,8 +3,10 @@
     :root {
         --main-color: white;
         --background-color: #4166f5;
+        --on-main-bg-color: #4165f5e8;
         --text-color: #4166f5;
-        --main-color-filter: invert(30%) sepia(84%) saturate(1834%) hue-rotate(219deg) brightness(98%) contrast(96%);
+        --platform-selected-bg: #4165f5e6;
+        --main-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
         --text-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%);
     }
 
@@ -44,6 +46,11 @@
     div.release-card {
         color: var(--text-color);
         background-color: var(--main-color);
+    }
+
+    div.release-card {
+        color: var(--main-color);
+        background-color: var(--on-main-bg-color);
     }
 
     div.release-card img {
@@ -91,12 +98,17 @@
     }
 
     input[type=button].platform-selected {
-        color: var(--text-color);
-        background-color: var(--main-color);
-        border: 2px solid transparent;
+        color: var(--main-color);
+        border-color: var(--text-color);
+        background-color: var(--platform-selected-bg);
     }
 
-    input[type=button].platform-unselected,
+    input[type=button].platform-unselected {
+        color: var(--text-color);
+        background-color: var(--main-color);
+        border-color: var(--text-color);
+    }
+    
     input[type=button].no-fill {
         color: var(--main-color);
         background-color: var(--text-color);

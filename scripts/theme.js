@@ -56,10 +56,13 @@ function setTheme(theme) {
             theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-light.svg');
             theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-light.svg');
             localStorage.setItem('theme', 'light');
-            root.style.setProperty('--main-color', '#4166f5');
-            root.style.setProperty('--background-color', 'white');
-            root.style.setProperty('--text-color', 'white');
-            root.style.setProperty('--main-color-filter','invert(30%) sepia(84%) saturate(1834%) hue-rotate(219deg) brightness(98%) contrast(96%)');
+            root.style.setProperty('--main-color', 'white');
+            root.style.setProperty('--background-color', '#4166f5');
+            root.style.setProperty('--on-main-bg-color', '#4165f5e8');
+            root.style.setProperty('--text-color', '#4166f5');
+            root.style.setProperty('--platform-selected-bg', '#4165f5e6');
+            root.style.setProperty('--main-color-filter','brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)');
+            root.style.setProperty('--text-color-filter', 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%)');
             break;
         case 'dark':
             theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-dark.svg');
@@ -67,8 +70,11 @@ function setTheme(theme) {
             localStorage.setItem('theme', 'dark');
             root.style.setProperty('--main-color', '#9db1ff');
             root.style.setProperty('--background-color', '#181d44');
-            root.style.setProperty('--text-color', '#181d44');
+            root.style.setProperty('--on-main-bg-color', '#181d44dd');
+            root.style.setProperty('--text-color', '#182142');
+            root.style.setProperty('--platform-selected-bg', '#181d44ca');
             root.style.setProperty('--main-color-filter','invert(74%) sepia(95%) saturate(1952%) hue-rotate(192deg) brightness(101%) contrast(100%)');
+            root.style.setProperty('--text-color-filter', 'brightness(0) saturate(100%) invert(87%) sepia(25%) saturate(7141%) hue-rotate(192deg) brightness(100%) contrast(103%)');
             break;
     }
 }

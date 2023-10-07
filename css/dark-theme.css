@@ -3,9 +3,11 @@
     :root {
         --main-color: #9db1ff;
         --background-color: #181d44;
+        --on-main-bg-color: #181d44dd; 
         --text-color: #182142;
+        --platform-selected-bg: #181d44ca;
         --main-color-filter: invert(74%) sepia(95%) saturate(1952%) hue-rotate(192deg) brightness(101%) contrast(100%);
-        --text-color-filter: brightness(0) saturate(100%) invert(87%) sepia(25%) saturate(7141%) hue-rotate(192deg) brightness(100%) contrast(103%);;
+        --text-color-filter: brightness(0) saturate(100%) invert(87%) sepia(25%) saturate(7141%) hue-rotate(192deg) brightness(100%) contrast(103%);
     }
 
     body {
@@ -33,7 +35,7 @@
 
     div.release-card {
         color: var(--main-color);
-        background-color: #181d44dd;
+        background-color: var(--on-main-bg-color);
     }
 
     div.release-card img {
@@ -86,7 +88,7 @@
     input[type=button].platform-selected {
         color: var(--main-color);
         border-color: var(--text-color);
-        background-color: #181d44ca;
+        background-color: var(--platform-selected-bg);
     }
 
     input[type=button].platform-unselected {
