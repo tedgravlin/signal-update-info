@@ -117,7 +117,7 @@ div.slim-card h1 {
     width: fit-content;
     border-radius: 24px;
     padding: 0.25em 0.5em 0.15em 0.5em;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 div.card-container,
@@ -154,7 +154,7 @@ div.release-page-card-container {
 
 div.card-content {
     margin-left: 0.5em;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 div.card-content p,
@@ -168,7 +168,7 @@ div.card-content-grid {
     grid-template-columns: min-content min-content min-content;
     margin-left: 0.25em;
     column-gap: 1em;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 div.card-content-grid p,
@@ -210,7 +210,7 @@ div.article-header p {
 }
 
 div.article-header p {
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin-left: 0.5em;
 }
 

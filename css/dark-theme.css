@@ -27,7 +27,7 @@
 
     div.card,
     div.slim-card {
-        color: var(--main-color);
+        color: var(--text-color);
         background-color: var(--main-color);
     }
 
