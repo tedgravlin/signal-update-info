@@ -100,7 +100,7 @@ div.release-card img {
 div.slim-card {
     display: inline-block;
     border-radius: 36px;
-    padding: 0em 1em 0em 2em;
+    padding: 0em 1em 0em 1em;
 }
 
 div.slim-card a {
@@ -154,7 +154,7 @@ div.release-page-card-container {
 
 div.card-content {
     margin-left: 0.5em;
-    font-size: 2vw;
+    font-size: 1.75vw;
 }
 
 div.card-content p,
@@ -425,7 +425,7 @@ a.noshow:hover {
     /* Text */
     div.card h1,
     div.slim-card h1 {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     div.card-content,

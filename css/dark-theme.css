@@ -78,6 +78,7 @@
     @media(hover: hover) and (pointer: fine) {
         div.article-preview:hover,
         div.article-preview:hover h1 {
+            transition: 0.1s;
             background-color: var(--main-color);
             color: var(--text-color);
             border-color: var(--text-color);

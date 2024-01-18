@@ -86,12 +86,14 @@
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
         div.article-preview:hover {
+            transition: 0.1s;
             color: var(--text-color);
             background-color: var(--main-color);
             border: 3px solid var(--text-color);;
         }
 
         div.article-preview:hover h1 {
+            transition: 0.1s;
             background-color: var(--main-color);
             color: var(--text-color);
         }
