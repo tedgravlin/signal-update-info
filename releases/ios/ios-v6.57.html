@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/light-theme.css">
     <link rel="stylesheet" href="/css/dark-theme.css">
-    <script src="/scripts/releases.js"></script>
     <script src="/scripts/theme.js"></script>
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>Android - Signal Update Info</title>
+    <title>Signal Update Info</title>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
@@ -34,7 +33,7 @@
         </a>
         <img class="theme-button-desktop" id="theme-button-desktop" src="/assets/images/icons/theme-auto.svg">
         <div class="site-navigation">
-            <a class="selected-page" href="">
+            <a class="selected-page" href="/releases.html#ios">
                 Releases
             </a>
             <a href="/news.html">
@@ -50,41 +49,46 @@
     </header>
     <!-- Main Page -->
     <main>
-        <!-- Android -->
-        <div class="platform-container">
-            <div class="platform-selector">
-                <input id="android-button" class="platform-selected left" type="button"
-                    onclick="switchRelease('android')" value="Android">
-                <input id="ios-button" class="platform-unselected middle" type="button" onclick="switchRelease('ios')"
-                    value="iOS">
-                <input id="desktop-button" class="platform-unselected right" type="button"
-                    onclick="switchRelease('desktop')" value="Desktop">
+        <div class="release-page-card-container">
+            <!-- Release Info Card -->
+            <div class="card">
+                <h1>iOS v6.57</h1>
+                <div class="card-content">
+                    <p>Official Release Notes</p>
+                    <ul>
+                        <li>If resolving a few small bugs counts as a New Year’s resolution, then 2024 is off to a
+                            fantastic start.</li>
+                    </ul>
+                    <br>
+                    <p>Notable Changes</p>
+                    <ul>
+                        <li>iDEAL payments have been enabled in production <a target="_blank"
+                                href="https://github.com/signalapp/Signal-iOS/commit/df7b86f2900cad6122957411c2cf7ed994409df2">[src]</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Upcoming Features</p>
+                    <ul>
+                        <li>The calls tab feature from Android has been enabled for internal testing <a target="_blank"
+                            href="https://github.com/signalapp/Signal-iOS/commit/b0b8f8bc21148ebf165516c220e1a616da6ab034">[src]</a>
+                        </li>
+                        <li>
+                            Work done on username discriminator editing <a target="_blank"
+                            href="https://github.com/signalapp/Signal-iOS/commit/f8b85e1e3b22dbc4d4d515916067f2f385182b7a">[src]</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="android-container" class="releases-card-container">
-                <a class="noshow" href="/releases/android/android-v6.32.html">
-                    <div class="release-card">
-                        <img src="/assets/images/icons/android.svg">
-                        <h3>v6.32</h3>
-                    </div>
-                </a>
-            </div>
-            <!-- iOS -->
-            <div id="ios-container" class="releases-card-container">
-                <a class="noshow" href="/releases/ios/ios-v6.57.html">
-                    <div class="release-card">
-                        <img src="/assets/images/icons/ios.svg">
-                        <h3>v6.57</h3>
-                    </div>
-                </a>
-            </div>
-            <!-- Desktop -->
-            <div id="desktop-container" class="releases-card-container">
-                <a class="noshow" href="/releases/desktop/desktop-release-template.html">
-                    <div class="release-card">
-                        <img src="/assets/images/icons/desktop.svg">
-                        <h3>v6.30</h3>
-                    </div>
-                </a>
+            <!-- Resources Card -->
+            <div class="slim-card">
+                <h1>Resources</h1>
+                <div class="card-content">
+                    <a target="_blank"
+                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-ios-6-57-release/58352?u=salt505">Beta
+                        thread</a>
+                    <a target="_blank"
+                        href="https://github.com/signalapp/Signal-iOS/compare/6.56.0.8-beta...6.57.0.9-beta">Commits</a>
+                </div>
             </div>
         </div>
     </main>
