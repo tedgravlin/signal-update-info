@@ -10,19 +10,19 @@
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>iOS v6.57 - Signal Update Info</title>
+    <title>Android v6.44 - Signal Update Info</title>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
     <!-- Meta -->
-    <meta name="title" property="og:title" content="Signal Update Info" />
+    <meta name="title" property="og:title" content="Signal Update Info"/>
     <meta name="description" property="og:description" content="Signal news and updates. 
-        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
-    <meta name="keywords" content="signal update info,signal updates,signal" />
-    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://signalupdateinfo.com/" />
+        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app."/>
+    <meta name="keywords" content="signal update info,signal updates,signal"/>
+    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://signalupdateinfo.com/"/>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
         </a>
         <img class="theme-button-desktop" id="theme-button-desktop" src="/assets/images/icons/theme-auto.svg">
         <div class="site-navigation">
-            <a class="selected-page" href="/releases.html#ios">
+            <a class="selected-page" href="/releases.html">
                 Releases
             </a>
             <a href="/news.html">
@@ -52,29 +52,25 @@
         <div class="release-page-card-container">
             <!-- Release Info Card -->
             <div class="card">
-                <h1>iOS v6.57</h1>
+                <h1>Android v6.44</h1>
                 <div class="card-content">
                     <p>Official Release Notes</p>
-                    <ul>
-                        <li>If resolving a few small bugs counts as a New Year’s resolution, then 2024 is off to a
-                            fantastic start.</li>
-                    </ul>
-                    <br>
-                    <p>Notable Changes</p>
-                    <ul>
-                        <li>iDEAL payments have been enabled in production <a target="_blank"
-                                href="https://github.com/signalapp/Signal-iOS/commit/df7b86f2900cad6122957411c2cf7ed994409df2">[src]</a>
-                        </li>
-                    </ul>
+                        <ul>
+                            <li>Now you can cancel attachment uploads while they're in progress. If a transfer is slowed because you're on the road (in airplane mode?) 
+                                or the mediocre hotel WiFi is about to implode, you can wait to reload when more available bandwidth is bestowed.</li>
+                            <li>We also fixed a bug that sometimes caused the “back” gesture to interrupt video trimming, and added notification profile support for 
+                                Signal call events so that you can easily see when an incoming call was missed because a notification profile was enabled for that chat.</li>
+                        </ul>
                     <br>
                     <p>Upcoming Features</p>
                     <ul>
-                        <li>The calls tab feature from Android has been enabled for internal testing <a target="_blank"
-                            href="https://github.com/signalapp/Signal-iOS/commit/b0b8f8bc21148ebf165516c220e1a616da6ab034">[src]</a>
+                        <li>
+                            Work done on usernames: Add ability to set custom username discriminators
+                            <a href="https://github.com/signalapp/Signal-Android/commit/17a6fcafa18ca7e6a467c8eb08a0a99420cd436c">[src]</a>
                         </li>
                         <li>
-                            Work done on username discriminator editing <a target="_blank"
-                            href="https://github.com/signalapp/Signal-iOS/commit/f8b85e1e3b22dbc4d4d515916067f2f385182b7a">[src]</a>
+                            Work done on group call reactions: Change audio tone for raise hand
+                            <a href="https://github.com/signalapp/Signal-Android/commit/c16bf65a8010dfe54312ddd6a3636c4bcabdb0dc">[src]</a>
                         </li>
                     </ul>
                 </div>
@@ -83,11 +79,8 @@
             <div class="slim-card">
                 <h1>Resources</h1>
                 <div class="card-content">
-                    <a target="_blank"
-                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-ios-6-57-release/58352?u=salt505">Beta
-                        thread</a>
-                    <a target="_blank"
-                        href="https://github.com/signalapp/Signal-iOS/compare/6.56.0.8-beta...6.57.0.9-beta">Commits</a>
+                    <a href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-6-44-release/58250?u=salt505">Beta thread</a>
+                    <a href="https://github.com/signalapp/Signal-Android/compare/v6.43.2...v6.44.0">Commits</a>
                 </div>
             </div>
         </div>
@@ -97,7 +90,7 @@
         <a target="_blank" href="https://mastodon.world/@SignalUpdateInfo/">Mastodon</a>
         <p>-</p>
         <a target="_blank" href="https://github.com/tedgravlin/signal-update-info">GitHub</a>
-        <div class="theme-button-mobile " id="theme-button-mobile">
+        <div class="theme-button-mobile "id="theme-button-mobile">
             <p>Theme:</p>
             <img class="theme-icon-mobile" id="theme-icon-mobile" src="/assets/images/icons/theme-auto.svg">
         </div>

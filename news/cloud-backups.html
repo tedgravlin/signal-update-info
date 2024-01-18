@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Import CSS and Scripts-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/light-theme.css">
+    <link rel="stylesheet" href="/css/dark-theme.css">
+    <script src="/scripts/theme.js"></script>
+    <!-- Scale page to display width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>Cloud Backups - Signal Update Info</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <!-- Meta -->
+    <meta name="title" property="og:title" content="Signal Update Info"/>
+    <meta name="description" property="og:description" content="Signal news and updates. 
+        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app."/>
+    <meta name="keywords" content="signal update info,signal updates,signal"/>
+    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://signalupdateinfo.com/"/>
+</head>
+
+<body>
+    <!-- Site Header and Navigation-->
+    <header>
+        <a href="/index.html">
+            <h1 class="site-title">Signal Update Info</h1>
+        </a>
+        <img class="theme-button-desktop" id="theme-button-desktop" src="/assets/images/icons/theme-auto.svg">
+        <div class="site-navigation">
+            <a href="/releases.html">
+                Releases
+            </a>
+            <a class="selected-page" href="/news.html">
+                News
+            </a>
+            <a href="/about.html">
+                About
+            </a>
+            <a href="/donate.html">
+                Donate
+            </a>
+        </div>
+    </header>
+    <!-- Main Page -->
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <div class="article-header">
+                    <h1>Cloud Backups</h1>
+                    <p>Status: In Development</p>
+                </div>
+                <div class="card-content">
+                    <p>
+                        While there hasn't been any official announcement, it appears that Signal is currently 
+                        working on cloud backups for iOS and Android.
+                    </p>
+                    <br>
+                    <p>
+                        This feature would allow you to create cloud backups of your messages that you could import on another device.
+                        Cloud backups could solve one of the most highly-requested Signal iOS feature requests: <a target="_blank" href="https://community.signalusers.org/t/ios-backup-keeping-message-history-when-switching-phones/1736">iOS: Backup / keeping message history when switching phones</a>
+                        .
+                    </p>
+                    <br>
+                    <p>
+                        One of the first appearances of this feature was in a <a target="_blank" href="https://github.com/signalapp/Signal-iOS/commit/b1b1f8cc05cad53dbf872ed18c4315d8b25a5de4">commit to Signal-iOS on October 20, 2023.</a>
+                        If we look at the code below, there is a feature flag called <code>cloudBackupFileAlpha</code> and two strings <code>"Create backup file"</code> and <code>"Import backup file"</code>, both of which hint to an upcoming cloud backup feature.
+                    </p>
+                    <div class="code-container">
+                        <iframe frameborder="0" scrolling="no" style="width:100%; height:244px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fsignalapp%2FSignal-iOS%2Fblob%2Fb1b1f8cc05cad53dbf872ed18c4315d8b25a5de4%2FSignal%2Fsrc%2FViewControllers%2FAppSettings%2FInternal%2FTestingViewController.swift%23L74-L81&style=androidstudio&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on"></iframe>                      
+                    </div>
+                    <p>
+                        There have been a few more commits to both the Android and iOS clients,
+                        but we still don't know exactly how cloud backups will work. More details will be posted when we find out more!
+                        Developing features can take a while, especially with the level of security and privacy protections required for Signal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="spacer"></div>
+    <footer>
+        <a target="_blank" href="https://mastodon.world/@SignalUpdateInfo/">Mastodon</a>
+        <p>-</p>
+        <a target="_blank" href="https://github.com/tedgravlin/signal-update-info">GitHub</a>
+        <div class="theme-button-mobile "id="theme-button-mobile">
+            <p>Theme:</p>
+            <img class="theme-icon-mobile" id="theme-icon-mobile" src="/assets/images/icons/theme-auto.svg">
+        </div>
+    </footer>
+</body>
+
+</html>
