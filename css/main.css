@@ -330,6 +330,12 @@ code {
     border-radius: 6px;
 }
 
+p.disclaimer {
+    font-size: 75%;
+    opacity: 75%;
+    margin-bottom: 0;
+}
+
 /* Mobile layout */
 @media (max-width: 500px) {
 
