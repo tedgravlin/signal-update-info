@@ -16,13 +16,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
     <!-- Meta -->
-    <meta name="title" property="og:title" content="Signal Update Info"/>
+    <meta name="title" property="og:title" content="Signal Update Info" />
     <meta name="description" property="og:description" content="Signal news and updates. 
-        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app."/>
-    <meta name="keywords" content="signal update info,signal updates,signal"/>
-    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://signalupdateinfo.com/"/>
+        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
+    <meta name="keywords" content="signal update info,signal updates,signal" />
+    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://signalupdateinfo.com/" />
 </head>
 
 <body>
@@ -57,28 +57,60 @@
                 </div>
                 <div class="card-content">
                     <p>
-                        While there hasn't been any official announcement, it appears that Signal is currently 
+                        There hasn't been any official announcement, but it appears that Signal is currently
                         working on cloud backups for iOS and Android.
+                        This feature would allow you to create cloud backups of your messages and media.
                     </p>
                     <br>
                     <p>
-                        This feature would allow you to create cloud backups of your messages that you could import on another device.
-                        Cloud backups could solve one of the most highly-requested Signal iOS feature requests: <a target="_blank" href="https://community.signalusers.org/t/ios-backup-keeping-message-history-when-switching-phones/1736">iOS: Backup / keeping message history when switching phones</a>
-                        .
+                        While we have known about cloud backups since <a target="_blank"
+                            href="https://github.com/signalapp/Signal-iOS/commit/b1b1f8cc05cad53dbf872ed18c4315d8b25a5de4">a
+                            commit to Signal-iOS</a> on October 20, 2023, a <a href="https://github.com/signalapp/Signal-Android/commit/1234c638369c705719553c0644c38af4a0198f53">recent commit </a> to Signal-Android has revealed
+                        many more details.
+                    </p>                    
+                    <h3>Free and Paid Plans</h3>
+                    <p>
+                        It looks like there will be both free and paid plans.
+                        The free plan will provide full message text backups but only media backups from the last 30 days.
+                        The paid plan will provide full message text and media backups with a storage limit of 1TB.
                     </p>
                     <br>
-                    <p>
-                        One of the first appearances of this feature was in a <a target="_blank" href="https://github.com/signalapp/Signal-iOS/commit/b1b1f8cc05cad53dbf872ed18c4315d8b25a5de4">commit to Signal-iOS on October 20, 2023.</a>
-                        If we look at the code below, there is a feature flag called <code>cloudBackupFileAlpha</code> and two strings <code>"Create backup file"</code> and <code>"Import backup file"</code>, both of which hint to an upcoming cloud backup feature.
-                    </p>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Price (Monthly)</th>
+                                <th>Text Backup</th>
+                                <th>Media Backup</th>
+                                <th>Storage</th>
+                            </tr>
+                            <tr>
+                                <td>Free Tier</td>
+                                <td>$0</td>
+                                <td>Yes</td>
+                                <td>Last 30 days</td>
+                                <td>Unknown</td>
+                            </tr>
+                            <tr>
+                                <td>Paid Tier</td>
+                                <td>$3</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>1TB</td>
+                            </tr>
+                        </table>
+                        <a class="table-source" href="https://github.com/signalapp/Signal-Android/blob/1234c638369c705719553c0644c38af4a0198f53/app/src/main/java/org/thoughtcrime/securesms/backup/v2/ui/MessageBackupsTypeSelectionScreen.kt#L161-L195">Source </a>
+                    </div>
+                    <h3>More Details</h3>
+                    <p>From the commit we also know that Signal backups will be end-to-end encrypted and completely optional, with the ability to delete them at anytime.</p>
                     <div class="code-container">
-                        <iframe frameborder="0" scrolling="no" style="width:100%; height:244px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fsignalapp%2FSignal-iOS%2Fblob%2Fb1b1f8cc05cad53dbf872ed18c4315d8b25a5de4%2FSignal%2Fsrc%2FViewControllers%2FAppSettings%2FInternal%2FTestingViewController.swift%23L74-L81&style=androidstudio&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on"></iframe>                      
+                        <iframe frameborder="0" scrolling="no" style="width:100%; height:311px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fsignalapp%2FSignal-Android%2Fblob%2F1234c638369c705719553c0644c38af4a0198f53%2Fapp%2Fsrc%2Fmain%2Fjava%2Forg%2Fthoughtcrime%2Fsecuresms%2Fbackup%2Fv2%2Fui%2FMessageBackupsEducationScreen.kt%23L98-110&style=androidstudio&type=code&showLineNumbers=on"></iframe>
                     </div>
                     <p>
-                        There have been a few more commits to both the Android and iOS clients,
-                        but we still don't know exactly how cloud backups will work. More details will be posted when we find out more!
-                        Developing features can take a while, especially with the level of security and privacy protections required for Signal.
+                        Cloud backups could significantly improve usability on all platforms by preventing complete data-loss in the event that you lose your phone or encounter some other issue.
                     </p>
+                    <br>
+                    <p>NOTE: This feature is under active development and all of these details are subject to change. Additionally, a feature like this could take a significant amount of time to complete, so please be patient!</p>
                 </div>
             </div>
         </div>
@@ -88,7 +120,7 @@
         <a target="_blank" href="https://mastodon.world/@SignalUpdateInfo/">Mastodon</a>
         <p>-</p>
         <a target="_blank" href="https://github.com/tedgravlin/signal-update-info">GitHub</a>
-        <div class="theme-button-mobile "id="theme-button-mobile">
+        <div class="theme-button-mobile " id="theme-button-mobile">
             <p>Theme:</p>
             <img class="theme-icon-mobile" id="theme-icon-mobile" src="/assets/images/icons/theme-auto.svg">
         </div>

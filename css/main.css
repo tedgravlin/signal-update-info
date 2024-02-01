@@ -44,7 +44,7 @@ footer p {
 
 /* Divs */
 header {
-    margin: 2em 0 3em 3em;
+    margin: 2em 0 2em 3em;
     font-weight: bold;
 }
 
@@ -157,6 +157,10 @@ div.card-content {
     font-size: 1.75vw;
 }
 
+div.card-content a {
+    text-decoration-thickness: 1px;
+}
+
 div.card-content p,
 ul {
     margin: 0;
@@ -214,9 +218,29 @@ div.article-header p {
     margin-left: 0.5em;
 }
 
+a.table-source {
+    font-size: 60%;
+}
+
+table {
+    font-weight: normal;
+    font-size: 75%;
+    margin: auto;
+    width: 100%;
+}
+
+div.table-container {
+    width: 100%;
+}
+
+th, td {
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    border: 2px solid;
+}
+
 div.code-container {
     width: auto;
-    margin: 0.5em auto 0.5em auto;
+    margin: 0.5em auto auto auto;
 }
 
 div.platform-selector {
@@ -442,7 +466,7 @@ code {
 
     div.card-content,
     div.card-content-grid {
-        font-size: 6vw;
+        font-size: 5vw;
         row-gap: 1em;
     }
 
