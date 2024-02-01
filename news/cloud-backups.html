@@ -64,16 +64,18 @@
                     <p>
                         While we have known about cloud backups since <a target="_blank"
                             href="https://github.com/signalapp/Signal-iOS/commit/b1b1f8cc05cad53dbf872ed18c4315d8b25a5de4">a
-                            commit to Signal-iOS</a> on October 20, 2023, a <a href="https://github.com/signalapp/Signal-Android/commit/1234c638369c705719553c0644c38af4a0198f53">recent commit </a> to Signal-Android has revealed
+                            commit to Signal-iOS</a> on October 20, 2023, a <a target="_blank" href="https://github.com/signalapp/Signal-Android/commit/1234c638369c705719553c0644c38af4a0198f53">recent commit </a> to Signal-Android has revealed
                         many more details.
                     </p>                    
                     <h3>Free and Paid Plans</h3>
                     <p>
-                        It looks like there will be both free and paid plans.
-                        The free plan will provide full message text backups but only media backups from the last 30 days.
-                        The paid plan will provide full message text and media backups with a storage limit of 1TB.
+                        It looks like there could be both free and paid plans.
+                        The free plan could provide full message text backups but only media backups from the last 30 days.
+                        The paid plan could provide full message text and media backups with a storage limit of 1TB.
                     </p>
                     <br>
+                    <i>Correction: It has been <a target="_blank" href="https://community.signalusers.org/t/encrypted-cloud-backups/2798/144?u=salt505">confirmed</a> that these plans are only test data. 
+                        They will change before release and were never meant to be actual plans.</i>
                     <div class="table-container">
                         <table>
                             <tr>
@@ -98,7 +100,7 @@
                                 <td>1TB</td>
                             </tr>
                         </table>
-                        <a class="table-source" href="https://github.com/signalapp/Signal-Android/blob/1234c638369c705719553c0644c38af4a0198f53/app/src/main/java/org/thoughtcrime/securesms/backup/v2/ui/MessageBackupsTypeSelectionScreen.kt#L161-L195">Source </a>
+                        <a class="table-source" target="_blank" href="https://github.com/signalapp/Signal-Android/blob/1234c638369c705719553c0644c38af4a0198f53/app/src/main/java/org/thoughtcrime/securesms/backup/v2/ui/MessageBackupsTypeSelectionScreen.kt#L161-L195">Source. (These details are subject to change)</a>
                     </div>
                     <h3>More Details</h3>
                     <p>From the commit we also know that Signal backups will be end-to-end encrypted and completely optional, with the ability to delete them at anytime.</p>
