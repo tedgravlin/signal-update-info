@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Import CSS and Scripts-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/light-theme.css">
+    <link rel="stylesheet" href="/css/dark-theme.css">
+    <script src="/scripts/theme.js"></script>
+    <!-- Scale page to display width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>Desktop v6.47 - Signal Update Info</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <!-- Meta -->
+    <meta name="title" property="og:title" content="Signal Update Info" />
+    <meta name="description" property="og:description" content="Signal news and updates. 
+        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
+    <meta name="keywords" content="signal update info,signal updates,signal" />
+    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://signalupdateinfo.com/" />
+</head>
+
+<body>
+    <!-- Site Header and Navigation-->
+    <header>
+        <a href="/index.html">
+            <h1 class="site-title">Signal Update Info</h1>
+        </a>
+        <img class="theme-button-desktop" id="theme-button-desktop" src="/assets/images/icons/theme-auto.svg">
+        <div class="site-navigation">
+            <a class="selected-page" href="/releases.html#desktop">
+                Releases
+            </a>
+            <a href="/news.html">
+                News
+            </a>
+            <a href="/about.html">
+                About
+            </a>
+            <a href="/donate.html">
+                Donate
+            </a>
+        </div>
+    </header>
+    <!-- Main Page -->
+    <main>
+        <div class="release-page-card-container">
+            <!-- Release Info Card -->
+            <div class="card">
+                <h1>Desktop v6.47</h1>
+                <div class="card-content">
+                    <p>Release Notes</p>
+                    <ul>
+                        <li>If you spend a lot of time trying to pick out the perfect emoji reaction for every
+                            situation, you'll be 🎉 to know that we fixed a bug with typing indicators that sometimes
+                            caused the emoji selection box to disappear while you were in the middle of pondering your
+                            choices.</li>
+                        <li>Signal will now match your selected title bar color on Microsoft Windows. When all of your
+                            windows in Windows look the same, that's a common theme.</li>
+                    </ul>
+                    <br>
+                    <p>Upcoming Features</p>
+                    <ul>
+                        <li>Work done on call reactions
+                            <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Desktop/commit/52d267f7b8e34a62a6dd697478f2bc7ad0b0ab84">[src]</a>
+                        </li>
+                        <li>Work done on usernames
+                            <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Desktop/commit/0630a593a326d648baad8385cc4396cb6257883d">[src]</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Other Changes</p>
+                    <ul>
+                        <li>Group calling improvements: Improve group call participants background, padding, margin
+                            <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Desktop/commit/a9df5923a30f1d625484bc9fe03b01ca5801a41e">[src]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Resources Card -->
+            <div class="slim-card">
+                <h1>Resources</h1>
+                <div class="card-content">
+                    <a target="_blank"
+                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-desktop-6-47-release/58592?u=salt505">Beta
+                        thread</a>
+                    <a target="_blank"
+                        href="https://github.com/signalapp/Signal-Desktop/compare/v6.46.0...v6.47.0-beta.2">Commits</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="spacer"></div>
+    <footer>
+        <a rel="me" target="_blank" href="https://mastodon.world/@SignalUpdateInfo">Mastodon</a>
+        <p>-</p>
+        <a target="_blank" href="https://github.com/tedgravlin/signal-update-info">GitHub</a>
+        <br>
+        <div class="theme-button-mobile " id="theme-button-mobile">
+            <p>Theme:</p>
+            <img class="theme-icon-mobile" id="theme-icon-mobile" src="/assets/images/icons/theme-auto.svg">
+        </div>
+        <p class="disclaimer">Signal Update Info is not affiliated with Signal and is not an official Signal website.
+        </p>
+    </footer>
+</body>
+
+</html>
