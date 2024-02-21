@@ -1,5 +1,3 @@
-const url_params = new URLSearchParams(window.location.search);
-
 // On page load, show the right platform
 window.addEventListener("load", (event) => {
     let platform = window.location.hash.substring(1);
