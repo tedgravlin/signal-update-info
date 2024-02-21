@@ -53,8 +53,8 @@
         <!-- Type Switcher -->
         <div class="platform-container">
             <div class="button-generator-selector">
-                <input id="username-button" class="platform-selected left" type="button" onclick="switchType('username')"
-                    value="Username">
+                <input id="username-button" class="platform-selected left" type="button"
+                    onclick="switchType('username')" value="Username">
                 <input id="phone-button" class="platform-unselected middle" type="button" onclick="switchType('phone')"
                     value="Phone">
                 <input id="group-button" class="platform-unselected right" type="button" onclick="switchType('group')"
@@ -62,12 +62,25 @@
             </div>
             <div class="button-username-container" id="button-username-container">
                 <p>username</p>
+                <input class="button-generator-input" id="username-link" type="text" placeholder="Username Link">
             </div>
             <div class="button-phone-container" id="button-phone-container">
                 <p>phone</p>
+                <input class="button-generator-input" id="phone-intl-code" type="number" placeholder="1">
+                <input class="button-generator-input" id="phone-number" type="number" placeholder="1234567890">
             </div>
             <div class="button-group-container" id="button-group-container">
                 <p>group</p>
+                <input class="button-generator-input" id="group-link" type="text" placeholder="Group Link">
+            </div>
+            <div class="generate-button-container">
+                <button onclick="handleClick()">Generate</button>
+            </div>
+            <div class="button-code-container">
+                <p class="button-code" id="button-code">This is code.</p>
+            </div>
+            <div class="button-preview-container">
+                <p id="button-preview"></p>
             </div>
         </div>
     </main>

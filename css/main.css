@@ -142,6 +142,16 @@ div.platform-container {
     margin: 0 3em 1em 3em;
 }
 
+div.button-code-container {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 24px;
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.401);
+}
+
 div.two-card-container {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
