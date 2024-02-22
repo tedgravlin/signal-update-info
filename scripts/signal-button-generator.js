@@ -42,7 +42,9 @@ function handleClick() {
 // Generate the HTML code and display it
 function generateCode(link) {
     let button_code = document.getElementById("button-code");
-    let button_preview = document.getElementById("button-preview");
+    let button_preview_container = document.getElementById("button-preview-container");
+    let new_button = document.createElement("a");
+    let old_button = button_preview_container.children[0];
 
     let code = "<a target='_blank' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;" 
     + "background-color: #3c76ee; color: white; padding: 0.5em 1em 0.5em 1em; border-radius: 24px;" 
@@ -51,8 +53,10 @@ function generateCode(link) {
     + "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);' " 
     + "src='/assets/images/icons/signal-icon.png'><p style='margin: 0;font-size: 14px;'>Chat on Signal</p></a>";
 
+    new_button.innerHTML = code;
+
     button_code.innerText = code;
-    button_preview.innerHTML = code;
+    button_preview_container.replaceChild(new_button, old_button);
 }
 
 // Switched the generator type that's displayed based on button click

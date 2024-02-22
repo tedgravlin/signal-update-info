@@ -152,6 +152,64 @@ div.button-code-container {
     background-color: rgba(0, 0, 0, 0.401);
 }
 
+div.button-generator-container {
+    display: grid;
+    grid-template-columns: 0.65fr 0.35fr;
+}
+
+a.button-preview {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3c76ee;
+    color: white;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 24px;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 0.25fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+    column-gap: 5px;
+}
+
+a.button-preview img {
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);
+}
+
+a.button-preview p {
+    margin: 0;
+    font-size: 14px;
+}
+
+div.button-message-options,
+div.button-style-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    /* Don't allow the text to be selectable and change cursor to pointer */
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+div.message-option,
+div.style-option {
+    padding: 1em;
+    border-radius: 16px;
+    border: 1.5px solid black;
+}
+
+div.message-option p {
+    margin: 0;
+}
+
+div.button-style-options {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
 div.two-card-container {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
@@ -243,7 +301,8 @@ div.table-container {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 0.25em 0.25em 0.25em 0.25em;
     border: 2px solid;
 }
@@ -253,7 +312,8 @@ div.code-container {
     margin: 0.5em auto auto auto;
 }
 
-div.platform-selector, div.button-generator-selector {
+div.platform-selector,
+div.button-generator-selector {
     display: grid;
     width: 30%;
     grid-template-columns: 1fr 1fr 1fr;
@@ -271,7 +331,9 @@ div.button-generator-selector {
     margin: 1em auto 1em auto;
 }
 
-div.button-username-container, div.button-phone-container, div.button-group-container {
+div.button-username-container,
+div.button-phone-container,
+div.button-group-container {
     display: none;
 }
 
@@ -416,7 +478,7 @@ p.disclaimer {
         width: 90%;
         margin: auto;
     }
-    
+
 
     div.two-card-container {
         grid-template-columns: 1fr;

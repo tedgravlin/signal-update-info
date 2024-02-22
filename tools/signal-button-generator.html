@@ -50,7 +50,6 @@
     </header>
     <!-- Main Page -->
     <main>
-        <!-- Type Switcher -->
         <div class="platform-container">
             <div class="button-generator-selector">
                 <input id="username-button" class="platform-selected left" type="button"
@@ -60,28 +59,67 @@
                 <input id="group-button" class="platform-unselected right" type="button" onclick="switchType('group')"
                     value="Group">
             </div>
-            <div class="button-username-container" id="button-username-container">
-                <p>username</p>
-                <input class="button-generator-input" id="username-link" type="text" placeholder="Username Link">
+            <div class="button-generator-container">
+                <div class="button-generator-options">
+                    <div class="button-username-container" id="button-username-container">
+                        <label for="username-link">Username Link</label>
+                        <br>
+                        <input class="button-generator-input" id="username-link" type="text"
+                            placeholder="https://signal.me/#eu/...">
+                    </div>
+                    <div class="button-phone-container" id="button-phone-container">
+                        <label for="phone-number">Phone Number</label>
+                        <br>
+                        <input class="button-generator-input" id="phone-intl-code" type="number" placeholder="1">
+                        <input class="button-generator-input" id="phone-number" type="number" placeholder="1234567890">
+                    </div>
+                    <div class="button-group-container" id="button-group-container">
+                        <label for="group-link">Group Link</label>
+                        <br>
+                        <input class="button-generator-input" id="group-link" type="text"
+                            placeholder="https://signal.group/...">
+                    </div>
+                    <p>Choose Message</p>
+                    <div class="button-message-options">
+                        <div class="message-option">
+                            <p>Chat on Signal</p>
+                        </div>
+                        <div class="message-option">
+                            <p>Message me on Signal</p>
+                        </div>
+                        <div class="message-option">
+                            <p>Custom...</p>
+                            <input type="text" placeholder="Message me on Signal">
+                        </div>
+                    </div>
+                    <p>Choose Style</p>
+                    <div class="button-style-options">
+                        <div class="style-option">
+                            <p>[Blue on white]</p>
+                        </div>
+                        <div class="style-option">
+                            <p>[White on blue]</p>
+                        </div>
+                    </div>
+                    <div class="generate-button-container">
+                        <button onclick="handleClick()">Generate</button>
+                    </div>
+                </div>
+                <div class="button-generator-preview">
+                    <div class="button-preview-container" id="button-preview-container">
+                        <p>Preview</p>
+                        <a class="button-preview">
+                            <img src='/assets/images/icons/signal-icon.png'>
+                            <p>Chat on Signal</p>
+                        </a>
+                    </div>
+                    <p>Code</p>
+                    <div class="button-code-container">
+                        <p class="button-code" id="button-code">This is code.</p>
+                    </div>
+                </div>
             </div>
-            <div class="button-phone-container" id="button-phone-container">
-                <p>phone</p>
-                <input class="button-generator-input" id="phone-intl-code" type="number" placeholder="1">
-                <input class="button-generator-input" id="phone-number" type="number" placeholder="1234567890">
-            </div>
-            <div class="button-group-container" id="button-group-container">
-                <p>group</p>
-                <input class="button-generator-input" id="group-link" type="text" placeholder="Group Link">
-            </div>
-            <div class="generate-button-container">
-                <button onclick="handleClick()">Generate</button>
-            </div>
-            <div class="button-code-container">
-                <p class="button-code" id="button-code">This is code.</p>
-            </div>
-            <div class="button-preview-container">
-                <p id="button-preview"></p>
-            </div>
+
         </div>
     </main>
     <div class="spacer"></div>
