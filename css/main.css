@@ -143,7 +143,6 @@ div.platform-container {
 }
 
 div.button-code-container {
-    text-align: center;
     margin: auto;
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 24px;
@@ -154,12 +153,26 @@ div.button-code-container {
 }
 
 div.button-generator-container {
+    padding: 1em;
+    width: 90%;
+    margin: auto;
     display: grid;
     grid-template-columns: 0.65fr 0.35fr;
     column-gap: 1em;
 }
 
-a.button-preview {
+div.button-generator-options,
+div.button-generator-preview {
+    padding: 1em 2em 2em 2em;
+    border-radius: 24px;
+}
+
+div.button-generator-preview {
+    padding: 1em;
+}
+
+a.button-preview,
+a.button-color-preview {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #3c76ee;
     color: white;
@@ -185,11 +198,29 @@ a.button-preview p {
     font-size: 14px;
 }
 
+a.button-color-preview {
+    margin: auto;
+    pointer-events: none;
+}
+
+a.button-color-inverted {
+    color: #3c76ee;
+    background-color: white;
+    border: 1.5px solid #3c76ee;
+}
+
+a.button-color-inverted img {
+    filter: brightness(0) saturate(100%) invert(54%) sepia(72%) saturate(5717%) hue-rotate(208deg) brightness(98%) contrast(90%);
+
+}
+
+
 div.button-message-options,
 div.button-style-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1em;
+    row-gap: 1em;
     /* Don't allow the text to be selectable and change cursor to pointer */
     cursor: pointer;
     -webkit-user-select: none;
@@ -201,7 +232,18 @@ div.message-option,
 div.style-option {
     padding: 1em;
     border-radius: 24px;
-    border: 1.5px solid black;
+    border: 1.5px solid;
+    transition: 0.25s;
+}
+
+div.style-option {
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+div.message-option:hover {
+    transition: 0.25s;
 }
 
 div.message-option p {
@@ -212,6 +254,22 @@ div.button-style-options {
     grid-template-columns: repeat(2, 1fr);
 }
 
+div.button-link-container input {
+    padding: 1em;
+    width: 90%;
+    border: 2px solid;
+    border-radius: 16px;
+    margin-top: 1em;
+}
+
+div.button-message-options input {
+    padding: 0.5em;
+    width: 90%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 75%;
+    margin-top: 1em;
+}
 
 div.two-card-container {
     grid-template-columns: 1fr 1fr;

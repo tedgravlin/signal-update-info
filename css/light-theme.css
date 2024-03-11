@@ -14,7 +14,8 @@
         background-color: var(--background-color);
     }
 
-    img.theme-button-desktop, img.theme-icon-mobile {
+    img.theme-button-desktop,
+    img.theme-icon-mobile {
         filter: var(--main-color-filter);
     }
 
@@ -22,7 +23,9 @@
         color: var(--main-color);
     }
 
-    footer a, footer a:visited, footer a:active {
+    footer a,
+    footer a:visited,
+    footer a:active {
         color: var(--main-color);
     }
 
@@ -83,19 +86,55 @@
         color: var(--main-color);
     }
 
+    div.message-option,
+    div.style-option {
+        background-color: #dee6ffbf;
+        border-color: #dee6ffbf;
+    }
+
+    div.button-generator-options,
+    div.button-generator-preview {
+        background-color: var(--main-color);
+    }
+
+    div.button-link-container input {
+        background-color: #dee6ffbf;
+        border-color: #dee6ffbf;
+    }
+
+    div.button-message-options input {
+        background-color: #bac5eabf;
+    }
+
+    .custom-message {
+        grid-column: 1/3;
+    }
+
+    div.button-link-container input:focus-visible,
+    div.button-message-options input:focus-visible {
+        outline: 3px solid #bac5ea;
+        transition: 0.05s;
+    }
+
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
         div.article-preview:hover {
             transition: 0.1s;
             color: var(--text-color);
             background-color: var(--main-color);
-            border: 3px solid var(--text-color);;
+            border: 3px solid var(--text-color);
         }
 
         div.article-preview:hover h1 {
             transition: 0.1s;
             background-color: var(--main-color);
             color: var(--text-color);
+        }
+
+        div.message-option:hover,
+        div.style-option:hover {
+            background-color: #dee6ffbf;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
         }
     }
 
@@ -110,7 +149,7 @@
         background-color: var(--main-color);
         border-color: var(--text-color);
     }
-    
+
     input[type=button].no-fill {
         color: var(--main-color);
         background-color: var(--text-color);

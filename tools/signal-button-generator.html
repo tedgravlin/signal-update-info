@@ -50,54 +50,67 @@
     </header>
     <!-- Main Page -->
     <main>
-        <div class="platform-container">
-            <div class="button-generator-container">
-                <div class="button-generator-options">
-                    <div>
-                        <label for="link-input">Link or Phone Number</label>
-                        <br>
-                        <input onkeyup="handleInput('link')" class="button-generator-input" id="link-input" type="text"
-                            placeholder="https://signal.me/#eu/...">
+        <div class="button-generator-container">
+            <div class="button-generator-options">
+                <h3>Signal Button Generator</h3>
+                <div class="button-link-container">
+                    <label for="link-input">Link or Phone Number</label>
+                    <br>
+                    <input onkeyup="handleInput('link')" class="button-generator-input" id="link-input" type="text"
+                        placeholder="https://signal.me/#eu/...">
+                </div>
+                <p>Choose Message</p>
+                <div class="button-message-options">
+                    <div onclick="handleMessageChange('message0')" class="message-option">
+                        <p>Chat on Signal</p>
                     </div>
-                    <p>Choose Message</p>
-                    <div class="button-message-options">
-                        <div onclick="handleMessageChange('message0')" class="message-option">
-                            <p>Chat on Signal</p>
-                        </div>
-                        <div onclick="handleMessageChange('message1')" class="message-option">
-                            <p>Message me on Signal</p>
-                        </div>
-                        <div onclick="handleMessageChange('message-custom')" class="message-option">
-                            <p>Custom...</p>
-                            <input onkeyup="handleMessageChange('message-custom')" type="text" id='custom-message' placeholder="Message me on Signal">
-                        </div>
+                    <div onclick="handleMessageChange('message1')" class="message-option">
+                        <p>Message me on Signal</p>
                     </div>
-                    <p>Choose Style</p>
-                    <div class="button-style-options">
-                        <div onclick="handleColorChange('color_scheme0')" class="style-option">
-                            <p>[Blue on white]</p>
-                        </div>
-                        <div onclick="handleColorChange('color_scheme1')" class="style-option">
-                            <p>[White on blue]</p>
-                        </div>
+                    <div onclick="handleMessageChange('message2')" class="message-option">
+                        <p>Signal Contact</p>
+                    </div>
+                    <div onclick="handleMessageChange('message-custom')" class="custom-message message-option">
+                        <p>Custom...</p>
+                        <input onkeyup="handleMessageChange('message-custom')" type="text" id='custom-message'
+                            placeholder="Chat on Signal">
+                    </div>
+                    <div onclick="handleMessageChange('message-empty')" class="message-option">
+                        <p>Empty, icon only</p>
                     </div>
                 </div>
-                <div class="button-generator-preview">
-                    <div class="button-preview-container" id="button-preview-container">
-                        <p>Preview</p>
-                        <a class="button-preview">
+                <p>Choose Style</p>
+                <div class="button-style-options">
+                    <div onclick="handleColorChange('color_scheme0')" class="style-option">
+                        <a class="button-color-preview button-preview">
                             <img src='/assets/images/icons/signal-icon.png'>
-                            <p>Chat on Signal</p>
+                            <p>Blue on white</p>
                         </a>
                     </div>
-                    <p>Code</p>
-                    <div class="button-code-container">
-                        <p class="button-code" id="button-code">This is code.</p>
+                    <div onclick="handleColorChange('color_scheme1')" class="style-option">
+                        <a class="button-color-inverted button-color-preview button-preview">
+                            <img src='/assets/images/icons/signal-icon.png'>
+                            <p>White on blue</p>
+                        </a>
                     </div>
                 </div>
             </div>
-
+            <div class="button-generator-preview">
+                <div class="button-preview-container" id="button-preview-container">
+                    <p>Preview</p>
+                    <a class="button-preview">
+                        <img src='/assets/images/icons/signal-icon.png'>
+                        <p>Chat on Signal</p>
+                    </a>
+                </div>
+                <p>Code</p>
+                <div class="button-code-container">
+                    <p class="button-code" id="button-code">This is code.</p>
+                    <button>Copy to clipboard</button>
+                </div>
+            </div>
         </div>
+
     </main>
     <div class="spacer"></div>
     <footer>
