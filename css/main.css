@@ -312,8 +312,7 @@ div.code-container {
     margin: 0.5em auto auto auto;
 }
 
-div.platform-selector,
-div.button-generator-selector {
+div.platform-selector {
     display: grid;
     width: 30%;
     grid-template-columns: 1fr 1fr 1fr;
@@ -324,17 +323,6 @@ div.platform-selector a {
     overflow: hidden;
     width: auto;
     display: inline-block;
-}
-
-div.button-generator-selector {
-    width: 50%;
-    margin: 1em auto 1em auto;
-}
-
-div.button-username-container,
-div.button-phone-container,
-div.button-group-container {
-    display: none;
 }
 
 div.screenshot-album {

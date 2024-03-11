@@ -1,41 +1,55 @@
-// On page load, show the right type
-window.addEventListener("load", (event) => {
-    let type = window.location.hash.substring(1);
-    console.log("Type:", type);
-    // If there isn't a hash, default to username
-    if (type == "") {
-        switchType('username');
+// Get the value from the input box and validate it
+function handleInput() {
+    let input_value = document.getElementById('link-input').value;
+    let input_type = determineInputType(input_value);
+
+    if (input_type === "link") {
+        // Check if the link is a valid username or group link
+        if (isValidSignalLink(input_value)) {
+            console.log("Valid username or group link");
+            generateCode(input_value);
+        }
+        else {
+            console.log("Invalid username or group link");
+        }
     }
-    else {
-        switchType(type);
+    else if (input_type === "number") {
+        console.log("Valid number was input!");
+        generateCode(generatePhoneLink(input_value));
     }
-});
+}
 
-// Handle 'Generate' button press
-function handleClick() {
-    // Get the type from URL
-    let type = window.location.hash.substring(1);
-
-    // Username input
-    let username_link = document.getElementById('username-link').value;
-
-    // Phone Number input
-    let phone_number = document.getElementById('phone-number').value;
-    let phone_intl_code = document.getElementById('phone-intl-code').value;
-
-    // Group link input
-    let group_link = document.getElementById('group-link').value;
-
-    if (type == 'username') {
-        generateCode(username_link);
+// Returns the type of info entered (link or phone number)
+function determineInputType(input) {
+    const phone_regex = /(\+)[1-9][0-9 \-\(\)\.]{7,32}$/;
+    
+    // Check if the input is a valid URL
+    if (URL.canParse(input)) {
+        return "link";
     }
-    else if (type == 'phone') {
-        generateCode('https://signal.me/#p/' + '+' + phone_intl_code + phone_number);
+    // If it's not a URL check if it's a phone number
+    else if (phone_regex.test(input)) {
+        return "number";
     }
-    else if (type == 'group') {
-        generateCode(group_link);
+}
+
+// Validate that a link is a proper group or username link
+function isValidSignalLink(link) {
+    const group_regex = /^https:\/\/signal.group\/#.*$/;
+    const username_regex = /^https:\/\/signal.me\/#eu\/*.*$/;
+
+    // If the link matches the regex for group or username link, return true
+    if (group_regex.test(link) || username_regex.test(link)) {
+        return true;
     }
 
+    // If not valid signal link, return false
+    return false;
+}
+
+// Generates and returns a phone number link with given phone number
+function generatePhoneLink(phone_number) {
+    return ('https://signal.me/#p/' + phone_number);
 }
 
 
@@ -58,52 +72,3 @@ function generateCode(link) {
     button_code.innerText = code;
     button_preview_container.replaceChild(new_button, old_button);
 }
-
-// Switched the generator type that's displayed based on button click
-function switchType(type) {
-    let username_container = document.getElementById("button-username-container");
-    let phone_container = document.getElementById("button-phone-container");
-    let group_container = document.getElementById("button-group-container");
-    let username_button = document.getElementById("username-button");
-    let phone_button = document.getElementById("phone-button");
-    let group_button = document.getElementById("group-button");
-
-    // Show username container, hide all other
-    if (type == 'username') {
-        // Containers
-        username_container.style.display = "block";
-        phone_container.style.display = "none";
-        group_container.style.display = "none";
-        // Buttons
-        username_button.className = "platform-selected left";
-        phone_button.className = "platform-unselected middle";
-        group_button.className = "platform-unselected right";
-        // URL
-        window.location.replace('#' + "username");
-    }
-    else if (type == 'phone') {
-        // Containers
-        username_container.style.display = "none";
-        phone_container.style.display = "block";
-        group_container.style.display = "none";
-        // Buttons
-        username_button.className = "platform-unselected left";
-        phone_button.className = "platform-selected middle";
-        group_button.className = "platform-unselected right";
-        // URL
-        window.location.replace('#' + "phone");
-    }
-    else if (type == 'group') {
-        // Containers
-        username_container.style.display = "none";
-        phone_container.style.display = "none";
-        group_container.style.display = "block";
-        // Buttons
-        username_button.className = "platform-unselected left";
-        phone_button.className = "platform-unselected middle";
-        group_button.className = "platform-selected right";
-        // URL
-        window.location.replace('#' + "group");
-    }
-}
-

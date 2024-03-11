@@ -51,33 +51,13 @@
     <!-- Main Page -->
     <main>
         <div class="platform-container">
-            <div class="button-generator-selector">
-                <input id="username-button" class="platform-selected left" type="button"
-                    onclick="switchType('username')" value="Username">
-                <input id="phone-button" class="platform-unselected middle" type="button" onclick="switchType('phone')"
-                    value="Phone">
-                <input id="group-button" class="platform-unselected right" type="button" onclick="switchType('group')"
-                    value="Group">
-            </div>
             <div class="button-generator-container">
                 <div class="button-generator-options">
-                    <div class="button-username-container" id="button-username-container">
-                        <label for="username-link">Username Link</label>
+                    <div>
+                        <label for="link-input">Link or Phone Number</label>
                         <br>
-                        <input class="button-generator-input" id="username-link" type="text"
+                        <input onkeyup="handleInput()" class="button-generator-input" id="link-input" type="text"
                             placeholder="https://signal.me/#eu/...">
-                    </div>
-                    <div class="button-phone-container" id="button-phone-container">
-                        <label for="phone-number">Phone Number</label>
-                        <br>
-                        <input class="button-generator-input" id="phone-intl-code" type="number" placeholder="1">
-                        <input class="button-generator-input" id="phone-number" type="number" placeholder="1234567890">
-                    </div>
-                    <div class="button-group-container" id="button-group-container">
-                        <label for="group-link">Group Link</label>
-                        <br>
-                        <input class="button-generator-input" id="group-link" type="text"
-                            placeholder="https://signal.group/...">
                     </div>
                     <p>Choose Message</p>
                     <div class="button-message-options">
