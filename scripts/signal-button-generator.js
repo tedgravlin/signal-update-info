@@ -87,8 +87,14 @@ function getMessage(id) {
     else if (id === 'message1') {
         return "Message me on Signal";
     }
+    else if (id === 'message2') {
+        return "Signal Contact";
+    }
     else if (id === 'message-custom') {
         return document.getElementById('custom-message').value;
+    }
+    else if (id === 'message-empty') {
+        return "";
     }
 }
 
@@ -102,13 +108,23 @@ function generateCode() {
     let message = localStorage.getItem("message");
     let button_color = localStorage.getItem("button_color");
     let image_filter = localStorage.getItem("button_filter");
+    let grid_template_columns = "0.25fr 1fr";
+
+    // Standard message design
+    if (message != "") {
+        message = "<p style='margin:0;font-size:14px;'>" + message + "</p></a>";
+    }
+    // Empty message design
+    else {
+        grid_template_columns = "1fr";
+    }
 
     let code = "<a target='_blank' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;"
         + button_color + "padding: 0.5em 1em 0.5em 1em; border-radius: 24px;"
-        + "display: grid;width: fit-content;grid-template-columns: 0.25fr 1fr;justify-items: center;"
+        + "display: grid;width: fit-content;grid-template-columns:" + grid_template_columns +";justify-items: center;"
         + "align-items: center;text-decoration: none;column-gap:5px;'><img style='width: 20px;"
         + image_filter + "' "
-        + "src='/assets/images/icons/signal-icon.png'><p style='margin: 0;font-size: 14px;'>" + message + "</p></a>";
+        + "src='/assets/images/icons/signal-icon.png'>" + message;
 
     new_button.innerHTML = code;
 
