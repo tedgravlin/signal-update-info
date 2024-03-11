@@ -144,23 +144,26 @@ div.platform-container {
 
 div.button-code-container {
     text-align: center;
-    width: 75%;
     margin: auto;
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 24px;
     font-family: monospace;
     background-color: rgba(0, 0, 0, 0.401);
+    font-size: 0.85vw;
+    word-wrap: anywhere;
 }
 
 div.button-generator-container {
     display: grid;
     grid-template-columns: 0.65fr 0.35fr;
+    column-gap: 1em;
 }
 
 a.button-preview {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #3c76ee;
     color: white;
+    border: 1.5px solid transparent;
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 24px;
     display: grid;
@@ -197,7 +200,7 @@ div.button-style-options {
 div.message-option,
 div.style-option {
     padding: 1em;
-    border-radius: 16px;
+    border-radius: 24px;
     border: 1.5px solid black;
 }
 

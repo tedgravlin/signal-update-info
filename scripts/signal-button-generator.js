@@ -1,5 +1,5 @@
 // Get the value from the input box and validate it
-function handleInput() {
+function handleInput(change) {
     let input_value = document.getElementById('link-input').value;
     let input_type = determineInputType(input_value);
 
@@ -7,7 +7,7 @@ function handleInput() {
         // Check if the link is a valid username or group link
         if (isValidSignalLink(input_value)) {
             console.log("Valid username or group link");
-            generateCode(input_value);
+            localStorage.setItem("link", input_value);
         }
         else {
             console.log("Invalid username or group link");
@@ -15,14 +15,42 @@ function handleInput() {
     }
     else if (input_type === "number") {
         console.log("Valid number was input!");
-        generateCode(generatePhoneLink(input_value));
+        localStorage.setItem("link", generatePhoneLink(input_value));
     }
+
+    generateCode();
+}
+
+function handleMessageChange(id) {
+    if (id !== 'message-custom') {
+        localStorage.setItem("message", getMessage(id));
+    }
+    else {
+        localStorage.setItem("message", document.getElementById('custom-message').value);
+    }
+
+    generateCode();
+}
+
+function handleColorChange(id) {
+    // Blue on white
+    if (id === 'color_scheme0') {
+        localStorage.setItem("button_color", "background-color: #3c76ee; color: white; border: 1.5px solid transparent;");
+        localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
+    }
+    // White on blue
+    else if (id === 'color_scheme1') {
+        localStorage.setItem("button_color", "background-color: white; color: #3c76ee; border: 1.5px solid #3c76ee;");
+        localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(54%) sepia(72%) saturate(5717%) hue-rotate(208deg) brightness(98%) contrast(90%);");
+    }
+
+    generateCode();
 }
 
 // Returns the type of info entered (link or phone number)
 function determineInputType(input) {
     const phone_regex = /(\+)[1-9][0-9 \-\(\)\.]{7,32}$/;
-    
+
     // Check if the input is a valid URL
     if (URL.canParse(input)) {
         return "link";
@@ -52,20 +80,35 @@ function generatePhoneLink(phone_number) {
     return ('https://signal.me/#p/' + phone_number);
 }
 
+function getMessage(id) {
+    if (id === 'message0') {
+        return "Chat on Signal";
+    }
+    else if (id === 'message1') {
+        return "Message me on Signal";
+    }
+    else if (id === 'message-custom') {
+        return document.getElementById('custom-message').value;
+    }
+}
 
 // Generate the HTML code and display it
-function generateCode(link) {
+function generateCode() {
     let button_code = document.getElementById("button-code");
     let button_preview_container = document.getElementById("button-preview-container");
     let new_button = document.createElement("a");
-    let old_button = button_preview_container.children[0];
+    let old_button = button_preview_container.children[1];
+    let link = localStorage.getItem("link");
+    let message = localStorage.getItem("message");
+    let button_color = localStorage.getItem("button_color");
+    let image_filter = localStorage.getItem("button_filter");
 
-    let code = "<a target='_blank' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;" 
-    + "background-color: #3c76ee; color: white; padding: 0.5em 1em 0.5em 1em; border-radius: 24px;" 
-    + "display: grid;width: fit-content;grid-template-columns: 0.25fr 1fr;justify-items: center;" 
-    + "align-items: center;text-decoration: none;column-gap:5px;'><img style='width: 20px;" 
-    + "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);' " 
-    + "src='/assets/images/icons/signal-icon.png'><p style='margin: 0;font-size: 14px;'>Chat on Signal</p></a>";
+    let code = "<a target='_blank' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;"
+        + button_color + "padding: 0.5em 1em 0.5em 1em; border-radius: 24px;"
+        + "display: grid;width: fit-content;grid-template-columns: 0.25fr 1fr;justify-items: center;"
+        + "align-items: center;text-decoration: none;column-gap:5px;'><img style='width: 20px;"
+        + image_filter + "' "
+        + "src='/assets/images/icons/signal-icon.png'><p style='margin: 0;font-size: 14px;'>" + message + "</p></a>";
 
     new_button.innerHTML = code;
 

@@ -56,33 +56,30 @@
                     <div>
                         <label for="link-input">Link or Phone Number</label>
                         <br>
-                        <input onkeyup="handleInput()" class="button-generator-input" id="link-input" type="text"
+                        <input onkeyup="handleInput('link')" class="button-generator-input" id="link-input" type="text"
                             placeholder="https://signal.me/#eu/...">
                     </div>
                     <p>Choose Message</p>
                     <div class="button-message-options">
-                        <div class="message-option">
+                        <div onclick="handleMessageChange('message0')" class="message-option">
                             <p>Chat on Signal</p>
                         </div>
-                        <div class="message-option">
+                        <div onclick="handleMessageChange('message1')" class="message-option">
                             <p>Message me on Signal</p>
                         </div>
-                        <div class="message-option">
+                        <div onclick="handleMessageChange('message-custom')" class="message-option">
                             <p>Custom...</p>
-                            <input type="text" placeholder="Message me on Signal">
+                            <input onkeyup="handleMessageChange('message-custom')" type="text" id='custom-message' placeholder="Message me on Signal">
                         </div>
                     </div>
                     <p>Choose Style</p>
                     <div class="button-style-options">
-                        <div class="style-option">
+                        <div onclick="handleColorChange('color_scheme0')" class="style-option">
                             <p>[Blue on white]</p>
                         </div>
-                        <div class="style-option">
+                        <div onclick="handleColorChange('color_scheme1')" class="style-option">
                             <p>[White on blue]</p>
                         </div>
-                    </div>
-                    <div class="generate-button-container">
-                        <button onclick="handleClick()">Generate</button>
                     </div>
                 </div>
                 <div class="button-generator-preview">
