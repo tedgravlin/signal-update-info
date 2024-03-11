@@ -152,6 +152,22 @@ div.button-code-container {
     word-wrap: anywhere;
 }
 
+div.copy-button{
+    cursor: pointer;
+    border: 2px solid black;
+    display: grid;
+    padding: 1em;
+    grid-template-columns: 0.5fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    border-radius: 24px;
+    width: 50%;
+}
+
+div.copy-button p {
+    margin: 0;
+}
+
 div.button-generator-container {
     padding: 1em;
     width: 90%;

@@ -121,13 +121,32 @@ function generateCode() {
 
     let code = "<a target='_blank' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;"
         + button_color + "padding: 0.5em 1em 0.5em 1em; border-radius: 24px;"
-        + "display: grid;width: fit-content;grid-template-columns:" + grid_template_columns +";justify-items: center;"
+        + "display: grid;width: fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
         + "align-items: center;text-decoration: none;column-gap:5px;'><img style='width: 20px;"
         + image_filter + "' "
         + "src='/assets/images/icons/signal-icon.png'>" + message;
 
+    // Replace old button with new button
     new_button.innerHTML = code;
-
     button_code.innerText = code;
     button_preview_container.replaceChild(new_button, old_button);
+
+    // Reset the status of the copy button
+    document.getElementById("copy-icon").setAttribute("src", "/assets/images/icons/copy.svg");
+    document.getElementById("copy-text").innerText = "Copy";
+}
+
+async function copyCodeToClipboard() {
+    let copy_icon = document.getElementById("copy-icon");
+    let copy_text = document.getElementById("copy-text");
+
+    try {
+        // Copy the code to the clipboard
+        await navigator.clipboard.writeText(document.getElementById("button-code").innerText);
+        // Update the copy button to reflect successful copy
+        copy_icon.setAttribute("src", "/assets/images/icons/copy-confirmation.svg");
+        copy_text.innerText = "Copied";
+    } catch (error) {
+        console.error(error.message);
+    }
 }
