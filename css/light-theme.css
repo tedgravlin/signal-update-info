@@ -87,7 +87,8 @@
     }
 
     div.message-option,
-    div.style-option {
+    div.style-option,
+    div.copy-button {
         background-color: #dee6ffbf;
         border-color: #dee6ffbf;
     }
@@ -110,11 +111,20 @@
         grid-column: 1/3;
     }
 
+    .message-selected,
+    .color-selected {
+        border-color: #a5b2da !important;
+    }
+
     div.button-link-container input:focus-visible,
     div.button-message-options input:focus-visible {
         outline: 3px solid #bac5ea;
         transition: 0.05s;
     }
+
+    div.button-code-container {
+        background-color: #dee6ff4f;
+    }    
 
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
@@ -133,9 +143,11 @@
 
         div.message-option:hover,
         div.style-option:hover {
-            background-color: #dee6ffbf;
             box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
         }
+
+        div.copy-button:hover {
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
     }
 
     input[type=button].platform-selected {

@@ -142,31 +142,55 @@ div.platform-container {
     margin: 0 3em 1em 3em;
 }
 
+p.button-generator-description {
+    font-size: 0.90vw;
+    opacity: 80%;
+}
+
+div.button-generator-options h3 {
+    margin: 0;
+}
+
+p.button-link-input-warning {
+    font-size: 0.85vw;
+    opacity: 80%;
+    margin-bottom: 0;
+}
+
 div.button-code-container {
     margin: auto;
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 24px;
     font-family: monospace;
-    background-color: rgba(0, 0, 0, 0.401);
+    background-color: #dee6ff4f;
     font-size: 0.85vw;
     word-wrap: anywhere;
 }
 
-div.copy-button{
+div.copy-button {
     cursor: pointer;
     border: 2px solid black;
     display: grid;
-    padding: 1em 0.5em 1em 0.5em;
-    grid-template-columns: 0.5fr 0.5fr;
+    padding: 0.5em 1em 0.5em 1em;
+    grid-template-columns: 0.25fr 1fr;
     justify-items: center;
     align-items: center;
     border-radius: 24px;
-    width: 50%;
+    width: fit-content;
     margin: auto;
+    background-color: #dee6ffbf;
+    transition: 0.1s;
+    column-gap: 1em;
 }
 
 div.copy-button p {
+    font-size: 125%;
     margin: 0;
+    align-self: left;
+}
+
+div.copy-button img {
+    align-self: right;
 }
 
 div.button-generator-container {
@@ -255,7 +279,6 @@ div.style-option {
 
 .message-selected,
 .color-selected {
-    border-color: #a5b2da !important;
     border-width: 2px !important;
 }
 

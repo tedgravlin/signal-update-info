@@ -11,19 +11,20 @@
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>Signal Chat Button Generator - Signal Update Info</title>
+    <title>Signal Button Generator - Signal Update Info</title>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
     <!-- Meta -->
-    <meta name="title" property="og:title" content="Signal Update Info" />
-    <meta name="description" property="og:description" content="Signal news and updates. 
-        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
-    <meta name="keywords" content="signal update info,signal updates,signal" />
+    <meta name="title" property="og:title" content="Signal Button Generator" />
+    <meta name="description" property="og:description"
+        content="Generate a Signal button that you can embed anywhere on your website. Simply enter a Signal group link, username link, or the phone number for your Signal account. Then customize the chat message and color scheme. " />
     <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg" />
+    <meta name="keywords"
+        content="signal button generator, signal button, chat on signal button, signal website embed, signal username button, signal" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://signalupdateinfo.com/" />
+    <meta property="og:url" content="https://signalupdateinfo.com/tools/signal-button-generator" />
 </head>
 
 <body onload="generateCode()">
@@ -53,11 +54,17 @@
         <div class="button-generator-container">
             <div class="button-generator-options">
                 <h3>Signal Button Generator</h3>
+                <p class="button-generator-description">Generate a Signal button that you can embed anywhere on your
+                    website.
+                    Simply enter a Signal group link, username link, or the phone number for your Signal account.
+                    Then customize the chat message and color scheme.
+                </p>
                 <div class="button-link-container">
                     <label for="link-input">Link or Phone Number</label>
                     <br>
-                    <input autocomplete="off" onkeyup="handleInput('link')" class="button-generator-input" id="link-input" type="text"
-                        placeholder="https://signal.me/#eu/...">
+                    <input autocomplete="off" onkeyup="handleInput('link')" class="button-generator-input"
+                        id="link-input" type="text" placeholder="https://signal.me/#eu/...">
+                    <p class="button-link-input-warning">Phone number must be in international format (e.g. +12345678901)</p>
                 </div>
                 <p>Choose Message</p>
                 <div class="button-message-options">
@@ -70,20 +77,21 @@
                     <div onclick="handleMessageChange('message2')" id='message2' class="message-option">
                         <p>Signal Contact</p>
                     </div>
-                    <div onclick="handleMessageChange('message-custom')" id='message-custom' class="custom-message message-option">
+                    <div onclick="handleMessageChange('message-custom')" id='message-custom'
+                        class="custom-message message-option">
                         <p>Custom...</p>
-                        <input autocomplete="off" onkeyup="handleMessageChange('message-custom')" type="text" id='custom-message'
-                            placeholder="Chat on Signal">
+                        <input maxlength="27" autocomplete="off" onkeyup="handleMessageChange('message-custom')"
+                            type="text" id='custom-message' placeholder="Chat on Signal">
                     </div>
                     <div onclick="handleMessageChange('message-empty')" id='message-empty' class="message-option">
                         <p>Empty, icon only</p>
                     </div>
                 </div>
-                <p>Choose Style</p>
+                <p>Choose Color Scheme</p>
                 <div class="button-style-options">
                     <div onclick="handleColorChange('color_scheme0')" id="color_scheme0" class="style-option">
                         <a class="button-color-preview button-preview">
-                            <img src='/assets/images/icons/signal-icon.png'>
+                            <img alt="Signal Logo" src='/assets/images/icons/signal-icon.png'>
                             <p>Blue on white</p>
                         </a>
                     </div>
@@ -99,7 +107,7 @@
                 <div class="button-preview-container" id="button-preview-container">
                     <p>Preview</p>
                     <a class="button-preview">
-                        <img src='/assets/images/icons/signal-icon.png'>
+                        <img alt="Signal Logo" src='/assets/images/icons/signal-icon.png'>
                         <p>Chat on Signal</p>
                     </a>
                 </div>
@@ -107,7 +115,7 @@
                 <div class="button-code-container">
                     <p class="button-code" id="button-code">This is code.</p>
                     <div onclick="copyCodeToClipboard()" class="copy-button">
-                        <img id="copy-icon" src="/assets/images/icons/copy.svg">
+                        <img alt="Copy Icon" id="copy-icon" src="/assets/images/icons/copy.svg">
                         <p id="copy-text">Copy</p>
                     </div>
                 </div>
