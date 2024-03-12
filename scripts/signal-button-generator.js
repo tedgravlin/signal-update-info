@@ -116,6 +116,14 @@ function generateCode() {
     let image_filter = localStorage.getItem("button_filter");
     let grid_template_columns = "0.25fr 1fr";
 
+    // If items are null, set placeholder values
+    if (message == null) localStorage.setItem("message", "Chat on Signal");
+    if (button_color == null) localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
+    if (image_filter == null) localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
+    message = localStorage.getItem("message");
+    button_color = localStorage.getItem("button_color");
+    image_filter = localStorage.getItem("button_filter");
+
     // Standard message design
     if (message != "") {
         message = "<p style='margin:0;font-size:14px;'>" + message + "</p></a>";
@@ -130,7 +138,7 @@ function generateCode() {
         + "display: grid;width: fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
         + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: 20px;"
         + image_filter + "' "
-        + "src='/assets/images/icons/signal-icon.png'>" + message;
+        + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.png'>" + message;
 
     // Replace old button with new button
     new_button.innerHTML = code;
