@@ -8,6 +8,10 @@
         --platform-selected-bg: #4165f5e6;
         --main-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
         --text-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%);
+        --btn-bg-color: #dee6ffbf;
+        --btn-border-color: #dee6ffbf;
+        --btn-selected-border-color: #a5b2da;
+        --code-container-bg: #dee6ff4f;    
     }
 
     body {
@@ -89,8 +93,8 @@
     div.message-option,
     div.style-option,
     div.copy-button {
-        background-color: #dee6ffbf;
-        border-color: #dee6ffbf;
+        background-color: var(--btn-bg-color);
+        border-color: var(--btn-border-color);
     }
 
     div.button-generator-options,
@@ -99,12 +103,12 @@
     }
 
     div.button-link-container input {
-        background-color: #dee6ffbf;
-        border-color: #dee6ffbf;
+        background-color: var(--btn-bg-color);
+        border-color: var(--btn-border-color);
     }
 
     div.button-message-options input {
-        background-color: #bac5eabf;
+        background-color: var(--btn-border-color);
     }
 
     .custom-message {
@@ -113,17 +117,17 @@
 
     .message-selected,
     .color-selected {
-        border-color: #a5b2da !important;
+        border-color: var(--btn-selected-border-color) !important;
     }
 
     div.button-link-container input:focus-visible,
     div.button-message-options input:focus-visible {
-        outline: 3px solid #bac5ea;
+        outline: 3px solid var(--btn-selected-border-color);
         transition: 0.05s;
     }
 
     div.button-code-container {
-        background-color: #dee6ff4f;
+        background-color: var(--code-container-bg);
     }    
 
     /* Targeting devices with mouse cursor and :hover */
@@ -148,6 +152,7 @@
 
         div.copy-button:hover {
             box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
+        }
     }
 
     input[type=button].platform-selected {
