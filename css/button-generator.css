@@ -20,7 +20,7 @@ div.button-generator-preview {
 a.button-preview,
 a.button-color-preview {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #3c76ee;
+    background-color: #4166f5;
     color: white;
     border: 1.5px solid transparent;
     padding: 0.5em 1em 0.5em 1em;
@@ -36,8 +36,7 @@ a.button-color-preview {
 
 a.button-preview img {
     width: 20px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);
-}
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);}
 
 a.button-preview p {
     margin: 0;
@@ -50,13 +49,13 @@ a.button-color-preview {
 }
 
 a.button-color-inverted {
-    color: #3c76ee;
+    color: #4166f5;
     background-color: white;
-    border: 1.5px solid #3c76ee;
+    border: 1.5px solid #4166f5;
 }
 
 a.button-color-inverted img {
-    filter: brightness(0) saturate(100%) invert(54%) sepia(72%) saturate(5717%) hue-rotate(208deg) brightness(98%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(34%) sepia(73%) saturate(3397%) hue-rotate(220deg) brightness(100%) contrast(93%);
 
 }
 

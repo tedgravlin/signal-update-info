@@ -36,15 +36,15 @@ function handleMessageChange(id) {
 }
 
 function handleColorChange(id) {
-    // Blue on white
+    // White on blue
     if (id === 'color_scheme0') {
-        localStorage.setItem("button_color", "background-color: #3c76ee; color: white; border: 1.5px solid transparent;");
+        localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
         localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
     }
-    // White on blue
+    // Blue on white
     else if (id === 'color_scheme1') {
-        localStorage.setItem("button_color", "background-color: white; color: #3c76ee; border: 1.5px solid #3c76ee;");
-        localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(54%) sepia(72%) saturate(5717%) hue-rotate(208deg) brightness(98%) contrast(90%);");
+        localStorage.setItem("button_color", "background-color: white; color: #4166f5; border: 1.5px solid #4166f5;");
+        localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(34%) sepia(73%) saturate(3397%) hue-rotate(220deg) brightness(100%) contrast(93%);");
     }
 
     // Set the color option as selected
