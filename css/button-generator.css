@@ -1,0 +1,179 @@
+p.button-generator-description {
+    font-size: 0.90vw;
+    opacity: 80%;
+}
+
+div.button-generator-options h3 {
+    margin: 0;
+}
+
+p.button-link-input-warning {
+    font-size: 0.85vw;
+    opacity: 80%;
+    margin-bottom: 0;
+}
+
+div.button-code-container {
+    margin: auto;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 24px;
+    font-family: monospace;
+    background-color: #dee6ff4f;
+    font-size: 0.85vw;
+    word-wrap: anywhere;
+}
+
+div.copy-button {
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: grid;
+    padding: 0.5em 1em 0.5em 1em;
+    grid-template-columns: 0.25fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border-radius: 24px;
+    width: fit-content;
+    margin: auto;
+    background-color: #dee6ffbf;
+    transition: 0.1s;
+    column-gap: 1em;
+}
+
+div.copy-button p {
+    font-size: 125%;
+    margin: 0;
+    align-self: left;
+}
+
+div.copy-button img {
+    align-self: right;
+}
+
+div.button-generator-container {
+    padding: 0em 1em 1em 1em;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.65fr 0.35fr;
+    column-gap: 1em;
+}
+
+div.button-generator-options,
+div.button-generator-preview {
+    padding: 2em 2em 2em 2em;
+    border-radius: 24px;
+}
+
+div.button-generator-preview {
+    padding: 1em;
+}
+
+a.button-preview,
+a.button-color-preview {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3c76ee;
+    color: white;
+    border: 1.5px solid transparent;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 24px;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 0.25fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+    column-gap: 5px;
+}
+
+a.button-preview img {
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);
+}
+
+a.button-preview p {
+    margin: 0;
+    font-size: 14px;
+}
+
+a.button-color-preview {
+    margin: auto;
+    pointer-events: none;
+}
+
+a.button-color-inverted {
+    color: #3c76ee;
+    background-color: white;
+    border: 1.5px solid #3c76ee;
+}
+
+a.button-color-inverted img {
+    filter: brightness(0) saturate(100%) invert(54%) sepia(72%) saturate(5717%) hue-rotate(208deg) brightness(98%) contrast(90%);
+
+}
+
+
+div.button-message-options,
+div.button-style-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+    /* Don't allow the text to be selectable and change cursor to pointer */
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+div.message-option,
+div.style-option {
+    padding: 1em;
+    border-radius: 24px;
+    border: 2px solid transparent;
+    transition: 0.25s;
+}
+
+.message-selected,
+.color-selected {
+    border-width: 2px !important;
+}
+
+div.style-option {
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+div.message-option:hover {
+    transition: 0.25s;
+}
+
+div.message-option p {
+    margin: 0;
+}
+
+div.button-style-options {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div.button-link-container input {
+    padding: 1em;
+    width: 90%;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    margin-top: 1em;
+}
+
+div.button-message-options input {
+    padding: 0.5em;
+    width: 90%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 75%;
+    margin-top: 1em;
+}
+
+/* Mobile layout */
+@media (max-width: 500px) {
+    
+}

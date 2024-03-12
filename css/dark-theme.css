@@ -11,6 +11,7 @@
         --btn-bg-color: #dee6ffbf;
         --btn-border-color: #181d447a;
         --btn-selected-border-color: #181d44;
+        --input-bg-color: #bac5eabf;
         --code-container-bg: #dee6ff4f;
     }
 
@@ -96,7 +97,7 @@
     }
 
     div.button-message-options input {
-        background-color: var(--btn-bg-color);
+        background-color: var(--input-bg-color);
         border-color: var(--btn-border-color);
     }
 
