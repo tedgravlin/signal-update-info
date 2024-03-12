@@ -29,6 +29,9 @@ function handleMessageChange(id) {
         localStorage.setItem("message", document.getElementById('custom-message').value);
     }
 
+    // Set the message option as selected
+    setButtonAsSelected("message", id);
+    // Regenerate the code
     generateCode();
 }
 
@@ -44,6 +47,9 @@ function handleColorChange(id) {
         localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(54%) sepia(72%) saturate(5717%) hue-rotate(208deg) brightness(98%) contrast(90%);");
     }
 
+    // Set the color option as selected
+    setButtonAsSelected("color", id);
+    // Regenerate the code
     generateCode();
 }
 
@@ -148,5 +154,26 @@ async function copyCodeToClipboard() {
         copy_text.innerText = "Copied";
     } catch (error) {
         console.error(error.message);
+    }
+}
+
+function setButtonAsSelected(type, id) {
+    if (type === 'message') {
+        // Unselect all message buttons
+        let message_options = document.querySelectorAll(".message-selected");
+        for (let i = 0; i < message_options.length; i++) {
+            message_options[i].classList.remove("message-selected");
+        }
+        // Mark the current message option as selected
+        document.getElementById(id).classList.add("message-selected");
+    }
+    else if (type === 'color') {
+        // Unselect all color buttons
+        let color_options = document.querySelectorAll(".color-selected");
+        for (let i = 0; i < color_options.length; i++) {
+            color_options[i].classList.remove("color-selected");
+        }
+        // Mark the current color option as selected
+        document.getElementById(id).classList.add("color-selected");
     }
 }
