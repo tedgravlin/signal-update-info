@@ -233,7 +233,8 @@ div.table-container {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 0.25em 0.25em 0.25em 0.25em;
     border: 2px solid;
 }
@@ -397,7 +398,7 @@ p.disclaimer {
         width: 90%;
         margin: auto;
     }
-    
+
 
     div.two-card-container {
         grid-template-columns: 1fr;

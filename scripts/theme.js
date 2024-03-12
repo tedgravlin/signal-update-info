@@ -63,6 +63,11 @@ function setTheme(theme) {
             root.style.setProperty('--platform-selected-bg', '#4165f5e6');
             root.style.setProperty('--main-color-filter','brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)');
             root.style.setProperty('--text-color-filter', 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%)');
+            root.style.setProperty('--btn-bg-color', '#dee6ffbf');
+            root.style.setProperty('--btn-border-color', '#dee6ffbf');
+            root.style.setProperty('--btn-selected-border-color', '#a5b2da');
+            root.style.setProperty('--input-bg-color', '#bac5eabf');
+            root.style.setProperty('--code-container-bg', '#dee6ff4f'); 
             break;
         case 'dark':
             theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-dark.svg');
@@ -75,6 +80,11 @@ function setTheme(theme) {
             root.style.setProperty('--platform-selected-bg', '#181d44ca');
             root.style.setProperty('--main-color-filter','invert(74%) sepia(95%) saturate(1952%) hue-rotate(192deg) brightness(101%) contrast(100%)');
             root.style.setProperty('--text-color-filter', 'brightness(0) saturate(100%) invert(87%) sepia(25%) saturate(7141%) hue-rotate(192deg) brightness(100%) contrast(103%)');
+            root.style.setProperty('--btn-bg-color', '#dee6ffbf');
+            root.style.setProperty('--btn-border-color', '#181d447a');
+            root.style.setProperty('--btn-selected-border-color', '#181d44');
+            root.style.setProperty('--input-bg-color', '#bac5eabf');
+            root.style.setProperty('--code-container-bg', '#dee6ff4f');
             break;
     }
 }

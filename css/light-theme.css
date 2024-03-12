@@ -8,13 +8,19 @@
         --platform-selected-bg: #4165f5e6;
         --main-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
         --text-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%);
+        --btn-bg-color: #dee6ffbf;
+        --btn-border-color: #dee6ffbf;
+        --btn-selected-border-color: #a5b2da;
+        --input-bg-color: #bac5eabf;
+        --code-container-bg: #dee6ff4f;    
     }
 
     body {
         background-color: var(--background-color);
     }
 
-    img.theme-button-desktop, img.theme-icon-mobile {
+    img.theme-button-desktop,
+    img.theme-icon-mobile {
         filter: var(--main-color-filter);
     }
 
@@ -22,7 +28,9 @@
         color: var(--main-color);
     }
 
-    footer a, footer a:visited, footer a:active {
+    footer a,
+    footer a:visited,
+    footer a:active {
         color: var(--main-color);
     }
 
@@ -83,19 +91,68 @@
         color: var(--main-color);
     }
 
+    div.message-option,
+    div.style-option,
+    div.copy-button {
+        background-color: var(--btn-bg-color);
+        border-color: var(--btn-border-color);
+    }
+
+    div.button-generator-options,
+    div.button-generator-preview {
+        background-color: var(--main-color);
+    }
+
+    div.button-link-container input {
+        background-color: var(--btn-bg-color);
+        border-color: var(--btn-border-color);
+    }
+
+    div.button-message-options input {
+        background-color: var(--input-bg-color);
+    }
+
+    .custom-message {
+        grid-column: 1/3;
+    }
+
+    .message-selected,
+    .color-selected {
+        border-color: var(--btn-selected-border-color) !important;
+    }
+
+    div.button-link-container input:focus-visible,
+    div.button-message-options input:focus-visible {
+        outline: 3px solid var(--btn-selected-border-color);
+        transition: 0.05s;
+    }
+
+    div.button-code-container {
+        background-color: var(--code-container-bg);
+    }    
+
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
         div.article-preview:hover {
             transition: 0.1s;
             color: var(--text-color);
             background-color: var(--main-color);
-            border: 3px solid var(--text-color);;
+            border: 3px solid var(--text-color);
         }
 
         div.article-preview:hover h1 {
             transition: 0.1s;
             background-color: var(--main-color);
             color: var(--text-color);
+        }
+
+        div.message-option:hover,
+        div.style-option:hover {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+        }
+
+        div.copy-button:hover {
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
         }
     }
 
@@ -110,7 +167,7 @@
         background-color: var(--main-color);
         border-color: var(--text-color);
     }
-    
+
     input[type=button].no-fill {
         color: var(--main-color);
         background-color: var(--text-color);
