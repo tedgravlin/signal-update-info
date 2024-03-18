@@ -131,7 +131,7 @@ div.button-message-options input {
 }
 
 p.button-generator-description {
-    font-size: 0.95vw;
+    font-size: 1vw;
     opacity: 80%;
 }
 
@@ -140,7 +140,7 @@ div.button-generator-options h3 {
 }
 
 p.button-link-input-warning {
-    font-size: 0.90vw;
+    font-size: 0.95vw;
     opacity: 80%;
     margin-bottom: 0;
 }

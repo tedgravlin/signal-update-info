@@ -58,11 +58,11 @@
                 <p class="button-generator-description">Generate a Signal button that you can embed anywhere on your
                     website.
                     Simply enter a Signal group link, username link, or the phone number for your Signal account.
-                    Then customize the chat message and color scheme.
+                    Then customize the button to your liking.
                 </p>
                 <div class="button-link-container">
                     <label for="link-input">Link or Phone Number</label>
-                    <p class="button-link-input-warning">Enter a username/group link or a phone number in international format (e.g. +12345678901)</p>
+                    <p id="button-link-input-warning" class="button-link-input-warning">Enter a username/group link or a phone number in international format (e.g. +12345678901)</p>
                     <input autocomplete="off" onkeyup="handleInput('link')" class="button-generator-input"
                         id="link-input" type="text" placeholder="https://signal.me/#eu/...">
                 </div>

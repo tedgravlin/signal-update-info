@@ -6,7 +6,7 @@ let image_filter;
 let image_size;
 let font_size;
 
-// Sanitizes input values, preventing user's from injecting HTML code
+// Sanitizes input values, preventing users from injecting HTML code
 function sanitizeString(string) {
     const map = {
         '&': '&amp;',
@@ -35,22 +35,68 @@ function handleInput() {
     let input_value = sanitizeString(document.getElementById('link-input').value);
     let input_type = determineInputType(input_value);
 
-    if (input_type === "link") {
-        // Check if the link is a valid username or group link
-        if (isValidSignalLink(input_value)) {
-            console.log("Valid username or group link");
-            link = input_value;
-        }
-        else {
-            console.log("Invalid username or group link");
-        }
-    }
-    else if (input_type === "number") {
-        console.log("Valid number was input!");
-        link = generatePhoneLink(input_value);
+    // If input is empty, clear the warning and return
+    if(input_value === "") {
+        changeLinkInputText('success', 'default');
+        return;
     }
 
-    generateCode();
+    if (input_type != undefined && input_type != 'error') {
+        if (input_type.includes("link")) {
+            // Check if the link is a valid username or group link
+            if (isValidSignalLink(input_value)) {
+                console.log("Valid username or group link");
+                link = input_value;
+                changeLinkInputText('success', 'default');
+            }
+            // Show the correct error depending on Signal link type
+            else if (!isValidSignalLink(input_value)) {
+                if (input_type === 'username-link') {
+                    console.log("Invalid Signal Username link.");
+                    changeLinkInputText('error', 'Invalid Signal Username link.');
+                }
+                else if (input_type === 'group-link') {
+                    console.log("Invalid Signal Group link.");
+                    changeLinkInputText('error', 'Invalid Signal Group link.');
+                }
+            }
+            if (input_type === 'invalid-link') {
+                console.log("Invalid link. Must be a full link (e.g. https://signal.group/...)");
+                changeLinkInputText('error', 'Invalid link. Must be a full link (e.g. https://signal.group/)');
+            }
+            else if (input_type === 'valid-link') {
+                console.log("Not a valid Signal Username/Group link.");
+                changeLinkInputText('error', 'Not a valid Signal Username/Group link.');
+            }
+        }
+        else if (input_type === "number") {
+            console.log("Valid number was input!");
+            link = generatePhoneLink(input_value);
+            changeLinkInputText('success', 'default');
+        }
+        generateCode();
+    }
+    else if (input_type == 'error') {
+        console.log("Input_type error: Not a link or a phone number");
+        changeLinkInputText('error', 'Please enter a valid Signal link or phone number in international format (e.g. +12345678901)');
+    }
+    else {
+        console.log("Input_type is undefined. ");
+        changeLinkInputText('success', 'default');
+    }
+}
+
+function changeLinkInputText(type, text) {
+    let link_input_error = document.getElementById('button-link-input-warning');
+
+    if (type === 'success') {
+        link_input_error.innerHTML = "Enter a username/group link or phone number in international format (e.g. +12345678901)";
+        link_input_error.style.color = "inherit";
+    }
+    else if (type === 'error') {
+        link_input_error.innerHTML = text;
+        link_input_error.style.color = "#ae0a0a";
+    }
 }
 
 function handleMessageChange(id) {
@@ -106,14 +152,33 @@ function handleSizeChange(id) {
 // Returns the type of info entered (link or phone number)
 function determineInputType(input) {
     const phone_regex = /(\+)[1-9][0-9 \-\(\)\.]{7,32}$/;
+    const link_regex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 
-    // Check if the input is a valid URL
-    if (URL.canParse(input)) {
-        return "link";
+    // Check if the input is a link
+    if (link_regex.test(input)) {
+        // Check if the link is a parseable URL
+        if (URL.canParse(input)) {
+            // Determine if the link is a group link or a username link
+            if (input.includes("signal.group")) {
+                return "group-link";
+            }
+            else if (input.includes("signal.me")) {
+                return "username-link";
+            }
+            else {
+                return "valid-link";
+            }
+        }
+        return "invalid-link";
     }
+
     // If it's not a URL check if it's a phone number
     else if (phone_regex.test(input)) {
         return "number";
+    }
+
+    else {
+        return "error";
     }
 }
 

@@ -86,7 +86,8 @@
 
     div.message-option,
     div.style-option,
-    div.copy-button {
+    div.copy-button,
+    div.size-option {
         background-color: var(--btn-bg-color);
         border-color: var(--btn-border-color);
     }
