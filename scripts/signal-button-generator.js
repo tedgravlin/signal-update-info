@@ -1,9 +1,23 @@
+// Global variables for button options
 let link;
 let message;
 let button_color;
 let image_filter;
 let image_size;
 let font_size;
+
+// Sanitizes input values, preventing user's from injecting HTML code
+function sanitizeString(string) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+    };
+    const regex = /[&<>"']/ig;
+    return string.replace(regex, (match) => (map[match]));
+}
 
 // Sets localStorage values to default on page load
 function resetOnPageLoad() {
@@ -18,7 +32,7 @@ function resetOnPageLoad() {
 
 // Get the value from the input box and validate it
 function handleInput() {
-    let input_value = document.getElementById('link-input').value;
+    let input_value = sanitizeString(document.getElementById('link-input').value);
     let input_type = determineInputType(input_value);
 
     if (input_type === "link") {
@@ -40,12 +54,7 @@ function handleInput() {
 }
 
 function handleMessageChange(id) {
-    if (id !== 'message-custom') {
-        message = getMessage(id);
-    }
-    else {
-        message = document.getElementById('custom-message').value;
-    }
+    message = getMessage(id);
 
     // Set the message option as selected
     setButtonAsSelected("message", id);
@@ -138,7 +147,7 @@ function getMessage(id) {
         return "Signal Contact";
     }
     else if (id === 'message-custom') {
-        return document.getElementById('custom-message').value;
+        return sanitizeString(document.getElementById('custom-message').value);
     }
     else if (id === 'message-empty') {
         return "";
