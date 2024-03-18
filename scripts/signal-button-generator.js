@@ -135,7 +135,7 @@ function generateCode() {
 
     let code = "<a target='_blank' rel='noreferrer' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;"
         + button_color + "padding: 0.5em 1em 0.5em 1em; border-radius: 24px;"
-        + "display: grid;width: fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
+        + "display: grid;width: fit-content;height:fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
         + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: 20px;"
         + image_filter + "' "
         + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.png'>" + message;
