@@ -126,21 +126,22 @@ div.button-message-options input {
     width: 95%;
     border: 2px solid transparent;
     border-radius: 8px;
-    font-size: 75%;
+    font-size: calc(7px + 0.390625vw);
     margin-top: 1em;
 }
 
 p.button-generator-description {
-    font-size: 1vw;
+    font-size: calc(9px + 0.390625vw);
     opacity: 80%;
 }
 
 div.button-generator-options h3 {
+    font-size: calc(14px + 0.390625vw);
     margin: 0;
 }
 
 p.button-link-input-warning {
-    font-size: 0.95vw;
+    font-size: calc(7px + 0.390625vw);
     opacity: 80%;
     margin-bottom: 0;
 }
@@ -151,7 +152,7 @@ div.button-code-container {
     border-radius: 24px;
     font-family: monospace;
     background-color: #dee6ff4f;
-    font-size: 0.85vw;
+    font-size: calc(6px + 0.390625vw);
     word-wrap: anywhere;
 }
 
@@ -172,7 +173,7 @@ div.copy-button {
 }
 
 div.copy-button p {
-    font-size: 125%;
+    font-size: calc(10px + 0.390625vw);
     margin: 0;
     align-self: left;
     pointer-events: none;
@@ -184,7 +185,7 @@ div.copy-button img {
 }
 
 /* Mobile layout */
-@media (max-width: 500px) {
+@media (max-width: 640px) {
     div.button-generator-container {
         width: 95vw;
         padding: 0em;

@@ -49,7 +49,7 @@ header {
 }
 
 header h1 {
-    font-size: 3vw;
+    font-size: calc(34px + 0.390625vw);
     margin: 0;
     display: inline-block;
 }
@@ -63,7 +63,7 @@ div.site-navigation {
     display: grid;
     grid-template-columns: auto auto auto auto;
     width: 35vw;
-    font-size: 2vw;
+    font-size: calc(21px + 0.390625vw);
 }
 
 div.site-navigation p,
@@ -117,7 +117,7 @@ div.slim-card h1 {
     width: fit-content;
     border-radius: 24px;
     padding: 0.25em 0.5em 0.15em 0.5em;
-    font-size: 2vw;
+    font-size: calc(20px + 0.390625vw);
 }
 
 div.card-container,
@@ -130,7 +130,7 @@ div.release-page-card-container {
 
 div.releases-card-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     column-gap: 1em;
     row-gap: 1em;
 }
@@ -154,7 +154,7 @@ div.release-page-card-container {
 
 div.card-content {
     margin-left: 0.5em;
-    font-size: 1.75vw;
+    font-size: calc(17px + 0.390625vw);
 }
 
 div.card-content a {
@@ -172,7 +172,7 @@ div.card-content-grid {
     grid-template-columns: min-content min-content min-content;
     margin-left: 0.25em;
     column-gap: 1em;
-    font-size: 2vw;
+    font-size: calc(20px + 0.390625vw);
 }
 
 div.card-content-grid p,
@@ -202,11 +202,11 @@ div.tool-preview {
 div.article-preview h1 {
     padding: 0;
     margin: 0;
-    font-size: 2vw;
+    font-size: calc(20px + 0.390625vw);
 }
 
 div.article-preview h3 {
-    font-size: 1vw;
+    font-size: calc(7px + 0.390625vw);
 }
 
 div.article-header h1,
@@ -215,7 +215,7 @@ div.article-header p {
 }
 
 div.article-header p {
-    font-size: 2vw;
+    font-size: calc(20px + 0.390625vw);
     margin-left: 0.5em;
 }
 
@@ -273,7 +273,7 @@ div.button-preview-bg * {
 }
 
 a.table-source {
-    font-size: 60%;
+    font-size: calc(7px + 0.390625vw);
 }
 
 table {
@@ -334,7 +334,7 @@ input[type=button] {
     border-radius: 24px;
     padding: 0.25em 0.25em 0.25em 0.25em;
     font-family: league-spartan;
-    font-size: 1.5rem;
+    font-size: calc(17px + 0.390625vw);
     cursor: pointer;
     width: 100%
 }
@@ -346,7 +346,7 @@ input[type=button].platform-unselected {
     border: 2px solid transparent;
     padding: 0.25em 1em 0.25em 1em;
     font-family: league-spartan;
-    font-size: 1.75vw;
+    font-size: calc(17px + 0.390625vw);
     cursor: pointer;
     width: 100%
 }
@@ -392,7 +392,7 @@ p.disclaimer {
 }
 
 /* Mobile layout */
-@media (max-width: 500px) {
+@media (max-width: 640px) {
 
     body {
         width: 95%;
