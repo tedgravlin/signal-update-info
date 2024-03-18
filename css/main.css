@@ -192,7 +192,8 @@ div.news-card-grid {
     row-gap: 1em;
 }
 
-div.article-preview {
+div.article-preview,
+div.tool-preview {
     border: 3px solid transparent;
     border-radius: 20px;
     padding: 2em;
@@ -216,6 +217,59 @@ div.article-header p {
 div.article-header p {
     font-size: 2vw;
     margin-left: 0.5em;
+}
+
+div.tool-preview {
+    padding: 0.5em;
+    text-align: center;
+    transition: 0.25s;
+}
+
+div.tool-button-preview {
+    padding: 1em;
+    border-radius: 20px;
+}
+
+div.button-preview,
+div.button-color-preview {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4166f5;
+    color: white;
+    border: 1.5px solid transparent;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 24px;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 0.25fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+    column-gap: 5px;
+}
+
+/* Targeting devices with mouse cursor and :hover */
+@media(hover: hover) and (pointer: fine) {
+    div.tool-preview:hover {
+        transform: scale(95%);
+    }
+}
+
+div.button-preview img {
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);}
+
+div.button-preview p {
+    margin: 0;
+    font-size: 14px;
+}
+
+div.button-color-preview {
+    pointer-events: none;
+}
+
+div.button-preview-bg * {
+    pointer-events: none;
 }
 
 a.table-source {

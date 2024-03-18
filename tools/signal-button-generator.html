@@ -28,7 +28,7 @@
     <meta property="og:url" content="https://signalupdateinfo.com/tools/signal-button-generator/" />
 </head>
 
-<body onload="generateCode()">
+<body onload="resetOnPageLoad()">
     <!-- Site Header and Navigation-->
     <header>
         <a href="/index.html">
@@ -62,14 +62,13 @@
                 </p>
                 <div class="button-link-container">
                     <label for="link-input">Link or Phone Number</label>
-                    <br>
+                    <p class="button-link-input-warning">Enter a username/group link or a phone number in international format (e.g. +12345678901)</p>
                     <input autocomplete="off" onkeyup="handleInput('link')" class="button-generator-input"
                         id="link-input" type="text" placeholder="https://signal.me/#eu/...">
-                    <p class="button-link-input-warning">Phone number must be in international format (e.g. +12345678901)</p>
                 </div>
                 <p class="option-category">Choose Message</p>
                 <div class="button-message-options">
-                    <div onclick="handleMessageChange('message0')" id="message0" class="message-option">
+                    <div onclick="handleMessageChange('message0')" id="message0" class="message-selected message-option">
                         <p>Chat on Signal</p>
                     </div>
                     <div onclick="handleMessageChange('message1')" id='message1' class="message-option">
@@ -90,7 +89,7 @@
                 </div>
                 <p class="option-category">Choose Color Scheme</p>
                 <div class="button-style-options">
-                    <div onclick="handleColorChange('color_scheme0')" id="color_scheme0" class="style-option">
+                    <div onclick="handleColorChange('color_scheme0')" id="color_scheme0" class="color-selected style-option">
                         <a class="button-color-preview button-preview">
                             <img alt="Signal Logo" src='/assets/images/icons/signal-icon.png'>
                             <p>White on blue</p>
@@ -101,6 +100,18 @@
                             <img src='/assets/images/icons/signal-icon.png'>
                             <p>Blue on white</p>
                         </a>
+                    </div>
+                </div>
+                <p class="option-category">Choose Size</p>
+                <div class="button-size-options">
+                    <div onclick="handleSizeChange('size0')" id="size0" class="size-option">
+                        <p>Small</p>
+                    </div>
+                    <div onclick="handleSizeChange('size1')" id='size1' class="size-selected size-option">
+                        <p>Medium</p>
+                    </div>
+                    <div onclick="handleSizeChange('size2')" id='size2' class="size-option">
+                        <p>Large</p>
                     </div>
                 </div>
             </div>

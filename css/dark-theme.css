@@ -68,10 +68,15 @@
         color: var(--text-color);
     }
 
-    div.article-preview {
+    div.article-preview,
+    div.tool-preview {
         background-color: var(--text-color);
         border-color: var(--text-color);
         color: var(--main-color);
+    }
+
+    div.tool-button-preview {
+        background-color: var(--main-color);
     }
 
     div.article-preview h1 {
@@ -106,7 +111,8 @@
     }
 
     .message-selected,
-    .color-selected {
+    .color-selected,
+    .size-selected {
         border-color: var(--btn-selected-border-color) !important;
     }
 
@@ -131,7 +137,8 @@
         }
 
         div.message-option:hover,
-        div.style-option:hover {
+        div.style-option:hover,
+        div.size-option:hover {
             box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
         }
 

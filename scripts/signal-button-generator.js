@@ -1,5 +1,15 @@
+// Sets localStorage values to default on page load
+function resetOnPageLoad() {
+    localStorage.setItem("message", "Chat on Signal");
+    localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
+    localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
+    localStorage.setItem("image_size", "20px");
+    localStorage.setItem("font_size", "14px");
+    generateCode();
+}
+
 // Get the value from the input box and validate it
-function handleInput(change) {
+function handleInput() {
     let input_value = document.getElementById('link-input').value;
     let input_type = determineInputType(input_value);
 
@@ -49,6 +59,30 @@ function handleColorChange(id) {
 
     // Set the color option as selected
     setButtonAsSelected("color", id);
+    // Regenerate the code
+    generateCode();
+}
+
+function handleSizeChange(id) {
+    // Small
+    if (id === 'size0') {
+        localStorage.setItem("image_size", "14px");
+        localStorage.setItem("font_size", "12px");
+    }
+    // Medium
+    else if (id === 'size1') {
+        localStorage.setItem("image_size", "20px");
+        localStorage.setItem("font_size", "14px");
+    }
+    // Large
+    // Medium
+    else if (id === 'size2') {
+        localStorage.setItem("image_size", "25px");
+        localStorage.setItem("font_size", "18px");
+    }
+
+    // Set the color option as selected
+    setButtonAsSelected("size", id);
     // Regenerate the code
     generateCode();
 }
@@ -114,19 +148,24 @@ function generateCode() {
     let message = localStorage.getItem("message");
     let button_color = localStorage.getItem("button_color");
     let image_filter = localStorage.getItem("button_filter");
+    let image_size = localStorage.getItem("image_size");
+    let font_size = localStorage.getItem("font_size");
     let grid_template_columns = "0.25fr 1fr";
 
     // If items are null, set placeholder values
     if (message == null) localStorage.setItem("message", "Chat on Signal");
     if (button_color == null) localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
     if (image_filter == null) localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
+    if (image_size == null) localStorage.setItem("image_size", "20px");
+    if (font_size == null) localStorage.setItem("font_size", "14px");
+
     message = localStorage.getItem("message");
     button_color = localStorage.getItem("button_color");
     image_filter = localStorage.getItem("button_filter");
 
     // Standard message design
     if (message != "") {
-        message = "<p style='margin:0;font-size:14px;'>" + message + "</p></a>";
+        message = "<p style='margin:0;font-size:" + font_size + ";'>" + message + "</p></a>";
     }
     // Empty message design
     else {
@@ -136,7 +175,7 @@ function generateCode() {
     let code = "<a target='_blank' rel='noreferrer' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;"
         + button_color + "padding: 0.5em 1em 0.5em 1em; border-radius: 24px;"
         + "display: grid;width: fit-content;height:fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
-        + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: 20px;"
+        + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: " + image_size +  ";"
         + image_filter + "' "
         + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.png'>" + message;
 
@@ -183,5 +222,14 @@ function setButtonAsSelected(type, id) {
         }
         // Mark the current color option as selected
         document.getElementById(id).classList.add("color-selected");
+    }
+    else if (type === 'size') {
+        // Unselect all color buttons
+        let size_options = document.querySelectorAll(".size-selected");
+        for (let i = 0; i < size_options.length; i++) {
+            size_options[i].classList.remove("size-selected");
+        }
+        // Mark the current color option as selected
+        document.getElementById(id).classList.add("size-selected");
     }
 }
