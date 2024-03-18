@@ -1,10 +1,18 @@
+let link;
+let message;
+let button_color;
+let image_filter;
+let image_size;
+let font_size;
+
 // Sets localStorage values to default on page load
 function resetOnPageLoad() {
-    localStorage.setItem("message", "Chat on Signal");
-    localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
-    localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
-    localStorage.setItem("image_size", "20px");
-    localStorage.setItem("font_size", "14px");
+    link = "";
+    message = "Chat on Signal"
+    button_color = "background-color: #4166f5; color: white; border: 1.5px solid transparent;";
+    image_filter = "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);";
+    image_size = "20px";
+    font_size = "14px";
     generateCode();
 }
 
@@ -17,7 +25,7 @@ function handleInput() {
         // Check if the link is a valid username or group link
         if (isValidSignalLink(input_value)) {
             console.log("Valid username or group link");
-            localStorage.setItem("link", input_value);
+            link = input_value;
         }
         else {
             console.log("Invalid username or group link");
@@ -25,7 +33,7 @@ function handleInput() {
     }
     else if (input_type === "number") {
         console.log("Valid number was input!");
-        localStorage.setItem("link", generatePhoneLink(input_value));
+        link = generatePhoneLink(input_value);
     }
 
     generateCode();
@@ -33,10 +41,10 @@ function handleInput() {
 
 function handleMessageChange(id) {
     if (id !== 'message-custom') {
-        localStorage.setItem("message", getMessage(id));
+        message = getMessage(id);
     }
     else {
-        localStorage.setItem("message", document.getElementById('custom-message').value);
+        message = document.getElementById('custom-message').value;
     }
 
     // Set the message option as selected
@@ -48,13 +56,13 @@ function handleMessageChange(id) {
 function handleColorChange(id) {
     // White on blue
     if (id === 'color_scheme0') {
-        localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
-        localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
+        button_color = "background-color: #4166f5; color: white; border: 1.5px solid transparent;";
+        image_filter = "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);";
     }
     // Blue on white
     else if (id === 'color_scheme1') {
-        localStorage.setItem("button_color", "background-color: white; color: #4166f5; border: 1.5px solid #4166f5;");
-        localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(34%) sepia(73%) saturate(3397%) hue-rotate(220deg) brightness(100%) contrast(93%);");
+        button_color = "background-color: white; color: #4166f5; border: 1.5px solid #4166f5;";
+        image_filter = "filter: brightness(0) saturate(100%) invert(34%) sepia(73%) saturate(3397%) hue-rotate(220deg) brightness(100%) contrast(93%);";
     }
 
     // Set the color option as selected
@@ -66,19 +74,18 @@ function handleColorChange(id) {
 function handleSizeChange(id) {
     // Small
     if (id === 'size0') {
-        localStorage.setItem("image_size", "14px");
-        localStorage.setItem("font_size", "12px");
+        image_size = "14px";
+        font_size = "12px";
     }
     // Medium
     else if (id === 'size1') {
-        localStorage.setItem("image_size", "20px");
-        localStorage.setItem("font_size", "14px");
+        image_size = "20px";
+        font_size = "14px";
     }
     // Large
-    // Medium
     else if (id === 'size2') {
-        localStorage.setItem("image_size", "25px");
-        localStorage.setItem("font_size", "18px");
+        image_size = "25px";
+        font_size = "18px";
     }
 
     // Set the color option as selected
@@ -144,40 +151,24 @@ function generateCode() {
     let button_preview_container = document.getElementById("button-preview-container");
     let new_button = document.createElement("a");
     let old_button = button_preview_container.children[1];
-    let link = localStorage.getItem("link");
-    let message = localStorage.getItem("message");
-    let button_color = localStorage.getItem("button_color");
-    let image_filter = localStorage.getItem("button_filter");
-    let image_size = localStorage.getItem("image_size");
-    let font_size = localStorage.getItem("font_size");
     let grid_template_columns = "0.25fr 1fr";
-
-    // If items are null, set placeholder values
-    if (message == null) localStorage.setItem("message", "Chat on Signal");
-    if (button_color == null) localStorage.setItem("button_color", "background-color: #4166f5; color: white; border: 1.5px solid transparent;");
-    if (image_filter == null) localStorage.setItem("button_filter", "filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);");
-    if (image_size == null) localStorage.setItem("image_size", "20px");
-    if (font_size == null) localStorage.setItem("font_size", "14px");
-
-    message = localStorage.getItem("message");
-    button_color = localStorage.getItem("button_color");
-    image_filter = localStorage.getItem("button_filter");
 
     // Standard message design
     if (message != "") {
-        message = "<p style='margin:0;font-size:" + font_size + ";'>" + message + "</p></a>";
+        message_element = "<p style='margin:0;font-size:" + font_size + ";'>" + message + "</p></a>";
     }
     // Empty message design
     else {
         grid_template_columns = "1fr";
+        message_element = "";
     }
 
     let code = "<a target='_blank' rel='noreferrer' href='" + link + "' style='font-family:Arial, Helvetica, sans-serif;"
         + button_color + "padding: 0.5em 1em 0.5em 1em; border-radius: 24px;"
         + "display: grid;width: fit-content;height:fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
-        + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: " + image_size +  ";"
+        + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: " + image_size + ";"
         + image_filter + "' "
-        + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.png'>" + message;
+        + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.png'>" + message_element;
 
     // Replace old button with new button
     new_button.innerHTML = code;
