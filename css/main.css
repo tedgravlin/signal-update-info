@@ -20,7 +20,19 @@ img.theme-button-desktop {
     float: right;
     margin: 1em 2em 1em 1em;
     cursor: pointer;
+    transition: 0.25s;
 }
+
+@keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
 
 div.theme-button-mobile {
     display: none;
@@ -80,12 +92,14 @@ div.card,
 div.slim-card {
     border-radius: 24px;
     padding: 1em 2em 2em 2em;
+    animation: ease-out 0.5s;
 }
 
 div.release-card {
     display: flex;
     border-radius: 24px;
     padding: 1em;
+    transition: 0.25s;
 }
 
 div.release-card * {
@@ -129,10 +143,41 @@ div.release-page-card-container {
 }
 
 div.releases-card-container {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     column-gap: 1em;
     row-gap: 1em;
+}
+
+.cardSlideUp {
+    animation: ease-out cardSlideUp 0.5s;
+}
+
+div.card-container:nth-child(1),
+div.release-page-card-container:nth-child(1) {
+    animation: ease-out cardSlideUp 0.5s;
+}
+
+div.card-container:nth-child(2) {
+    animation: ease-out cardSlideUp 0.65s;
+}
+
+div.card-container:nth-child(3) {
+    animation: ease-out cardSlideUp 0.75s;
+}
+
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(25px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.home-releases {
+    display: grid !important;
 }
 
 div.platform-container {
@@ -140,6 +185,9 @@ div.platform-container {
     border-radius: 24px;
     padding: 1em 2em 2em 2em;
     margin: 0 3em 1em 3em;
+    min-height: 150px;
+    height: fit-content;
+    animation: ease-out cardSlideUp 0.5s;
 }
 
 div.two-card-container {
@@ -197,6 +245,7 @@ div.tool-preview {
     border: 3px solid transparent;
     border-radius: 20px;
     padding: 2em;
+    transition: 0.25s;
 }
 
 div.article-preview h1 {
@@ -253,11 +302,22 @@ div.button-color-preview {
     div.tool-preview:hover {
         transform: scale(95%);
     }
+
+    div.release-card:hover,
+    div.article-preview:hover {
+        transform: scale(106%);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.11) 0px 1px 1px 0px, rgba(0, 0, 0, 0.24) 0px 1px 3px 0px
+    }
+
+    img.theme-button-desktop:hover {
+        transform: rotate(10deg);
+    }
 }
 
 div.button-preview img {
     width: 20px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);}
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7497%) hue-rotate(138deg) brightness(105%) contrast(101%);
+}
 
 div.button-preview p {
     margin: 0;

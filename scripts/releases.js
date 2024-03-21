@@ -1,7 +1,7 @@
 // On page load, show the right platform
 window.addEventListener("load", (event) => {
     let platform = window.location.hash.substring(1);
-    switchRelease(platform);  
+    switchRelease(platform);
 });
 
 
@@ -26,6 +26,9 @@ function switchRelease(platform) {
         desktop_button.className = "platform-unselected right";
         // URL
         window.location.replace('#' + "android");
+
+        // Animate release buttons
+        animateReleaseButtons(android_container);
     }
     // iOS
     if (platform == 'ios') {
@@ -39,6 +42,9 @@ function switchRelease(platform) {
         desktop_button.className = "platform-unselected right";
         // URL
         window.location.replace('#' + "ios");
+
+        // Animate release buttons
+        animateReleaseButtons(ios_container);
     }
     // Desktop
     if (platform == 'desktop') {
@@ -52,5 +58,23 @@ function switchRelease(platform) {
         desktop_button.className = "platform-selected right";
         // URL
         window.location.replace('#' + "desktop");
+
+        // Animate release buttons
+        animateReleaseButtons(desktop_container);
+    }
+}
+
+function animateReleaseButtons(platform_container) {
+    let children = platform_container.children;
+    let speed = 0.25;
+
+    // Increment each button's speed by 0.1s
+    for (let i = 0; i < platform_container.childElementCount; i++) {
+        // Add the animation class to the button
+        children[i].classList.add('cardSlideUp');
+        // Cap the speed at 1s
+        if (speed <= 1) speed = speed + 0.1;
+        // Change the button's animation duration
+        children[i].style.animationDuration = speed + "s";
     }
 }

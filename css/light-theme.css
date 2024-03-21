@@ -83,8 +83,7 @@
     div.article-preview,
     div.tool-preview {
         border: 3px solid transparent;
-        background-color: var(--text-color);
-        color: var(--main-color);
+        background-color: var(--on-main-bg-color);
     }
 
     div.tool-button-preview {
@@ -93,7 +92,7 @@
 
     div.article-preview h1 {
         background-color: var(--text-color);
-        color: var(--main-color);
+        color: transparent;
     }
 
     div.message-option,

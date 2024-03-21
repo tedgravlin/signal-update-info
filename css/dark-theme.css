@@ -70,8 +70,7 @@
 
     div.article-preview,
     div.tool-preview {
-        background-color: var(--text-color);
-        border-color: var(--text-color);
+        background-color: var(--on-main-bg-color);
         color: var(--main-color);
     }
 
@@ -81,7 +80,7 @@
 
     div.article-preview h1 {
         color: var(--main-color);
-        background-color: var(--text-color);
+        background-color: transparent;
     }
 
     div.message-option,
@@ -129,14 +128,6 @@
 
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
-        div.article-preview:hover,
-        div.article-preview:hover h1 {
-            transition: 0.1s;
-            background-color: var(--main-color);
-            color: var(--text-color);
-            border-color: var(--text-color);
-        }
-
         div.message-option:hover,
         div.style-option:hover,
         div.size-option:hover {
