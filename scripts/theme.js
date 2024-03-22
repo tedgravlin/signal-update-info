@@ -51,6 +51,8 @@ function setTheme(theme) {
         case 'auto':
             theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-auto.svg');
             theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-auto.svg');
+            theme_button_desktop.setAttribute('alt', 'Auto Theme Icon');
+            theme_icon_mobile.setAttribute('alt', 'Auto Theme Icon');
             localStorage.setItem('theme', 'auto');
             root.style.removeProperty('--main-color');
             root.style.removeProperty('--background-color');
@@ -60,6 +62,8 @@ function setTheme(theme) {
         case 'light':
             theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-light.svg');
             theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-light.svg');
+            theme_button_desktop.setAttribute('alt', 'Light Theme Icon');
+            theme_icon_mobile.setAttribute('alt', 'Light Theme Icon');
             localStorage.setItem('theme', 'light');
             root.style.setProperty('--main-color', 'white');
             root.style.setProperty('--background-color', '#4166f5');
@@ -77,6 +81,8 @@ function setTheme(theme) {
         case 'dark':
             theme_button_desktop.setAttribute('src', '/assets/images/icons/theme-dark.svg');
             theme_icon_mobile.setAttribute('src', '/assets/images/icons/theme-dark.svg');
+            theme_button_desktop.setAttribute('alt', 'Dark Theme Icon');
+            theme_icon_mobile.setAttribute('alt', 'Dark Theme Icon');
             localStorage.setItem('theme', 'dark');
             root.style.setProperty('--main-color', '#9db1ff');
             root.style.setProperty('--background-color', '#181d44');

@@ -82,8 +82,8 @@
 
     div.article-preview,
     div.tool-preview {
-        border: 3px solid transparent;
         background-color: var(--on-main-bg-color);
+        color: var(--main-color);
     }
 
     div.tool-button-preview {
@@ -91,8 +91,8 @@
     }
 
     div.article-preview h1 {
-        background-color: var(--text-color);
-        color: transparent;
+        color: var(--main-color);
+        background-color: transparent;
     }
 
     div.message-option,
@@ -139,19 +139,6 @@
 
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
-        div.article-preview:hover {
-            transition: 0.1s;
-            color: var(--text-color);
-            background-color: var(--main-color);
-            border: 3px solid var(--text-color);
-        }
-
-        div.article-preview:hover h1 {
-            transition: 0.1s;
-            background-color: var(--main-color);
-            color: var(--text-color);
-        }
-
         div.message-option:hover,
         div.style-option:hover,
         div.size-option:hover {
