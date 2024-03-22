@@ -141,6 +141,7 @@ div.release-page-card-container {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 3em 1em 3em;
+    will-change: transform !important;
 }
 
 div.releases-card-container {
@@ -152,6 +153,10 @@ div.releases-card-container {
 
 .cardSlideUp {
     animation: ease-out cardSlideUp 0.5s;
+}
+
+.releaseSlideUp {
+    animation: ease-out releaseSlideUp;
 }
 
 div.card-container:nth-child(1),
@@ -177,6 +182,16 @@ div.card-container:nth-child(3) {
     }
 }
 
+@keyframes releaseSlideUp {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
 .home-releases {
     display: grid !important;
 }
@@ -189,6 +204,7 @@ div.platform-container {
     min-height: 150px;
     height: fit-content;
     animation: ease-out cardSlideUp 0.5s;
+    will-change: transform !important;
 }
 
 div.two-card-container {

@@ -71,7 +71,7 @@ function animateReleaseButtons(platform_container) {
     // Increment each button's speed by 0.1s
     for (let i = 0; i < platform_container.childElementCount; i++) {
         // Add the animation class to the button
-        children[i].classList.add('cardSlideUp');
+        children[i].classList.add('releaseSlideUp');
         // Cap the speed at 1s
         if (speed <= 1) speed = speed + 0.1;
         // Change the button's animation duration
