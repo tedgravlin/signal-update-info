@@ -6,7 +6,7 @@ window.addEventListener("load", (event) => {
 
 
 // Switches platform
-function switchRelease(platform) {
+function switchRelease(incoming_platform) {
     let android_container = document.getElementById("android-container");
     let ios_container = document.getElementById("ios-container");
     let desktop_container = document.getElementById("desktop-container");
@@ -14,53 +14,35 @@ function switchRelease(platform) {
     let ios_button = document.getElementById("ios-button");
     let desktop_button = document.getElementById("desktop-button");
 
-    // Android
-    if (platform == 'android' || platform == "") {
-        // Containers
-        android_container.style.display = "grid";
-        ios_container.style.display = "none";
-        desktop_container.style.display = "none";
-        // Buttons
-        android_button.className = "platform-selected left";
-        ios_button.className = "platform-unselected middle";
-        desktop_button.className = "platform-unselected right";
-        // URL
-        window.location.replace('#' + "android");
+    let platform_list = ['android', 'ios', 'desktop'];
+    let container_list = [android_container, ios_container, desktop_container];
+    let button_list = [android_button, ios_button, desktop_button];
 
-        // Animate release buttons
-        animateReleaseButtons(android_container);
-    }
-    // iOS
-    if (platform == 'ios') {
-        // Containers
-        android_container.style.display = "none";
-        ios_container.style.display = "grid";
-        desktop_container.style.display = "none";
-        // Buttons
-        android_button.className = "platform-unselected left";
-        ios_button.className = "platform-selected middle";
-        desktop_button.className = "platform-unselected right";
-        // URL
-        window.location.replace('#' + "ios");
+    let platform_index = platform_list.indexOf(incoming_platform);
 
-        // Animate release buttons
-        animateReleaseButtons(ios_container);
-    }
-    // Desktop
-    if (platform == 'desktop') {
-        // Containers
-        android_container.style.display = "none";
-        ios_container.style.display = "none";
-        desktop_container.style.display = "grid";
-        // Buttons
-        android_button.className = "platform-unselected left";
-        ios_button.className = "platform-unselected middle";
-        desktop_button.className = "platform-selected right";
-        // URL
-        window.location.replace('#' + "desktop");
-
-        // Animate release buttons
-        animateReleaseButtons(desktop_container);
+    for (platform in platform_list) {
+        // If the platform is empty, default to first platform
+        if (incoming_platform == "") platform_index = 0;
+        // Show current platform container
+        // and mark its button as selected
+        if (platform == platform_index) {
+            // Change container display to grid
+            container_list[platform].style.display = "grid";
+            // Animate the release buttons
+            animateReleaseButtons(container_list[platform]);
+            // Mark as selected
+            button_list[platform].classList.remove('platform-unselected');
+            button_list[platform].classList.add('platform-selected');
+            // Update URL with new hash
+            window.location.replace('#' + platform_list[platform]);
+        }
+        // Hide all other platform containers
+        // and mark their buttons as unselected
+        else {
+            container_list[platform].style.display = "none";
+            button_list[platform].classList.remove('platform-selected');
+            button_list[platform].classList.add('platform-unselected');
+        }
     }
 }
 
