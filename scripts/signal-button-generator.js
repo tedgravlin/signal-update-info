@@ -242,7 +242,7 @@ function generateCode() {
         + "display: grid;width: fit-content;height:fit-content;grid-template-columns:" + grid_template_columns + ";justify-items: center;"
         + "align-items: center;text-decoration: none;column-gap:5px;'><img alt='Signal Logo' style='width: " + image_size + ";"
         + image_filter + "' "
-        + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.png'>" + message_element;
+        + "src='https://signalupdateinfo.com/assets/images/icons/signal-icon.webp'>" + message_element;
 
     // Replace old button with new button
     new_button.innerHTML = code;
