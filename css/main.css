@@ -1,12 +1,12 @@
 :root {
-    font-family: league-spartan;
+    font-family: 'league-spartan', 'Arial';
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: "league-spartan";
-    src: url(../assets/fonts/LeagueSpartan-SemiBold.ttf);
+    src: url(/assets/fonts/LeagueSpartan-SemiBold.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -24,6 +24,8 @@ img.theme-button-desktop {
     margin: 1em 2em 1em 1em;
     cursor: pointer;
     transition: 0.25s;
+    width: 24px;
+    height: 24px;
 }
 
 @keyframes spin {
@@ -117,6 +119,7 @@ div.release-card * {
 
 div.release-card img {
     width: 25px;
+    height: 25px;
 }
 
 div.slim-card {
