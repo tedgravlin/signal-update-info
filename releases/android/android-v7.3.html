@@ -10,19 +10,19 @@
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>iOS v7.5 - Signal Update Info</title>
+    <title>Android v7.3 - Signal Update Info</title>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
     <!-- Meta -->
-    <meta name="title" property="og:title" content="Signal for iOS v7.5" />
+    <meta name="title" property="og:title" content="Signal for Android v7.3" />
     <meta name="description" property="og:description"
         content="Signal news and updates. We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
     <meta name="keywords" content="signal update info,signal updates,signal" />
     <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://signalupdateinfo.com/releases/ios/ios-v7.5.html" />
+    <meta property="og:url" content="https://signalupdateinfo.com/releases/android/android-v7.3.html" />
 </head>
 
 <body>
@@ -31,10 +31,9 @@
         <a href="/index.html">
             <h1 class="site-title">Signal Update Info</h1>
         </a>
-        <img alt="Auto Theme Icon" class="theme-button-desktop" id="theme-button-desktop"
-            src="/assets/images/icons/theme-auto.svg">
+        <img alt="Auto Theme Icon" class="theme-button-desktop" id="theme-button-desktop" src="/assets/images/icons/theme-auto.svg">
         <div class="site-navigation">
-            <a class="selected-page" href="/releases.html#ios">
+            <a class="selected-page" href="/releases.html">
                 Releases
             </a>
             <a href="/news.html">
@@ -53,25 +52,31 @@
         <div class="release-page-card-container">
             <!-- Release Info Card -->
             <div class="card">
-                <h1>iOS v7.5</h1>
+                <h1>Android v7.3</h1>
                 <div class="card-content">
-                    <p>Official Release Notes</p>
+                    <!-- <p>Official Release Notes</p>
                     <ul>
-                        <li>Now when you open a chat with a missed call, that missed call indicator will also be cleared
-                            from the calls tab. If you've never seen this bug, you aren't missing much.
-                        </li>
+                        <li>Assign preferred display names to your Signal connections, and include a note.</li>
+                        <li>Fixes to the in-app camera, including rotation.</li>
                     </ul>
-                    <br>
-                    <p>Other Changes</p>
+                    <br> -->
+                    <p>Changes</p>
                     <ul>
-                        <li>Bug fixes and code cleanup
+                        <li>Improvements to calling
+                            <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/f01e04466230284e9fb5fb026cf6adfe1cf594d6">[src]</a>
+                        </li>
+                        <li>Renamed 'System contact' to 'Phone contact'
+                            <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/b50eab230dd98fe7e7ef848ec3793aefc1f068f8">[src]</a>
                         </li>
                     </ul>
                     <br>
                     <p>Upcoming Features</p>
                     <ul>
-                        <li>More work done on the upcoming nickname and notes feature <a target="_blank"
-                                href="https://github.com/signalapp/Signal-iOS/commit/1a5bacd22000c28d8374fafee8adc7507aa1a553">[src]</a>
+                        <li> More work done on call links
+                            <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/879e05148bc96df34e0d2772836c515c98b5bd71">[src]</a>
                         </li>
                     </ul>
                 </div>
@@ -81,10 +86,10 @@
                 <h1>Resources</h1>
                 <div class="card-content">
                     <a target="_blank"
-                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-ios-7-5-release/59903?u=salt505">Beta
+                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-7-3-release/60021?u=salt505">Beta
                         thread</a>
                     <a target="_blank"
-                        href="https://github.com/signalapp/Signal-iOS/compare/7.4.0.7-beta...7.5.0.7-beta">Commits</a>
+                        href="https://github.com/signalapp/Signal-Android/compare/v7.2.4...v7.3.0">Commits</a>
                 </div>
             </div>
         </div>
@@ -97,8 +102,7 @@
         <br>
         <div class="theme-button-mobile " id="theme-button-mobile">
             <p>Theme:</p>
-            <img alt="Auto Theme Icon" class="theme-icon-mobile" id="theme-icon-mobile"
-                src="/assets/images/icons/theme-auto.svg">
+            <img alt="Auto Theme Icon" class="theme-icon-mobile" id="theme-icon-mobile" src="/assets/images/icons/theme-auto.svg">
         </div>
         <p class="disclaimer">Signal Update Info is not affiliated with Signal and is not an official Signal website.
         </p>
