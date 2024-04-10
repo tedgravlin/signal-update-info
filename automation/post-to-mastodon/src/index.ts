@@ -107,8 +107,8 @@ export default {
 
 			// Create form for fetch body
 			const form = new FormData();
-			form.append('status', `🎉 There's a new beta version of Signal!\n\nSignal for ${getFormattedPlatform(platform)} v${major}.${minor}\n\nCheck out the Signal Community thread for more info: ${url.replace('.json', '')}\n\n#signal #signalapp #signalupdated`);
-			form.append('visibility', 'direct');
+			form.append('status', `🎉 There's a new beta version of Signal!\n\nSignal for ${getFormattedPlatform(platform)} v${major}.${minor}\n\nCheck out the Signal Community thread for more info: ${url.replace('.json', '')}\n\n#signal #signalapp #signalupdates`);
+			form.append('visibility', 'public');
 
 			// Attempt to post to Mastodon
 			let response: any = await fetch('https://mastodon.world/api/v1/statuses', {
@@ -168,7 +168,7 @@ export default {
 			// Append Mastodon API options
 			form.append('in_reply_to_id', postId);
 			form.append('status', `#Signal for ${getFormattedPlatform(platform)} v${major}.${minor} release notes:\n\n${releaseNotes}`);
-			form.append('visibility', 'direct');
+			form.append('visibility', 'public');
 
 			// Attempt to post the reply to Mastodon
 			let response: any = await fetch('https://mastodon.world/api/v1/statuses', {
