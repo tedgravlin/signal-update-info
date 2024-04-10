@@ -9,13 +9,29 @@
             up-to-date with your favorite E2EE messaging app.</description>
         <item>
             <title>Signal for iOS v7.6</title>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/ios/ios-v7.6.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
             <link>https://signalupdateinfo.com/releases/ios/ios-v7.6.html</link>
             <description>Release: Signal for iOS v7.6 has been released in beta.</description>
+            <pubDate>April 9 2024</pubDate>
         </item>
         <item>
             <title>Cloud Backups</title>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/news/cloud-backups.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/cloud-backups.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
             <link>https://signalupdateinfo.com/news/cloud-backups.html</link>
             <description>News: Cloud backups are coming to Signal.</description>
+            <pubDate>February 1 2024</pubDate>
         </item>
     </channel>
 
