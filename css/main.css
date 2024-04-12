@@ -59,6 +59,35 @@ footer p {
     display: inline-block;
 }
 
+div.footer-button-container {
+    display: grid;
+    width: fit-content;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+a.footer-button {
+    display: block;
+    text-decoration: none;
+    padding: 0.30em 0.5em 0.5em 0.5em;
+    border: 2px solid var(--main-color);
+    border-radius: 24px;
+    margin: auto;
+    width: fit-content;
+    transition: 0.25s;
+}
+
+a.footer-button img {
+    display: inline-block;
+    position: relative;
+    min-height: 19px;
+    min-width: 19px;
+    height: 19px;
+    width: 19px;
+    top: 5px;
+    margin: 0 3px 0 0;
+}
+
 /* Divs */
 header {
     margin: 2em 0 2em 3em;
@@ -71,7 +100,7 @@ header h1 {
     display: inline-block;
     transition: 0.25s;
     will-change: transform !important;
-    
+
 }
 
 header a {
@@ -207,7 +236,7 @@ div.card-container:nth-child(3) {
 }
 
 div.platform-container {
-    background-color: var(--main-color);
+    background-color: var(--card-color);
     border-radius: 24px;
     padding: 1em 2em 2em 2em;
     margin: 0 3em 1em 3em;
@@ -291,7 +320,7 @@ div.article-header p {
 }
 
 div.article-header p {
-    font-size: calc(20px + 0.390625vw);
+    font-size: calc(15px + 0.390625vw);
     margin-left: 0.5em;
 }
 
@@ -339,7 +368,8 @@ div.button-color-preview {
     }
 
     div.release-card:hover,
-    div.article-preview:hover {
+    div.article-preview:hover,
+    a.footer-button:hover {
         transform: scale(106%);
         box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.11) 0px 1px 1px 0px, rgba(0, 0, 0, 0.24) 0px 1px 3px 0px
     }
@@ -501,11 +531,18 @@ p.disclaimer {
 
     header h1 {
         font-size: 10vw;
-        margin: 0px;   
+        margin: 0px;
     }
 
     img.theme-button-desktop {
         display: none;
+    }
+
+    /* Footer */
+    div.footer-button-container {
+        width: fit-content;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     div.theme-button-mobile {
@@ -524,7 +561,10 @@ p.disclaimer {
     img.theme-icon-mobile {
         display: inline-block;
         position: relative;
+        min-height: 19px;
+        min-width: 19px;
         height: 19px;
+        width: 19px;
         top: 5px;
         margin: 0;
     }
@@ -572,7 +612,7 @@ p.disclaimer {
     }
 
     div.article-header p {
-        font-size: 5.5vw;
+        font-size: 4vw;
         margin-left: 0.5em;
         margin-top: 0;
     }
@@ -636,5 +676,8 @@ p.disclaimer {
     input[type=button].platform-selected,
     input[type=button].platform-unselected {
         font-size: 5vw;
+    }
+    div.card-content ul {
+        padding-inline-start: 30px;
     }
 }
