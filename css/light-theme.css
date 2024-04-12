@@ -37,6 +37,10 @@
         color: var(--main-color);
     }
 
+    a.footer-button img {
+        filter: var(--main-color-filter);
+    }
+
     header,
     header a:visited {
         color: var(--main-color);
@@ -87,6 +91,10 @@
     div.tool-preview {
         background-color: var(--on-main-bg-color);
         color: var(--btn-text);
+    }
+
+    div.article-header p {
+        color: var(--text-color);
     }
 
     div.tool-button-preview {

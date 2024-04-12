@@ -6,7 +6,7 @@
         --card-color: #9db1ff;
         --btn-text: #9db1ff;
         --background-color: #181d44;
-        --on-main-bg-color: #181d44dd; 
+        --on-main-bg-color: #181d44dd;
         --text-color: #182142;
         --platform-selected-bg: #181d44ca;
         --main-color-filter: invert(74%) sepia(95%) saturate(1952%) hue-rotate(192deg) brightness(101%) contrast(100%);
@@ -22,7 +22,8 @@
         background-color: var(--background-color);
     }
 
-    img.theme-button-desktop, img.theme-icon-mobile {
+    img.theme-button-desktop,
+    img.theme-icon-mobile {
         filter: var(--main-color-filter);
     }
 
@@ -30,9 +31,15 @@
     footer {
         color: var(--main-color);
     }
-    
-    footer a, footer a:visited, footer a:active {
+
+    footer a,
+    footer a:visited,
+    footer a:active {
         color: var(--main-color);
+    }
+
+    a.footer-button img {
+        filter: var(--main-color-filter);
     }
 
     div.card,
@@ -77,6 +84,10 @@
         color: var(--btn-text);
     }
 
+    div.article-header p {
+        color: var(--text-color);
+    }
+
     div.tool-button-preview {
         background-color: var(--main-color);
     }
@@ -85,6 +96,7 @@
         color: var(--btn-text);
         background-color: transparent;
     }
+    
 
     div.message-option,
     div.style-option,
@@ -127,10 +139,11 @@
 
     div.button-code-container {
         background-color: var(--code-container-bg);
-    }    
+    }
 
     /* Targeting devices with mouse cursor and :hover */
     @media(hover: hover) and (pointer: fine) {
+
         div.message-option:hover,
         div.style-option:hover,
         div.size-option:hover {
@@ -154,6 +167,7 @@
         background-color: var(--card-color);
         border-color: var(--text-color);
     }
+
     input[type=button].no-fill {
         color: var(--main-color);
         background-color: var(--background-color);
