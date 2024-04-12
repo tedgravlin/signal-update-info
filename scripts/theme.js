@@ -65,12 +65,12 @@ function setTheme(theme) {
             theme_button_desktop.setAttribute('alt', 'Light Theme Icon');
             theme_icon_mobile.setAttribute('alt', 'Light Theme Icon');
             localStorage.setItem('theme', 'light');
-            root.style.setProperty('--main-color', 'white');
-            root.style.setProperty('--background-color', '#4166f5');
-            root.style.setProperty('--on-main-bg-color', '#4165f5e8');
-            root.style.setProperty('--text-color', '#4166f5');
-            root.style.setProperty('--platform-selected-bg', '#4165f5e6');
-            root.style.setProperty('--main-color-filter', 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)');
+            root.style.setProperty('--main-color', '#FFFFFF');
+            root.style.setProperty('--background-color', '#9db1ff');
+            root.style.setProperty('--on-main-bg-color', '#212962dd');
+            root.style.setProperty('--text-color', '#181d44');
+            root.style.setProperty('--platform-selected-bg', '#212962dd');
+            root.style.setProperty('--main-color-filter', 'brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(2448%) hue-rotate(199deg) brightness(99%) contrast(99%)');
             root.style.setProperty('--text-color-filter', 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%)');
             root.style.setProperty('--btn-bg-color', '#dee6ffbf');
             root.style.setProperty('--btn-border-color', '#dee6ffbf');

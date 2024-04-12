@@ -1,12 +1,12 @@
 /* Light mode colors */
 @media (prefers-color-scheme: light) {
     :root {
-        --main-color: white;
-        --background-color: #4166f5;
-        --on-main-bg-color: #4165f5e8;
-        --text-color: #4166f5;
-        --platform-selected-bg: #4165f5e6;
-        --main-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+        --main-color: #FFFFFF;
+        --background-color: #9db1ff;
+        --on-main-bg-color: #212962dd;
+        --text-color: #181d44;
+        --platform-selected-bg: #212962dd;
+        --main-color-filter: brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(2448%) hue-rotate(199deg) brightness(99%) contrast(99%);
         --text-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(199deg) brightness(109%) contrast(104%);
         --btn-bg-color: #dee6ffbf;
         --btn-border-color: #dee6ffbf;
@@ -25,18 +25,18 @@
     }
 
     footer {
-        color: var(--main-color);
+        color: var(--text-color);
     }
 
     footer a,
     footer a:visited,
     footer a:active {
-        color: var(--main-color);
+        color: var(--text-color);
     }
 
     header,
     header a:visited {
-        color: var(--main-color);
+        color: var(--text-color);
     }
 
     div.card-content,
