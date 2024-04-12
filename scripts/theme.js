@@ -65,7 +65,10 @@ function setTheme(theme) {
             theme_button_desktop.setAttribute('alt', 'Light Theme Icon');
             theme_icon_mobile.setAttribute('alt', 'Light Theme Icon');
             localStorage.setItem('theme', 'light');
-            root.style.setProperty('--main-color', '#FFFFFF');
+            root.style.setProperty('--main-color', '#181d44');
+            root.style.setProperty('--text-on-main', '#FFFFFF');
+            root.style.setProperty('--card-color', '#FFFFFF');
+            root.style.setProperty('--btn-text', '#FFFFFF');
             root.style.setProperty('--background-color', '#9db1ff');
             root.style.setProperty('--on-main-bg-color', '#212962dd');
             root.style.setProperty('--text-color', '#181d44');
@@ -85,6 +88,9 @@ function setTheme(theme) {
             theme_icon_mobile.setAttribute('alt', 'Dark Theme Icon');
             localStorage.setItem('theme', 'dark');
             root.style.setProperty('--main-color', '#9db1ff');
+            root.style.setProperty('--text-on-main', '#9db1ff');
+            root.style.setProperty('--card-color', '#9db1ff');
+            root.style.setProperty('--btn-text', '#9db1ff');
             root.style.setProperty('--background-color', '#181d44');
             root.style.setProperty('--on-main-bg-color', '#181d44dd');
             root.style.setProperty('--text-color', '#182142');
