@@ -63,7 +63,8 @@ div.footer-button-container {
     display: grid;
     width: fit-content;
     margin: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 0.5em;
 }
 
 a.footer-button {
@@ -542,7 +543,7 @@ p.disclaimer {
     div.footer-button-container {
         width: fit-content;
         margin: auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, auto);
     }
 
     div.theme-button-mobile {
