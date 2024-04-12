@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+    <channel>
+        <atom:link href="https://signalupdateinfo.com/rss.xml" rel="self" type="application/rss+xml" />
+        <title>SignalUpdateInfo Feed</title>
+        <link>https://signalupdateinfo.com/</link>
+        <description>Signal news and updates. We post about new and upcoming features to keep you
+            up-to-date with your favorite E2EE messaging app.</description>
+        <item>
+            <title>Signal for iOS v7.7</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/ios/ios-v7.7.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-ios.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/ios/ios-v7.7.html</link>
+            <description>Release: Signal for iOS v7.7 has been released in beta.
+                Read more here: https://signalupdateinfo.com/releases/ios/ios-v7.7.html
+            </description>
+            <pubDate>Thu, 11 Apr 2024 10:50:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/releases/ios/ios-v7.7.html</guid>
+        </item>
+        <item>
+            <title>Signal for Android v7.4</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/android/android-v7.4.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-android.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/android/android-v7.4.html</link>
+            <description>Release: Signal for Android v7.4 has been released in beta. 
+                Read more here: https://signalupdateinfo.com/releases/android/android-v7.4.html
+            </description>
+            <pubDate>Wed, 10 Apr 2024 16:30:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/releases/android/android-v7.4.html</guid>
+        </item>
+        <item>
+            <title>Cloud Backups</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/news/cloud-backups.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/cloud-backups.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/news/cloud-backups.html</link>
+            <description>News: Cloud backups are coming to Signal. 
+                Read more here: https://signalupdateinfo.com/news/cloud-backups.html
+            </description>
+            <pubDate>Thu, 01 Feb 2024 00:46:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/news/cloud-backups.html</guid>
+        </item>
+    </channel>
+
+</rss> 
