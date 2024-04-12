@@ -137,6 +137,7 @@ div.slim-card {
 
 div.release-card {
     display: flex;
+    align-items: center;
     border-radius: 24px;
     padding: 1em;
     transition: 0.25s;
@@ -147,9 +148,14 @@ div.release-card * {
     margin: auto;
 }
 
+div.release-card p {
+    font-weight: bold;
+    font-size: calc(14px + 0.390625vw);
+}
+
 div.release-card img {
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
 }
 
 div.slim-card {
@@ -656,6 +662,10 @@ p.disclaimer {
         font-size: 4vw;
     }
 
+    div.release-card p {
+        font-size: calc(17px + 0.390625vw);
+    }
+
     /* Buttons */
     div.platform-selector {
         width: 100%;
@@ -678,6 +688,7 @@ p.disclaimer {
     input[type=button].platform-unselected {
         font-size: 5vw;
     }
+
     div.card-content ul {
         padding-inline-start: 30px;
     }
