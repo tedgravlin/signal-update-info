@@ -9,6 +9,21 @@
         <description>Signal news and updates. We post about new and upcoming features to keep you
             up-to-date with your favorite E2EE messaging app.</description>
         <item>
+            <title>Signal for Dektop v7.6</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/desktop/desktop-v7.6.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-desktop.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/desktop/desktop-v7.6.html</link>
+            <description>Release: Signal for Desktop v7.6 has been released in beta.</description>
+            <pubDate>Tue, 16 Apr 2024 11:02:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/releases/desktop/desktop-v7.6.html</guid>
+        </item>
+        <item>
             <title>Signal for iOS v7.7</title>
             <author>Signal Update Info</author>
             <media:content
@@ -19,9 +34,7 @@
                 width="500"
                 height="250" />
             <link>https://signalupdateinfo.com/releases/ios/ios-v7.7.html</link>
-            <description>Release: Signal for iOS v7.7 has been released in beta.
-                Read more here: https://signalupdateinfo.com/releases/ios/ios-v7.7.html
-            </description>
+            <description>Release: Signal for iOS v7.7 has been released in beta.</description>
             <pubDate>Thu, 11 Apr 2024 10:50:00 EST</pubDate>
             <guid isPermaLink="true">https://signalupdateinfo.com/releases/ios/ios-v7.7.html</guid>
         </item>
@@ -36,9 +49,7 @@
                 width="500"
                 height="250" />
             <link>https://signalupdateinfo.com/releases/android/android-v7.4.html</link>
-            <description>Release: Signal for Android v7.4 has been released in beta. 
-                Read more here: https://signalupdateinfo.com/releases/android/android-v7.4.html
-            </description>
+            <description>Release: Signal for Android v7.4 has been released in beta.</description>
             <pubDate>Wed, 10 Apr 2024 16:30:00 EST</pubDate>
             <guid isPermaLink="true">https://signalupdateinfo.com/releases/android/android-v7.4.html</guid>
         </item>
@@ -53,9 +64,7 @@
                 width="500"
                 height="250" />
             <link>https://signalupdateinfo.com/news/cloud-backups.html</link>
-            <description>News: Cloud backups are coming to Signal. 
-                Read more here: https://signalupdateinfo.com/news/cloud-backups.html
-            </description>
+            <description>News: Cloud backups are coming to Signal.</description>
             <pubDate>Thu, 01 Feb 2024 00:46:00 EST</pubDate>
             <guid isPermaLink="true">https://signalupdateinfo.com/news/cloud-backups.html</guid>
         </item>
