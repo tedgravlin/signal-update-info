@@ -9,7 +9,22 @@
         <description>Signal news and updates. We post about new and upcoming features to keep you
             up-to-date with your favorite E2EE messaging app.</description>
         <item>
-            <title>Signal for Dektop v7.6</title>
+            <title>Signal for Android v7.5</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/android/android-v7.5.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-android.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/android/android-v7.5.html</link>
+            <description>Release: Signal for Android v7.5 has been released in beta.</description>
+            <pubDate>Thu, 18 Apr 2024 23:02:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/releases/android/android-v7.5.html</guid>
+        </item>
+        <item>
+            <title>Signal for Desktop v7.6</title>
             <author>Signal Update Info</author>
             <media:content
                 xmlns:media="https://signalupdateinfo.com/releases/desktop/desktop-v7.6.html"
