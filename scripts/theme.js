@@ -2,6 +2,7 @@ window.addEventListener("load", () => {
     // Get the theme switcher buttons
     const theme_button_desktop = document.getElementById("theme-button-desktop");
     const theme_button_mobile = document.getElementById("theme-button-mobile");
+    const theme_icon_mobile = document.getElementById("theme-icon-mobile");
 
     // Get the stored theme and update the page
     let stored_theme = localStorage.getItem('theme');
