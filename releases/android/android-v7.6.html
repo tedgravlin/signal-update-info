@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Import CSS and Scripts-->
+    <script>
+        let theme = localStorage.getItem('theme');
+        if (theme === null || theme === " ") theme = 'auto';
+        localStorage.setItem('theme', `${theme}`)
+        if (theme === 'auto') document.documentElement.removeAttribute("data-theme");
+        else document.documentElement.setAttribute("data-theme", `${theme}`);
+    </script>
+    <script src="/scripts/theme.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <!-- Scale page to display width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>Android v7.6 - Signal Update Info</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <!-- Meta -->
+    <meta name="title" property="og:title" content="Signal for Android v7.6" />
+    <meta name="description" property="og:description"
+        content="Signal news and updates. We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
+    <meta name="keywords" content="signal update info,signal updates,signal" />
+    <meta name="image" property="og:image"
+        content="https://signalupdateinfo.com/assets/images/link-previews/new-release-android.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://signalupdateinfo.com/releases/android/android-v7.6.html" />
+</head>
+
+<body>
+    <!-- Site Header and Navigation-->
+    <header>
+        <a href="/index.html">
+            <h1 class="site-title">Signal Update Info</h1>
+        </a>
+        <img alt="Auto Theme Icon" class="theme-button-desktop" id="theme-button-desktop"
+            src="/assets/images/icons/theme-auto.svg">
+        <div class="site-navigation">
+            <a class="selected-page" href="/releases.html#android">
+                Releases
+            </a>
+            <a href="/news.html">
+                News
+            </a>
+            <a href="/about.html">
+                About
+            </a>
+            <a href="/donate.html">
+                Donate
+            </a>
+        </div>
+    </header>
+    <!-- Main Page -->
+    <main>
+        <div class="release-page-card-container">
+            <!-- Release Info Card -->
+            <div class="card">
+                <h1>Android v7.6</h1>
+                <div class="card-content">
+                    <!-- <p>Official Release Notes</p>
+                    <ul>
+                        <li>Now when you open a chat with a missed call, that missed call indicator will also be cleared
+                            from the calls tab. If you've never seen this bug, you aren't missing much.
+                        </li>
+                    </ul>
+                    <br> -->
+                    <p>Changes</p>
+                    <ul>
+                        <li>Added group call reactions <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/d20f58880231a9802ac60a798c98c851123de739">[src]</a>
+                        </li>
+                        <li>Added the ability to double tap on a message to edit it <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/ffc1463cdab238dd15d727efee0f9c2968f49117">[src]</a>
+                        </li>
+                        <li>Link preview images will no longer show in the 'Shared Media' section <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/0f4618ab11e95b8c0ddc1175a46bf7a66c5c54a1">[src]</a>
+                        </li>
+                        <li>Improvements to missed call handling <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/e60b32202efeb17b178f7307e3f62604dfcaccee">[src]</a>
+                        </li>
+                        <li>Updated permission popup UI in various places <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/fd4864b3b15a956926fa33bc6acb7372429058fd">[src]</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Upcoming Features</p>
+                    <ul>
+                        <li>More work completed for the upcoming cloud backups feature <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/b771a21518056cecb15ed03d2d9d0a997b9315ca">[src]</a>
+                        </li>
+                        <li>More work completed for the upcoming group call link feature <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Android/commit/293634c758d5841ac7fbd675379e5b2937ac0b21">[src]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Resources Card -->
+            <div class="slim-card">
+                <h1>Resources</h1>
+                <div class="card-content">
+                    <a target="_blank"
+                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-7-6-release/60501?u=salt505">Beta
+                        thread</a>
+                    <a target="_blank"
+                        href="https://github.com/signalapp/Signal-Android/compare/v7.5.2...v7.6.0">Commits</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="spacer"></div>
+    <footer>
+        <div class="footer-button-container">
+            <div class="theme-button-mobile " id="theme-button-mobile">
+                <p>Theme:</p>
+                <img alt="Auto Theme Icon" class="theme-icon-mobile" id="theme-icon-mobile"
+                    src="/assets/images/icons/theme-auto.svg">
+            </div>
+            <a class="footer-button" rel="me" target="_blank" href="https://mastodon.world/@SignalUpdateInfo"><img
+                    alt="Mastodon Icon" src="/assets/images/icons/mastodon-logo.svg">Mastodon</a>
+            <a class="footer-button" target="_blank" href="https://github.com/tedgravlin/signal-update-info"><img
+                    alt="GitHub Icon" src="/assets/images/icons/github-logo.svg">GitHub</a>
+            <a class="footer-button" rel="me" target="_blank" href="https://signalupdateinfo.com/rss/feed.xml"><img
+                    alt="RSS Icon" src="/assets/images/icons/rss-logo.svg">RSS</a>
+        </div>
+        <p class="disclaimer">Signal Update Info is not affiliated with Signal and is not an official Signal website.
+        </p>
+    </footer>
+</body>
+
+</html>
