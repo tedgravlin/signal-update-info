@@ -16,20 +16,20 @@
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>Signal Update Info</title>
+    <title>Desktop v7.9 - Signal Update Info</title>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
     <!-- Meta -->
-    <meta name="title" property="og:title" content="Signal Update Info" />
-    <meta name="description" property="og:description" content="Signal news and updates. 
-        We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
+    <meta name="title" property="og:title" content="Signal for Desktop v7.9" />
+    <meta name="description" property="og:description"
+        content="Signal news and updates. We post about new and upcoming features to keep you up-to-date with your favorite E2EE messaging app." />
     <meta name="keywords" content="signal update info,signal updates,signal" />
-    <meta name="image" property="og:image" content="https://signalupdateinfo.com/assets/images/ogimage.jpg" />
+    <meta name="image" property="og:image"
+        content="https://signalupdateinfo.com/assets/images/link-previews/new-release-desktop.jpg" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://signalupdateinfo.com" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://signalupdateinfo.com/rss/feed.xml">
+    <meta property="og:url" content="https://signalupdateinfo.com/releases/desktop/desktop-v7.9.html" />
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         <img alt="Auto Theme Icon" class="theme-button-desktop" id="theme-button-desktop"
             src="/assets/images/icons/theme-auto.svg">
         <div class="site-navigation">
-            <a href="/releases.html">
+            <a class="selected-page" href="/releases.html#desktop">
                 Releases
             </a>
             <a href="/news.html">
@@ -57,44 +57,44 @@
     </header>
     <!-- Main Page -->
     <main>
-        <div class="card-container">
+        <div class="release-page-card-container">
+            <!-- Release Info Card -->
             <div class="card">
-                <h1>Latest Releases</h1>
-                <div class="home-releases releases-card-container">
-                    <a class="noshow" href="/releases/android/android-v7.7.html">
-                        <div class="release-card">
-                            <img alt="Android Logo" src="/assets/images/icons/android.svg">
-                            <div class="spacer"></div>
-                            <p>7.7</p>
-                        </div>
-                    </a>
-                    <a class="noshow" href="/releases/ios/ios-v7.11.html">
-                        <div class="release-card">
-                            <img alt="Apple Logo" src="/assets/images/icons/ios.svg">
-                            <div class="spacer"></div>
-                            <p>7.11</p>
-                        </div>
-                    </a>
-                    <a class="noshow" href="/releases/desktop/desktop-v7.9.html">
-                        <div class="release-card">
-                            <img alt="Desktop Icon" src="/assets/images/icons/desktop.svg">
-                            <div class="spacer"></div>
-                            <p>7.9</p>
-                        </div>
-                    </a>
+                <h1>Desktop v7.9</h1>
+                <div class="card-content">
+                    <p>Official Release Notes</p>
+                    <ul>
+                        <li>Additional small tweaks, bug fixes, and performance enhancements. Thanks for using Signal!
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Other Changes</p>
+                    <ul>
+                        <li>A reconnection notification will now show when screensharing <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Desktop/commit/5d29178ece473ea4aefc9287e53c95ef4b092d33">[src]</a>
+                        </li>
+                        <li>Improvements to emoji rankings <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Desktop/commit/0119478d8561da4a84cae66287f5946de5d7413d">[src]</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Upcoming Features</p>
+                    <ul>
+                        <li>More work completed for the upcoming cloud backup feature <a target="_blank"
+                                href="https://github.com/signalapp/Signal-Desktop/commit/e84c8aefc1ae91ebaf1dca5c0bd52f65f183f3a4">[src]</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <h1>Recent News</h1>
-                <div class="news-card-grid">
-                    <a class="noshow" href="/news/cloud-backups.html">
-                        <div class="article-preview">
-                            <h1>Cloud <br> Backups</h1>
-                            <h3>Published Feb 1 2024</h3>
-                        </div>
-                    </a>
+            <!-- Resources Card -->
+            <div class="slim-card">
+                <h1>Resources</h1>
+                <div class="card-content">
+                    <a target="_blank"
+                        href="https://community.signalusers.org/t/beta-feedback-for-the-upcoming-desktop-7-9-release/60628?u=salt505">Beta
+                        thread</a>
+                    <a target="_blank"
+                        href="https://github.com/signalapp/Signal-Desktop/compare/v7.8.0-beta.1...v7.9.0-beta.1">Commits</a>
                 </div>
             </div>
         </div>
