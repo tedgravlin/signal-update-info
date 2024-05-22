@@ -10,6 +10,22 @@
             up-to-date with your favorite E2EE messaging app.
         </description>
         <item>
+            <title>New Feature: Faster Message Edits</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/news/faster-message-edits.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/faster-message-edits.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/news/faster-message-edits.html</link>
+            <description>Now you can quickly edit your Signal messages with a double tap! Read the
+                full article to learn more.</description>
+            <pubDate>Thu, 22 May 2024 18:34:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/news/faster-message-edits.html</guid>
+        </item>
+        <item>
             <title>Signal for Android v7.8</title>
             <author>Signal Update Info</author>
             <media:content

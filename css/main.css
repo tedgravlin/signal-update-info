@@ -460,6 +460,12 @@ div.screenshot-album a {
     animation-fill-mode: forwards;
 }
 
+img.screen-recording-gif {
+    margin: 1em auto 1em auto;
+    border-radius: 24px;
+    width: 50%;
+}
+
 
 /* Buttons */
 input[type=button] {
@@ -652,6 +658,12 @@ p.disclaimer {
     div.news-card-grid {
         grid-template-columns: 1fr;
         row-gap: 0.5em;
+    }
+
+    img.screen-recording-gif {
+        display: block;
+        border-radius: 24px;
+        width: 100%;
     }
 
     div.article-preview {
