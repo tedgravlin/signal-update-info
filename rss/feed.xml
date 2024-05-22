@@ -10,6 +10,37 @@
             up-to-date with your favorite E2EE messaging app.
         </description>
         <item>
+            <title>Signal for Desktop v7.11</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/desktop/desktop-v7.11.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-desktop.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/desktop/desktop-v7.11.html</link>
+            <description>Release: Signal for Desktop v7.10 has been released in beta.</description>
+            <pubDate>Thu, 22 May 2024 18:40:00 EST</pubDate>
+            <guid isPermaLink="true">
+                https://signalupdateinfo.com/releases/desktop/desktop-v7.11.html</guid>
+        </item>
+        <item>
+            <title>Signal for iOS v7.13</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/ios/ios-v7.13.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-ios.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/ios/ios-v7.13.html</link>
+            <description>Release: Signal for iOS v7.13 has been released in beta.</description>
+            <pubDate>Thu, 22 May 2024 18:38:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/releases/ios/ios-v7.13.html</guid>
+        </item>
+        <item>
             <title>New Feature: Faster Message Edits</title>
             <author>Signal Update Info</author>
             <media:content
