@@ -152,7 +152,8 @@ div.tool-preview {
     color: var(--btn-text);
 }
 
-div.article-header p {
+div.article-header p,
+div.home-releases-header p {
     color: var(--text-color);
 }
 

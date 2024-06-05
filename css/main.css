@@ -322,13 +322,19 @@ div.article-preview h3 {
 }
 
 div.article-header h1,
-div.article-header p {
+div.article-header p,
+div.home-releases-header * {
     display: inline-block;
 }
 
-div.article-header p {
+div.article-header p,
+div.home-releases-header p {
     font-size: calc(15px + 0.390625vw);
     margin-left: 0.5em;
+}
+
+div.home-releases-header p {
+    font-size: calc(7px + 0.390625vw);
 }
 
 div.tool-preview {
@@ -624,10 +630,15 @@ p.disclaimer {
         column-gap: 0.5em;
     }
 
-    div.article-header p {
+    div.article-header p,
+    div.home-releases-header p {
         font-size: 4vw;
         margin-left: 0.5em;
         margin-top: 0;
+    }
+
+    div.home-releases-header p {
+        font-size: 3vw;
     }
 
     div.screenshot-album img {
