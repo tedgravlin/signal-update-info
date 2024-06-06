@@ -10,6 +10,21 @@
             up-to-date with your favorite E2EE messaging app.
         </description>
         <item>
+            <title>Signal for Android v7.9</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/releases/android/android-v7.9.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/new-release-android.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/releases/android/android-v7.9.html</link>
+            <description>Release: Signal for Android v7.9 has been released in beta.</description>
+            <pubDate>Wed, 05 June 2024 21:58:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/releases/android/android-v7.9.html</guid>
+        </item>
+        <item>
             <title>Signal for iOS v7.14</title>
             <author>Signal Update Info</author>
             <media:content
