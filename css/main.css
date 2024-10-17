@@ -466,6 +466,21 @@ div.screenshot-album a {
     animation-fill-mode: forwards;
 }
 
+div.two-image {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 1fr 1fr;
+    margin: 1em auto 1em auto;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+div.two-image > img {
+    width: 30vw;
+    border-radius: 24px;
+    border: 2px solid var(--text-color);
+}
+
 img.screen-recording-gif {
     margin: 1em auto 1em auto;
     border-radius: 24px;
@@ -687,6 +702,14 @@ p.disclaimer {
 
     div.release-card p {
         font-size: calc(17px + 0.390625vw);
+    }
+
+    div.two-image {
+        grid-template-columns: 1fr;
+    }
+
+    div.two-image > img {
+        width: 100%;
     }
 
     /* Buttons */

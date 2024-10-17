@@ -10,6 +10,22 @@
             up-to-date with your favorite E2EE messaging app.
         </description>
         <item>
+            <title>New Feature: Chat Folders</title>
+            <author>Signal Update Info</author>
+            <media:content
+                xmlns:media="https://signalupdateinfo.com/news/chat-folders.html"
+                url="https://signalupdateinfo.com/assets/images/link-previews/chat-folders.jpg"
+                medium="image"
+                type="image/jpeg"
+                width="500"
+                height="250" />
+            <link>https://signalupdateinfo.com/news/chat-folders.html</link>
+            <description>Signal is working on chat folders! Read the
+                full article to learn more.</description>
+            <pubDate>Thu, 16 Oct 2024 22:36:00 EST</pubDate>
+            <guid isPermaLink="true">https://signalupdateinfo.com/news/chat-folders.html</guid>
+        </item>
+        <item>
             <title>Signal for iOS v7.34</title>
             <author>Signal Update Info</author>
             <media:content
