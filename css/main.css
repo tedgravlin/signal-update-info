@@ -19,6 +19,10 @@ body {
     margin-right: auto;
 }
 
+main {
+    min-width: fit-content;
+}
+
 img.theme-button-desktop {
     float: right;
     margin: 1em 2em 1em 1em;
@@ -739,5 +743,17 @@ p.disclaimer {
 
     div.card-content ul {
         padding-inline-start: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    div.footer-button-container {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 639px) {
+    div.footer-button-container {
+        font-size: 90%;
     }
 }
