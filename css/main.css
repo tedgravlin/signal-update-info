@@ -188,6 +188,7 @@ div.release-page-card-container {
     grid-template-columns: 1fr;
     margin: 0 3em 1em 3em;
     will-change: transform !important;
+    min-width: fit-content;
 }
 
 div.releases-card-container {
@@ -264,7 +265,7 @@ div.release-page-card-container {
 }
 
 div.card-content {
-    margin-left: 0.5em;
+    margin: auto 0.5em auto 0.5em;
     font-size: calc(17px + 0.390625vw);
 }
 
