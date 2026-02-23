@@ -10,6 +10,20 @@
     font-display: swap;
 }
 
+.top-ribbon {
+    text-align: center;
+    background-color: RGB(247, 245, 254);
+    text-align: center;
+    border-radius: 32px;
+    padding: 1em;
+    margin: 0 3em 1em 3em;
+    font-size: 20px;
+}
+
+.top-ribbon a {
+    color: #0000ffa8;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -664,6 +678,10 @@ p.disclaimer {
 
     div.screenshot-album img {
         width: 30vw;
+    }
+
+    .top-ribbon {
+        margin: 0 !important;
     }
 
     /* Cards */
